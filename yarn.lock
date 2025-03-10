@@ -1885,7 +1885,7 @@ __metadata:
     jsonc-eslint-parser: "npm:2.4.0"
     micromark-core-commonmark: "npm:2.0.3"
     micromark-util-character: "npm:2.1.1"
-    micromark-util-chunked: "npm:2.0.0"
+    micromark-util-chunked: "npm:2.0.1"
     node-notifier: "npm:10.0.1"
     prettier: "npm:3.5.3"
     remark: "npm:15.0.1"
@@ -7578,7 +7578,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"micromark-util-chunked@npm:2.0.0, micromark-util-chunked@npm:^2.0.0":
+"micromark-util-chunked@npm:2.0.1":
+  version: 2.0.1
+  resolution: "micromark-util-chunked@npm:2.0.1"
+  dependencies:
+    micromark-util-symbol: "npm:^2.0.0"
+  checksum: 10/f8cb2a67bcefe4bd2846d838c97b777101f0043b9f1de4f69baf3e26bb1f9885948444e3c3aec66db7595cad8173bd4567a000eb933576c233d54631f6323fe4
+  languageName: node
+  linkType: hard
+
+"micromark-util-chunked@npm:^2.0.0":
   version: 2.0.0
   resolution: "micromark-util-chunked@npm:2.0.0"
   dependencies:
