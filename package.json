@@ -128,7 +128,7 @@
     "@types/debug": "4.1.12",
     "debug": "4.3.5",
     "devlop": "1.1.0",
-    "micromark-util-chunked": "2.0.0"
+    "micromark-util-chunked": "2.0.1"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "0.17.4",
