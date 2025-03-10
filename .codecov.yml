@@ -4,12 +4,12 @@
 ---
 codecov:
   notify:
-    after_n_builds: 3
+    after_n_builds: 1
     wait_for_ci: true
   require_ci_to_pass: true
 
 comment:
-  after_n_builds: 3
+  after_n_builds: 1
   behavior: default
   layout: header,diff,flags,components,tree,footer
   require_base: false
@@ -17,6 +17,21 @@ comment:
   require_head: true
   show_carryforward_flags: true
   show_critical_paths: true
+
+component_management:
+  default_rules:
+    statuses:
+      - type: project
+        target: 100%
+  individual_components:
+    - component_id: constructs
+      name: constructs
+      paths:
+        - src/constructs/*.mts
+    - component_id: utils
+      name: utils
+      paths:
+        - src/utils/*.mts
 
 coverage:
   precision: 2
@@ -26,6 +41,7 @@ coverage:
     changes:
       default:
         branches:
+          - dependabot/*
           - feat/*
           - hotfix/*
           - main
@@ -64,15 +80,7 @@ coverage:
         threshold: 0%
 
 flags:
-  node20:
-    carryforward: false
-    paths:
-      - src/
-  node19:
-    carryforward: false
-    paths:
-      - src/
-  node18:
+  node23:
     carryforward: false
     paths:
       - src/
@@ -81,15 +89,14 @@ github_checks:
   annotations: true
 
 ignore:
-  - '**/__mocks__/**'
-  - '**/__tests__/**'
+  - '**/*.d.mts'
+  - '**/__mocks__/'
+  - '**/__tests__/'
   - '**/interfaces/'
   - '**/types/'
-  - '**/index.ts'
-  - '!src/index.ts'
 
 profiling:
   critical_files_paths:
-    - src/constructs/initialize.ts
-    - src/lexer.ts
-    - src/preprocess.ts
+    - src/constructs/initialize.mts
+    - src/create-tokenizer.mts
+    - src/preprocess.mts

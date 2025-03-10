@@ -18,7 +18,11 @@ import { scopes } from '@flex-development/commitlint-config'
 const config: UserConfig = {
   extends: ['@flex-development'],
   rules: {
-    'scope-enum': [Severity.Error, 'always', scopes(['chore', 'constructs'])]
+    'scope-enum': [Severity.Error, 'always', scopes([
+      'chore',
+      'constructs',
+      'errors'
+    ])]
   }
 }
 

@@ -2,10 +2,10 @@
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
   "allowCompoundWords": true,
   "caseSensitive": false,
-  "dictionaries": ["@flex-development/vfile-lexer"],
+  "dictionaries": ["@flex-development/vfile-tokenizer"],
   "dictionaryDefinitions": [
     {
-      "name": "@flex-development/vfile-lexer",
+      "name": "@flex-development/vfile-tokenizer",
       "path": "./.dictionary.txt"
     }
   ],
@@ -13,7 +13,7 @@
   "failFast": false,
   "flagWords": [],
   "ignorePaths": [
-    "**/*.log",
+    "**/*.patch",
     "**/*.snap",
     "**/*.wasm",
     "**/.*ignore",
@@ -21,23 +21,16 @@
     "**/CHANGELOG.md",
     "**/LICENSE.md",
     "**/RELEASE_NOTES.md",
-    "**/scratch.*",
     ".cspell.json",
     ".dictionary.txt",
     ".git/",
     ".husky/_/",
     ".vscode/settings.json",
     ".yarn/",
-    "dist/",
     "patches/",
     "yarn.lock"
   ],
-  "ignoreRegExpList": [
-    "/@flex-development\\/.*/",
-    "/from\\s+(['\"]).*\\1/",
-    "\\\\u001B\\[\\d+m",
-    "import\\(.*\\)"
-  ],
+  "ignoreRegExpList": [],
   "ignoreWords": [],
   "language": "en-US",
   "patterns": [],

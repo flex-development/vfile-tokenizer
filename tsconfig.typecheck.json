@@ -1,15 +1,21 @@
 {
-  "exclude": ["**/coverage", "**/dist", "**/node_modules"],
+  "compilerOptions": {
+    "allowJs": false,
+    "checkJs": false,
+    "customConditions": ["types", "vfile-tokenizer"]
+  },
+  "exclude": [],
   "extends": "./tsconfig.json",
   "files": [
-    "typings/@faker-js/faker/global.d.ts",
-    "typings/@flex-development/vfile-lexer/index.d.mts",
-    "vitest-env.d.ts"
+    "typings/@flex-development/vfile-tokenizer/index.d.mts",
+    "typings/typescript/lib.es5.d.ts",
+    "vitest-env.d.mts"
   ],
   "include": [
-    "__fixtures__/**/**.ts",
-    "__tests__/**/**.ts",
-    "src/**/**.ts",
-    "src/**/.*.ts"
+    "__fixtures__/**/*",
+    "__tests__/**/*",
+    "src/**/**.mts",
+    "typings/**/*",
+    "vitest-env.d.mts"
   ]
 }

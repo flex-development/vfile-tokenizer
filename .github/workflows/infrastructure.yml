@@ -45,13 +45,13 @@ jobs:
         uses: hmarr/debug-action@v3.0.0
       - id: bot-token
         name: Get bot token
-        uses: actions/create-github-app-token@v1.10.1
+        uses: actions/create-github-app-token@v1.11.5
         with:
           app-id: ${{ secrets.BOT_APP_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
       - id: checkout
         name: Checkout ${{ github.ref_name }}@${{ github.sha }}
-        uses: actions/checkout@v4.1.7
+        uses: actions/checkout@v4.2.2
         with:
           persist-credentials: false
           ref: ${{ github.sha }}

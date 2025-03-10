@@ -57,7 +57,7 @@ jobs:
         uses: hmarr/debug-action@v3.0.0
       - id: checkout
         name: Checkout ${{ env.REF_NAME }}
-        uses: actions/checkout@v4.1.7
+        uses: actions/checkout@v4.2.2
         with:
           ref: ${{ env.REF }}
       - id: version
@@ -89,7 +89,7 @@ jobs:
     steps:
       - id: checkout
         name: Checkout ${{ env.REF_NAME }}
-        uses: actions/checkout@v4.1.7
+        uses: actions/checkout@v4.2.2
         with:
           fetch-depth: 0
           persist-credentials: true
@@ -97,7 +97,7 @@ jobs:
           token: ${{ env.GITHUB_TOKEN }}
       - id: gpg-import
         name: Import GPG key
-        uses: crazy-max/ghaction-import-gpg@v6.1.0
+        uses: crazy-max/ghaction-import-gpg@v6.2.0
         with:
           git_config_global: true
           git_push_gpgsign: false
@@ -108,7 +108,7 @@ jobs:
           trust_level: 5
       - id: node
         name: Setup Node.js
-        uses: actions/setup-node@v4.0.2
+        uses: actions/setup-node@v4.2.0
         with:
           cache: yarn
           cache-dependency-path: yarn.lock

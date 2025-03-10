@@ -1,14 +1,21 @@
 {
   "compilerOptions": {
-    "customConditions": ["import", "node"],
-    "declaration": true,
+    "allowImportingTsExtensions": false,
+    "allowJs": false,
+    "checkJs": false,
+    "customConditions": ["vfile-tokenizer", "production", "import", "node"],
+    "declarationMap": false,
     "noEmitOnError": true,
-    "paths": {
-      "#src/*": ["src/*"]
-    },
-    "target": "es2022"
+    "outDir": "dist",
+    "rootDir": "src",
+    "sourceMap": false,
+    "target": "es2024"
   },
-  "exclude": [],
+  "exclude": ["**/__tests__/**"],
   "extends": "./tsconfig.json",
-  "include": ["./dist/*"]
+  "files": [
+    "typings/@flex-development/vfile-tokenizer/index.d.mts",
+    "typings/typescript/lib.es5.d.ts"
+  ],
+  "include": ["dist/**/*", "src/**/**.mts"]
 }

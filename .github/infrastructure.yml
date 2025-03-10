@@ -26,21 +26,14 @@ branches:
           - context: auto-review
           - context: build
           - context: changelog
-          - context: codecov/patch
-            app_id: 254
-          - context: codecov/project
-            app_id: 254
           - context: commitlint
           - context: dependabot-dedupe
           - context: format
           - context: gitguardian
           - context: lint
           - context: spelling
-          - context: test (18)
-          - context: test (19)
-          - context: test (20)
-          - context: typescript (5.5.2)
-          - context: typescript (latest)
+          - context: test (23)
+          - context: typescript
         strict: true
       restrictions: null
 environments:
@@ -170,7 +163,7 @@ repository:
   has_issues: true
   has_projects: true
   has_wiki: false
-  homepage: https://github.com/flex-development/vfile-lexer
+  homepage: https://github.com/flex-development/vfile-tokenizer
   is_template: false
   private: false
   security_and_analysis:

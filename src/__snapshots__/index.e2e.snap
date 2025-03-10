@@ -1,0 +1,17 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`e2e:vfile-tokenizer > should expose public api 1`] = `
+[
+  "initialize",
+  "createTokenizer",
+  "chars",
+  "codes",
+  "ev",
+  "preprocess",
+  "tokenize",
+  "isLineEnding",
+  "resolveAll",
+  "resolveSlice",
+  "resolveTokenList",
+]
+`;

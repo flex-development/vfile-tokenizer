@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "customConditions": ["vfile-tokenizer", "development", "node"]
+  },
+  "extends": "./tsconfig.json"
+}

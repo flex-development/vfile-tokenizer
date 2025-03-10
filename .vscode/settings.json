@@ -20,6 +20,7 @@
     "rewrap.wrappingColumn": 130
   },
   "[markdown]": {
+    "editor.formatOnSave": true,
     "editor.rulers": [
       {
         "color": "var(--vscode-editorRuler-foreground)",
@@ -39,6 +40,9 @@
     "editor.wordWrapColumn": 120,
     "rewrap.wrappingColumn": 120
   },
+  "[plaintext]": {
+    "files.trimTrailingWhitespace": false
+  },
   "[shellscript]": {
     "editor.rulers": [
       {
@@ -46,13 +50,6 @@
         "column": 100
       }
     ],
-    "editor.wordWrap": "wordWrapColumn",
-    "editor.wordWrapColumn": 100,
-    "rewrap.wrappingColumn": 100
-  },
-  "[xml]": {
-    "editor.defaultFormatter": "redhat.vscode-xml",
-    "editor.rulers": [100],
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 100,
     "rewrap.wrappingColumn": 100
@@ -110,11 +107,12 @@
   "emmet.showExpandedAbbreviation": "always",
   "emmet.triggerExpansionOnTab": true,
   "eslint.enable": true,
-  "eslint.experimental.useFlatConfig": true,
   "eslint.lintTask.enable": true,
+  "eslint.nodePath": "node_modules",
   "eslint.options": {},
   "eslint.runtime": "node",
   "eslint.trace.server": "messages",
+  "eslint.useFlatConfig": true,
   "eslint.validate": [
     "css",
     "github-actions-workflow",
@@ -133,8 +131,9 @@
     "*.log": "log",
     "*.snap": "jest-snapshot",
     ".env.zsh": "shellscript",
-    ".markdownlintignore": "ignore",
+    "*.map": "json",
     ".npmrc": "ini",
+    ".remarkignore": "ignore",
     "commit-msg": "shellscript",
     "pre-commit": "shellscript",
     "pre-push": "shellscript"
@@ -165,15 +164,6 @@
   "javascript.validate.enable": true,
   "markdown.extension.toc.slugifyMode": "github",
   "markdown.extension.toc.updateOnSave": false,
-  "markdownlint.ignore": ".markdownlintignore",
-  "markdownlint.lintWorkspaceGlobs": [
-    "**/*.md",
-    "!**/node_modules",
-    "!**/.git",
-    "!**/CHANGELOG.md",
-    "!**/LICENSE.md",
-    "!**/RELEASE_NOTES.md"
-  ],
   "mdx.trace.server.verbosity": "verbose",
   "rewrap.autoWrap.enabled": true,
   "rewrap.doubleSentenceSpacing": true,
@@ -222,6 +212,7 @@
   "typescript.format.insertSpaceAfterTypeAssertion": true,
   "typescript.format.semicolons": "remove",
   "typescript.inlayHints.enumMemberValues.enabled": true,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.preferences.importModuleSpecifierEnding": "minimal",
   "typescript.preferences.includePackageJsonAutoImports": "on",
   "typescript.preferences.quoteStyle": "single",
@@ -242,12 +233,7 @@
   ],
   "vsicons.associations.files": [
     {
-      "extensions": [".eslintrc.base.cjs"],
-      "format": "svg",
-      "icon": "eslint"
-    },
-    {
-      "extensions": ["build.json", "cjs.json", "typecheck.json"],
+      "extensions": ["build.json", "typecheck.json"],
       "format": "svg",
       "icon": "tsconfig"
     },
@@ -257,14 +243,9 @@
       "icon": "vitest"
     },
     {
-      "extensions": ["spec-d.ts"],
+      "extensions": ["spec-d.mts"],
       "format": "svg",
       "icon": "testts"
-    },
-    {
-      "extensions": ["yarnrc.yml"],
-      "format": "svg",
-      "icon": "yarn"
     }
   ],
   "vsicons.associations.folders": [
@@ -282,11 +263,6 @@
       "extensions": ["internal"],
       "format": "svg",
       "icon": "private"
-    },
-    {
-      "extensions": ["namespaces"],
-      "format": "svg",
-      "icon": "module"
     },
     {
       "extensions": ["patches"],

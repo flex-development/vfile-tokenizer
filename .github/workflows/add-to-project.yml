@@ -33,13 +33,13 @@ jobs:
         uses: hmarr/debug-action@v3.0.0
       - id: bot-token
         name: Get bot token
-        uses: actions/create-github-app-token@v1.10.1
+        uses: actions/create-github-app-token@v1.11.5
         with:
           app-id: ${{ secrets.BOT_APP_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
       - id: add-item
         name: Add ${{ format('#{0}', github.event.number) }} to project
-        uses: actions/add-to-project@v1.0.1
+        uses: actions/add-to-project@v1.0.2
         with:
           github-token: ${{ steps.bot-token.outputs.token }}
           project-url: |

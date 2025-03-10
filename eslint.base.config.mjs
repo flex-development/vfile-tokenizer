@@ -8,22 +8,31 @@ import eslint from '@eslint/js'
 import globals from 'globals'
 import fs from 'node:fs'
 import ts from 'typescript-eslint'
-import pkg from './package.json' assert { type: 'json' }
+import pkg from './package.json' with { type: 'json' }
+
+/**
+ * @typedef {import('eslint').ESLint.Plugin} Plugin
+ * @typedef {import('eslint').Linter.Config} Config
+ * @typedef {import('eslint').Linter.Parser} Parser
+ * @typedef {import('eslint').Linter.SourceType} SourceType
+ */
 
 /**
  * Load a plugin.
  *
  * @async
  *
- * @param {string} name - Plugin module name
- * @return {Promise<import('eslint').ESLint.Plugin>} Eslint plugin
+ * @param {string} name
+ *  Plugin module name
+ * @return {Promise<Plugin>}
+ *  Eslint plugin
  */
 const plugin = async name => (await import(name)).default
 
 /**
- * Base eslint configuration object.
+ * Eslint configuration objects.
  *
- * @type {import('eslint').Linter.FlatConfig[]}
+ * @type {Config[]}
  */
 export default [
   eslint.configs.recommended,
@@ -36,7 +45,7 @@ export default [
           jsx: true
         }
       },
-      sourceType: pkg.type
+      sourceType: /** @type {SourceType} */ (pkg.type)
     },
     linterOptions: {
       reportUnusedDisableDirectives: true
@@ -65,6 +74,11 @@ export default [
           object: 'object'
         },
         structuredTags: {
+          category: {
+            name: 'namepath-referencing',
+            required: ['name'],
+            type: false
+          },
           const: {
             name: 'namepath-defining',
             required: ['name']
@@ -77,7 +91,8 @@ export default [
             required: ['name', 'type']
           },
           experimental: {
-            name: 'none'
+            name: false,
+            type: false
           },
           extends: {
             name: 'namepath-defining',
@@ -161,7 +176,7 @@ export default [
         NodeJS: 'readonly',
         React: fs.existsSync('node_modules/react') ? 'readonly' : false
       },
-      parser: ts.parser,
+      parser: /** @type {Parser} */ (ts.parser),
       parserOptions: {
         extraFileExtensions: [],
         program: null,
@@ -172,7 +187,7 @@ export default [
     },
     plugins: {
       '@stylistic': await plugin('@stylistic/eslint-plugin'),
-      '@typescript-eslint': ts.plugin,
+      '@typescript-eslint': /** @type {Plugin} */ (ts.plugin),
       import: await plugin('eslint-plugin-import'),
       jsdoc: await plugin('eslint-plugin-jsdoc'),
       node: await plugin('eslint-plugin-n'),
@@ -226,15 +241,6 @@ export default [
       '@typescript-eslint/consistent-type-imports': 0,
       '@typescript-eslint/default-param-last': 2,
       '@typescript-eslint/explicit-function-return-type': 0,
-      '@typescript-eslint/explicit-member-accessibility': [
-        2,
-        {
-          accessibility: 'explicit',
-          overrides: {
-            constructors: 'no-public'
-          }
-        }
-      ],
       '@typescript-eslint/explicit-module-boundary-types': 0,
       '@typescript-eslint/init-declarations': 0,
       '@typescript-eslint/max-params': 0,
@@ -341,6 +347,7 @@ export default [
       '@typescript-eslint/no-use-before-define': [
         2,
         {
+          allowNamedExports: true,
           classes: true,
           enums: true,
           functions: false,
@@ -390,7 +397,28 @@ export default [
       'jsdoc/check-examples': 0,
       // https://github.com/gajus/eslint-plugin-jsdoc/issues/541
       'jsdoc/check-indentation': 0,
-      'jsdoc/check-line-alignment': 1,
+      'jsdoc/check-line-alignment': [
+        1,
+        'never',
+        {
+          customSpacings: {
+            postDelimiter: 1,
+            postHyphen: 1,
+            postName: 1,
+            postTag: 1,
+            postType: 1
+          },
+          tags: [
+            'param',
+            'property',
+            'return',
+            'template',
+            'throws',
+            'typeParam'
+          ],
+          wrapIndent: ' '
+        }
+      ],
       'jsdoc/check-param-names': [
         1,
         {
@@ -485,7 +513,7 @@ export default [
           }
         }
       ],
-      'jsdoc/require-hyphen-before-param-description': 1,
+      'jsdoc/require-hyphen-before-param-description': 0,
       'jsdoc/require-jsdoc': [
         1,
         {
@@ -605,6 +633,7 @@ export default [
       'no-redeclare': 0,
       'no-restricted-imports': 0,
       'no-return-await': 0,
+      'no-setter-return': 0,
       'no-shadow': 0,
       'no-sparse-arrays': 0,
       'no-throw-literal': 0,
@@ -633,13 +662,18 @@ export default [
       'node/no-unpublished-require': 0,
       'node/no-unsupported-features/es-builtins': 2,
       'node/no-unsupported-features/es-syntax': 0,
-      'node/no-unsupported-features/node-builtins': 2,
+      'node/no-unsupported-features/node-builtins': [
+        2,
+        {
+          allowExperimental: true
+        }
+      ],
       'node/prefer-global/buffer': 2,
       'node/prefer-global/console': 2,
       'node/prefer-global/process': 2,
       'node/prefer-global/text-decoder': 2,
       'node/prefer-global/text-encoder': 2,
-      'node/prefer-global/url': [2, 'never'],
+      'node/prefer-global/url': 0,
       'node/prefer-global/url-search-params': 2,
       'node/prefer-promises/dns': 2,
       'node/prefer-promises/fs': 2,
@@ -695,7 +729,6 @@ export default [
           ignore: []
         }
       ],
-      'unicorn/import-index': 2,
       'unicorn/import-style': [2, { styles: {} }],
       'unicorn/new-for-builtins': 2,
       'unicorn/no-abusive-eslint-disable': 2,
@@ -811,6 +844,15 @@ export default [
           allowProtectedClassPropertyAccess: false
         }
       ],
+      '@typescript-eslint/explicit-member-accessibility': [
+        2,
+        {
+          accessibility: 'explicit',
+          overrides: {
+            constructors: 'no-public'
+          }
+        }
+      ],
       '@typescript-eslint/explicit-module-boundary-types': [
         2,
         {
@@ -903,7 +945,7 @@ export default [
         {
           ignoreConditionalTests: true,
           ignoreMixedLogicalExpressions: true,
-          ignorePrimitives: { string: true }
+          ignorePrimitives: { boolean: true, string: true }
         }
       ],
       '@typescript-eslint/prefer-optional-chain': 2,
@@ -913,7 +955,12 @@ export default [
       '@typescript-eslint/prefer-reduce-type-parameter': 2,
       '@typescript-eslint/prefer-regexp-exec': 2,
       '@typescript-eslint/prefer-return-this-type': 0,
-      '@typescript-eslint/prefer-string-starts-ends-with': 2,
+      '@typescript-eslint/prefer-string-starts-ends-with': [
+        2,
+        {
+          allowSingleElementEquality: 'always'
+        }
+      ],
       '@typescript-eslint/promise-function-async': 2,
       '@typescript-eslint/require-array-sort-compare': 2,
       '@typescript-eslint/require-await': 2,
@@ -939,20 +986,12 @@ export default [
         }
       ],
       '@typescript-eslint/return-await': [2, 'in-try-catch'],
-      '@typescript-eslint/strict-boolean-expressions': [
-        2,
-        {
-          allowAny: false,
-          allowNullableBoolean: true,
-          allowNullableNumber: true,
-          allowNullableObject: true,
-          allowNullableString: true,
-          allowNumber: true,
-          allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: false,
-          allowString: true
-        }
-      ],
-      '@typescript-eslint/switch-exhaustiveness-check': 2,
+      '@typescript-eslint/strict-boolean-expressions': 0,
+      '@typescript-eslint/switch-exhaustiveness-check': [2, {
+        allowDefaultCaseForExhaustiveSwitch: true,
+        considerDefaultExhaustiveForUnions: true,
+        requireDefaultForNonUnion: false
+      }],
       '@typescript-eslint/unbound-method': [2, { ignoreStatic: true }],
       '@typescript-eslint/use-unknown-in-catch-callback-variable': 2,
       'consistent-return': 0,
@@ -961,6 +1000,24 @@ export default [
       'prefer-destructuring': 0,
       'prefer-promise-reject-errors': 0,
       'require-await': 0
+    }
+  },
+  {
+    files: ['**/*.+(cjs|cts)'],
+    rules: {
+      '@typescript-eslint/no-require-imports': 0,
+      'unicorn/prefer-module': 0
+    }
+  },
+  {
+    files: ['**/*.+(cts|mts)'],
+    rules: {
+      '@typescript-eslint/consistent-type-assertions': [
+        2,
+        {
+          assertionStyle: 'as'
+        }
+      ]
     }
   },
   {
@@ -976,26 +1033,30 @@ export default [
     }
   },
   {
-    files: ['**/*.+(cjs|cts)'],
+    files: ['**/*.abstract.+(mts|ts)'],
     rules: {
-      '@typescript-eslint/no-require-imports': 0,
-      'unicorn/prefer-module': 0
+      '@typescript-eslint/no-useless-constructor': 0
     }
   },
   {
-    files: ['**/*.interface.ts', '**/interfaces/*.ts', '**/types/*.ts'],
+    files: [
+      '**/*.interface.+(mts|ts)',
+      '**/interfaces/*.+(mts|ts)',
+      '**/types/*.+(mts|ts)'
+    ],
     rules: {
       '@typescript-eslint/no-invalid-void-type': 0
     }
   },
   {
-    files: ['**/__mocks__/**/*.+(ts|tsx)'],
-    rules: {
-      '@typescript-eslint/require-await': 0
-    }
-  },
-  {
-    files: ['**/__tests__/*.{spec,spec-d}.+(ts|tsx)'],
+    files: [
+      '**/__fixtures__/**/*.mts',
+      '**/__mocks__/**/*.+(mts|ts|tsx)',
+      '**/__tests__/*.spec-d.+(mts|ts)',
+      '**/__tests__/*.spec.+(mts|ts|tsx)',
+      '**/__tests__/setup/*.+(mts|ts|tsx)',
+      '**/__tests__/utils/*.+(mts|ts|tsx)'
+    ],
     languageOptions: {
       globals: {
         afterAll: true,
@@ -1015,7 +1076,16 @@ export default [
         vi: true,
         vitest: true
       }
-    },
+    }
+  },
+  {
+    files: [
+      '**/__mocks__/**/*.+(mts|ts|tsx)',
+      '**/__tests__/*.spec.+(mts|ts|tsx)',
+      '**/__tests__/*.spec-d.+(mts|ts)',
+      '**/__tests__/setup/*.+(mts|ts|tsx)',
+      '**/__tests__/utils/*.+(mts|ts|tsx)'
+    ],
     plugins: {
       'chai-expect': await plugin('eslint-plugin-chai-expect'),
       'jest-formatting': await plugin('eslint-plugin-jest-formatting')
@@ -1023,6 +1093,7 @@ export default [
     rules: {
       '@typescript-eslint/class-literal-property-style': 0,
       '@typescript-eslint/no-base-to-string': 0,
+      '@typescript-eslint/no-confusing-void-expression': 0,
       '@typescript-eslint/no-empty-function': 0,
       '@typescript-eslint/no-invalid-void-type': 0,
       '@typescript-eslint/no-unused-expressions': 0,
@@ -1042,6 +1113,7 @@ export default [
       'jest-formatting/padding-around-describe-blocks': 1,
       'jest-formatting/padding-around-expect-groups': 1,
       'jest-formatting/padding-around-test-blocks': 1,
+      'jsdoc/require-jsdoc': 0,
       'no-control-regex': 0,
       'no-empty-pattern': 0,
       'promise/prefer-await-to-callbacks': 0,
@@ -1053,12 +1125,11 @@ export default [
       'unicorn/no-useless-undefined': 0,
       'unicorn/prefer-at': 0,
       'unicorn/prefer-dom-node-append': 0,
-      'unicorn/string-content': 0,
-      'unicorn/text-encoding-identifier-case': 0
+      'unicorn/string-content': 0
     }
   },
   {
-    files: ['**/__tests__/*.spec-d.+(cts|mts|ts)'],
+    files: ['**/__tests__/*.spec-d.+(mts|ts)'],
     languageOptions: {
       globals: {
         assertType: true,
@@ -1072,30 +1143,20 @@ export default [
     }
   },
   {
-    files: ['**/*.abstract.ts'],
+    files: ['**/cli/**/*.+(mts|ts)'],
     rules: {
-      '@typescript-eslint/no-useless-constructor': 0
+      'node/prefer-global/process': [2, 'never'],
+      'unicorn/no-process-exit': 0
     }
   },
   {
-    files: ['**/decorators/*.constraint.ts', '**/*.decorator.ts'],
+    files: [
+      '**/enums/*.+(mts|ts)',
+      '**/interfaces/*.+(mts|ts)',
+      '**/types/*.+(mts|ts)'
+    ],
     rules: {
-      '@typescript-eslint/no-invalid-void-type': 0
-      // '@typescript-eslint/no-wrapper-object-types': 0
-    }
-  },
-  {
-    files: ['**/enums/*.ts', '**/interfaces/*.ts', '**/types/*.ts'],
-    rules: {
-      'jsdoc/check-indentation': 0,
       'unicorn/no-keyword-prefix': 0
-    }
-  },
-  {
-    files: ['**/*.+(cjs|js|mjs)'],
-    rules: {
-      '@typescript-eslint/explicit-member-accessibility': 0,
-      '@typescript-eslint/prefer-readonly': 0
     }
   },
   {
@@ -1110,7 +1171,7 @@ export default [
       parser: await import('jsonc-eslint-parser')
     },
     plugins: {
-      jsonc: (await import('eslint-plugin-jsonc')).default
+      jsonc: /** @type {any} */ ((await import('eslint-plugin-jsonc')).default)
     },
     rules: {
       'jsonc/no-bigint-literals': 2,
@@ -1167,7 +1228,6 @@ export default [
       parser: (await import('eslint-mdx')).parser
     },
     plugins: {
-      markdownlint: await plugin('eslint-plugin-markdownlint'),
       mdx: await plugin('eslint-plugin-mdx')
     },
     processor: 'mdx/remark',
@@ -1239,7 +1299,7 @@ export default [
       parser: await import('yaml-eslint-parser')
     },
     plugins: {
-      yml: (await import('eslint-plugin-yml')).default
+      yml: /** @type {any} */ ((await import('eslint-plugin-yml')).default)
     },
     rules: {
       'spaced-comment': 0,

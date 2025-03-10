@@ -41,10 +41,6 @@ switch_case_indent = true
 [*.snap]
 max_line_length = 130
 
-# xml
-[*.xml]
-max_line_length = 100
-
 # yaml
 [{*.yaml,*.yml}]
 max_line_length = 100

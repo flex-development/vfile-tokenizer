@@ -1,0 +1,8 @@
+# REMARK IGNORE
+# https://github.com/unifiedjs/unified-engine#ignore-files
+
+**/.remarkignore
+**/CHANGELOG.md
+**/LICENSE.md
+**/RELEASE_NOTES.md
+**/__fixtures__/markdown/*.md
