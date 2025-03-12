@@ -17,6 +17,9 @@ import type {
  * @see {@linkcode Event}
  * @see {@linkcode TokenizeContext}
  *
+ * @category
+ *  utils
+ *
  * @this {void}
  *
  * @param {Partial<Construct>[]} constructs
@@ -52,13 +55,13 @@ function resolveAll(
     /**
      * Resolver.
      *
-     * @const {Resolver | null | undefined} resolve
+     * @const {Resolver | null | undefined} resolver
      */
-    const resolve: Resolver | null | undefined = constructs[i]!.resolveAll
+    const resolver: Resolver | null | undefined = constructs[i]!.resolveAll
 
-    if (resolve && !called.includes(resolve)) {
-      events = resolve(events, context)
-      called.push(resolve)
+    if (resolver && !called.includes(resolver)) {
+      events = resolver(events, context)
+      called.push(resolver)
     }
   }
 

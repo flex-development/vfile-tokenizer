@@ -10,9 +10,9 @@ interface PreprocessOptions {
   /**
    * Number of spaces a tab is equivalent to.
    *
-   * @default 2
+   * @default constants.tabSize
    */
-  tabSize?: number | undefined
+  tabSize?: number | null | undefined
 }
 
 export type { PreprocessOptions as default }

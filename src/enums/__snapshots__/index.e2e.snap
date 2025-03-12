@@ -4,6 +4,7 @@ exports[`e2e:enums > should expose public api 1`] = `
 [
   "chars",
   "codes",
+  "constants",
   "ev",
 ]
 `;

@@ -3,9 +3,22 @@
  * @module vfile-tokenizer/createTokenizer
  */
 
-import { chars, codes, ev } from '#enums/index'
-import createPreprocessor from '#preprocess'
-import { isLineEnding, resolveAll } from '#utils/index'
+import codes from '#enums/codes'
+import ev from '#enums/ev'
+import constant from '#internal/constant'
+import createDefineSkip from '#internal/create-define-skip'
+import disabled from '#internal/disabled'
+import noop from '#internal/noop'
+import onsuccessfulcheck from '#internal/onsuccessfulcheck'
+import skip from '#internal/skip'
+import toList from '#internal/to-list'
+import createPreprocess from '#preprocess'
+import eos from '#utils/eof'
+import eol from '#utils/eol'
+import push from '#utils/push'
+import resolveAll from '#utils/resolve-all'
+import serializeChunks from '#utils/serialize-chunks'
+import splice from '#utils/splice'
 import { u } from '@flex-development/unist-util-builder'
 import { Location } from '@flex-development/vfile-location'
 import type {
@@ -17,17 +30,18 @@ import type {
   ConstructPack,
   ConstructRecord,
   Constructs,
-  DefineSkip,
   Effects,
   Event,
+  FileLike,
+  Guard,
   Info,
   InitialConstruct,
   Line,
+  List,
   Options,
   Place,
-  Point,
   Position,
-  Preprocessor,
+  Preprocess,
   ReturnHandle,
   State,
   Token,
@@ -35,11 +49,11 @@ import type {
   TokenFields,
   TokenInfo,
   TokenizeContext,
-  TokenType
+  TokenType,
+  Value
 } from '@flex-development/vfile-tokenizer'
 import createDebug, { type Debugger } from 'debug'
 import { ok as assert } from 'devlop'
-import { push, splice } from 'micromark-util-chunked'
 
 /**
  * Create a tokenizer.
@@ -50,7 +64,7 @@ import { push, splice } from 'micromark-util-chunked'
  * @this {void}
  *
  * @param {Options} options
- *  Tokenize options
+ *  Tokenizer options
  * @return {TokenizeContext}
  *  Tokenize context
  */
@@ -60,16 +74,16 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
    *
    * @const {Debugger} debug
    */
-  const debug: Debugger = createDebug(options.debug ?? 'unist-util-tokenize')
+  const debug: Debugger = createDebug(options.debug ?? 'vfile-tokenizer')
 
   /**
    * Initial construct.
    *
    * @const {InitialConstruct} initialize
    */
-  const initialize: InitialConstruct = typeof options.initialize === 'function'
-    ? options.initialize()
-    : options.initialize
+  const initialize: InitialConstruct = typeof options.initial === 'function'
+    ? options.initial()
+    : options.initial
 
   /**
    * Location utility.
@@ -81,16 +95,16 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
   /**
    * Turn a value into character code chunks.
    *
-   * @const {Preprocessor} preprocess
+   * @const {Preprocess} preprocess
    */
-  const preprocess: Preprocessor = options.preprocess ?? createPreprocessor()
+  const preprocess: Preprocess = options.preprocess ?? createPreprocess()
 
   /**
    * Constructs with `resolveAll` handlers.
    *
-   * @const {Construct[]} resolveAllConstructs
+   * @const {Construct[]} resolveAlls
    */
-  const resolveAllConstructs: Construct[] = []
+  const resolveAlls: Construct[] = []
 
   /**
    * Map, where each key is a line number and each value a column to be skipped
@@ -170,7 +184,7 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
   let context: TokenizeContext = {
     code: codes.eof,
     currentConstruct: undefined,
-    defineSkip,
+    defineSkip: createDefineSkip(place, skips, debug),
     events: [],
     next: codes.eof,
     now,
@@ -183,7 +197,7 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
   }
 
   context = options.finalizeContext?.(context) ?? context
-  initialize.resolveAll && resolveAllConstructs.push(initialize)
+  onsuccessfulconstruct(initialize)
   place._index = 0
 
   /**
@@ -205,9 +219,6 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
   /**
    * Factory to attempt/check/interrupt.
    *
-   * @see {@linkcode Attempt}
-   * @see {@linkcode ReturnHandle}
-   *
    * @this {void}
    *
    * @param {ReturnHandle} onreturn
@@ -225,8 +236,8 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
     return hook
 
     /**
-     * Handle either an object mapping codes to constructs, a list of
-     * constructs, or a single construct.
+     * Handle an object mapping codes to constructs, a list of constructs, or a
+     * single construct.
      *
      * @this {void}
      *
@@ -242,8 +253,8 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
     function hook(
       this: void,
       construct: Constructs,
-      succ: State = /* v8 ignore next */ () => undefined,
-      fail?: State
+      succ: State | undefined = noop,
+      fail?: State | undefined
     ): State {
       /**
        * Current construct.
@@ -274,11 +285,9 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
       let list: Construct[]
 
       // handle list of constructs, single construct, or map of constructs
-      return Array.isArray(construct)
-        ? handleConstructList(construct)
-        : 'tokenize' in construct
-        ? handleConstructList([construct])
-        : handleConstructRecord(construct)
+      return !Array.isArray(construct) && !('tokenize' in construct)
+        ? handleConstructRecord(construct)
+        : handleConstructList(toList(construct))
 
       /**
        * Handle a list of constructs.
@@ -299,6 +308,7 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
           return fail
         }
 
+        assert(constructs[j], 'expected `constructs[j]`')
         return handleConstruct(constructs[j]!)
       }
 
@@ -368,23 +378,45 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
          *  Next state
          */
         function start(code: Code): State | undefined {
-          const { name, partial, previous, test, tokenize } = construct
-
           info = store()
           currentConstruct = construct
 
-          if (!partial) context.currentConstruct = construct
+          if (!construct.partial) context.currentConstruct = construct
 
-          context.interrupt = interrupt as boolean | undefined
+          context.interrupt = interrupt
 
-          switch (true) {
-            case !!name && !!options.disabled?.includes(name):
-            case !!previous && !previous.call(context, context.previous):
-            case !!test && !test.call(context, code):
-              return nok(code)
-            default:
-              return tokenize.call(context, effects, ok, nok)(code)
+          /**
+           * Check if the previous character code can come before this
+           * construct.
+           *
+           * @const {Guard} previous
+           */
+          const previous: Guard = construct.previous ?? constant(true)
+
+          /**
+           * Check if the current character code can start before this
+           * construct.
+           *
+           * @const {Guard} test
+           */
+          const test: Guard = construct.test ?? constant(true)
+
+          /**
+           * Next state.
+           *
+           * @var {State} state
+           */
+          let state: State = nok
+
+          if (
+            !disabled(options.disabled, construct.name) &&
+            previous.call(context, context.previous) &&
+            test.call(context, code)
+          ) {
+            state = construct.tokenize.call(context, effects, ok, nok)
           }
+
+          return state(code)
         }
       }
 
@@ -422,15 +454,25 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
         debug('nok: `%o`', code)
         consumed = true
         info.restore()
-        return ++j < list.length ? handleConstruct(list[j]!) : fail
+
+        /**
+         * Next state.
+         *
+         * @var {State | undefined} state
+         */
+        let state: State | undefined = fail
+
+        if (++j < list.length) {
+          state = handleConstruct(list[j]!)
+        }
+
+        return state
       }
     }
   }
 
   /**
    * Consume a character code and move onto the next.
-   *
-   * @see {@linkcode Code}
    *
    * @this {void}
    *
@@ -450,38 +492,8 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
     return void (consumed = true, code)
   }
 
-  /* v8 ignore start */
-
-  /**
-   * Define a skip.
-   *
-   * @see {@linkcode DefineSkip}
-   * @see {@linkcode Point}
-   *
-   * @todo test
-   *
-   * @this {void}
-   *
-   * @param {Pick<Point, 'column' | 'line'>} point
-   *  Skip point
-   * @return {undefined}
-   */
-  function defineSkip(
-    this: void,
-    point: Pick<Point, 'column' | 'line'>
-  ): undefined {
-    skips[point.line] = point.column
-    return skip(), void debug('position: define skip: `%j`', point)
-  }
-
-  /* v8 ignore stop */
-
   /**
    * Start a new token.
-   *
-   * @see {@linkcode TokenFields}
-   * @see {@linkcode TokenType}
-   * @see {@linkcode Token}
    *
    * @this {void}
    *
@@ -497,7 +509,7 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
     type: TokenType,
     fields?: TokenFields | null | undefined
   ): Token {
-    skip()
+    skip(place, skips)
 
     /**
      * New token.
@@ -521,22 +533,7 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
   }
 
   /**
-   * Check if end of stream has been reached.
-   *
-   * @this {void}
-   *
-   * @return {boolean}
-   *  `true` if at end of stream, `false` otherwise
-   */
-  function eos(this: void): boolean {
-    return chunks[chunks.length - 1] === codes.eof
-  }
-
-  /**
    * Close an open token.
-   *
-   * @see {@linkcode TokenType}
-   * @see {@linkcode Token}
    *
    * @this {void}
    *
@@ -570,8 +567,6 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
   /**
    * Deal with one character code.
    *
-   * @see {@linkcode Code}
-   *
    * @this {void}
    *
    * @param {Code} code
@@ -591,12 +586,10 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
   /**
    * Get the current point in the file.
    *
-   * @see {@linkcode Place}
-   *
    * @this {void}
    *
    * @return {Place}
-   *  Current point in file, relative to {@linkcode start}
+   *  Current point in file
    */
   function now(this: void): Place {
     const { _index, column, line, offset } = place
@@ -604,61 +597,57 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
     return { line, column, offset, _index }
   }
 
-  /* v8 ignore start */
-
   /**
-   * Discard results.
-   *
-   * @todo test
-   *
-   * @see {@linkcode Construct}
-   * @see {@linkcode Info}
+   * Resolve events.
    *
    * @this {void}
    *
    * @param {Construct} construct
    *  The successful construct
-   * @param {Info} info
-   *  Info passed around
-   * @return {undefined}
-   */
-  function onsuccessfulcheck(
-    this: void,
-    construct: Construct,
-    info: Info
-  ): undefined {
-    return void info.restore()
-  }
-
-  /* v8 ignore stop */
-
-  /**
-   * Use results.
-   *
-   * @see {@linkcode Construct}
-   * @see {@linkcode Info}
-   *
-   * @this {void}
-   *
-   * @param {Construct} construct
-   *  Successful construct
-   * @param {Info} info
+   * @param {Pick<Info, 'from'> | null | undefined} [info]
    *  Info passed around
    * @return {undefined}
    */
   function onsuccessfulconstruct(
     this: void,
     construct: Construct,
-    info: Info
+    info?: Pick<Info, 'from'> | null | undefined
   ): undefined {
-    return void result(construct, info.from)
+    if (construct.resolveAll && !resolveAlls.includes(construct)) {
+      resolveAlls.push(construct)
+    }
+
+    if (info) {
+      // resolve the events parsed by `construct.tokenize`.
+      if (construct.resolve) {
+        splice(
+          context.events,
+          info.from,
+          context.events.length - info.from,
+          construct.resolve(context.events.slice(info.from), context)
+        )
+      }
+
+      // resolve the events parsed from the start of content (which may include
+      // other constructs) to the last one parsed by `construct.tokenize`.
+      if (construct.resolveTo) {
+        context.events = construct.resolveTo(context.events, context)
+      }
+
+      assert(
+        /* v8 ignore next 3 */ !!construct.partial ||
+          !context.events.length ||
+          context.events[context.events.length - 1]![0] === ev.exit,
+        'expected last token to end'
+      )
+    }
+
+    return void construct
   }
 
   /**
    * Get the next `k`-th character code from the file without changing the
    * position of the tokenizer.
-   *
-   * @see {@linkcode Code}
    *
    * @this {void}
    *
@@ -677,8 +666,6 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
    *
    * Unlike {@linkcode peek}, this method changes the position of the reader.
    *
-   * @see {@linkcode Code}
-   *
    * @this {void}
    *
    * @return {Code}
@@ -692,7 +679,7 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
      */
     const code: Code = peek(0)
 
-    if ((options.eol ?? isLineEnding)(code)) {
+    if ((options.eol ?? eol)(code)) {
       place.column = 1
       place.line++
       place.offset += code === codes.crlf ? 2 : 1
@@ -708,166 +695,7 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
   }
 
   /**
-   * Resolve events.
-   *
-   * @todo test resolve
-   * @todo test resolveTo
-   *
-   * @see {@linkcode Construct}
-   *
-   * @this {void}
-   *
-   * @param {Construct} construct
-   *  Construct to handle
-   * @param {number} from
-   *  Last event index
-   * @return {undefined}
-   */
-  function result(this: void, construct: Construct, from: number): undefined {
-    if (construct.resolveAll && !resolveAllConstructs.includes(construct)) {
-      resolveAllConstructs.push(construct)
-    }
-
-    /* v8 ignore start */
-
-    if (construct.resolve) {
-      splice(
-        context.events,
-        from,
-        context.events.length - from,
-        construct.resolve(context.events.slice(from), context)
-      )
-    }
-
-    if (construct.resolveTo) {
-      context.events = construct.resolveTo(context.events, context)
-    }
-
-    /* v8 ignore stop */
-
-    assert(
-      /* v8 ignore next 3 */ !!construct.partial ||
-        !context.events.length ||
-        context.events[context.events.length - 1]![0] === ev.exit,
-      'expected last token to end'
-    )
-
-    return void construct
-  }
-
-  /**
-   * Move the current point a bit forward in the line when on a column skip.
-   *
-   * @todo test
-   *
-   * @this {void}
-   *
-   * @return {undefined}
-   */
-  function skip(this: void): undefined {
-    /* v8 ignore next 4 */
-    if (place.line in skips && place.column < 2) {
-      place.column = skips[place.line]!
-      place.offset += place.column - 1
-    }
-
-    return void place
-  }
-
-  /**
-   * Get the string value of a slice of `chunks`.
-   *
-   * @see {@linkcode Chunk}
-   *
-   * @todo test string chunk
-   *
-   * @this {void}
-   *
-   * @param {Chunk[]} chunks
-   *  Chunks to serialize
-   * @param {boolean | null | undefined} [expandTabs]
-   *  Whether to expand tabs
-   * @return {string}
-   *  String value of `chunks`
-   */
-  function serializeChunks(
-    this: void,
-    chunks: Chunk[],
-    expandTabs?: boolean | null | undefined
-  ): string {
-    /**
-     * Serialized character code array.
-     *
-     * @const {string[]} result
-     */
-    const result: string[] = []
-
-    /**
-     * Index of current chunk.
-     *
-     * @var {number} index
-     */
-    let index: number = -1
-
-    /**
-     * Current code represents horizontal tab?
-     *
-     * @var {boolean} tab
-     */
-    let tab: boolean = false
-
-    while (++index < chunks.length) {
-      /**
-       * Current chunk.
-       *
-       * @const {Chunk} chunk
-       */
-      const chunk: Chunk = chunks[index] as Chunk
-
-      /**
-       * Current serialized chunk.
-       *
-       * @var {string} value
-       */
-      let value: string
-
-      /* v8 ignore next 2 */ if (typeof chunk === 'string') {
-        value = chunk
-      } else {
-        switch (chunk) {
-          case codes.crlf:
-            value = chars.crlf
-            break
-          case codes.vcr:
-            value = chars.cr
-            break
-          case codes.vht:
-            value = expandTabs ? chars.space : chars.ht
-            break
-          case codes.vlf:
-            value = chars.lf
-            break
-          case codes.vs:
-            if (!expandTabs && tab) continue
-            value = chars.space
-            break
-          default:
-            assert(typeof chunk === 'number', 'expected code point')
-            value = String.fromCodePoint(chunk)
-        }
-      }
-
-      tab = chunk === codes.vht
-      result.push(value)
-    }
-
-    return result.join(chars.empty)
-  }
-
-  /**
    * Get the text spanning `range`.
-   *
-   * @see {@linkcode Position}
    *
    * @this {void}
    *
@@ -889,15 +717,12 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
   /**
    * Get the chunks spanning `range`.
    *
-   * @see {@linkcode Code}
-   * @see {@linkcode Position}
-   *
    * @this {void}
    *
    * @param {Position} range
    *  Position in stream
    * @return {Code[]}
-   *  List of chunks
+   *  Chunks in stream spanning `range`
    */
   function sliceStream(this: void, range: Position): Code[] {
     return chunks.slice(range.start._index, range.end._index)
@@ -922,26 +747,26 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
     /**
      * The current construct.
      *
-     * @const {Construct | undefined} currentConstruct
+     * @const {Construct | null | undefined} construct
      */
-    const currentConstruct: Construct | undefined = context.currentConstruct
+    const construct: Construct | null | undefined = context.currentConstruct
 
     /**
-     * Current events length.
+     * The current number of events.
      *
      * @const {number} from
      */
     const from: number = context.events.length
 
     /**
-     * Current place.
+     * The current point.
      *
      * @const {Place} lastPlace
      */
     const lastPlace: Place = now()
 
     /**
-     * Current token stack.
+     * The current token stack.
      *
      * @const {Token[]} lastStack
      */
@@ -975,12 +800,12 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
       stack = lastStack
 
       context.code = code
-      context.currentConstruct = currentConstruct
+      context.currentConstruct = construct
       context.events.length = from
       context.next = next
       context.previous = previous
 
-      skip()
+      skip(place, skips)
       return void debug('restore: %o', place)
     }
   }
@@ -989,7 +814,7 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
    * Main loop to walk through {@linkcode chunks}.
    *
    * > 👉 **Note**: The {@linkcode read} method modifies `_index` in
-   * > {@linkcode place} to advance the loop until end of stream.
+   * > {@linkcode place} to advance the loop until the end of stream.
    *
    * @this {void}
    *
@@ -997,7 +822,7 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
    */
   function tokenize(this: void): undefined {
     while (place._index < chunks.length) go(peek(0))
-    eos() && state && go(context.code)
+    eos(chunks[chunks.length - 1]) && state && go(context.code)
     return void state
   }
 
@@ -1006,30 +831,32 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
    *
    * The eof code (`null`) can be used to signal end of stream.
    *
-   * @see {@linkcode Chunk}
-   * @see {@linkcode Event}
-   *
    * @this {void}
    *
-   * @param {Chunk[]} slice
-   *  The chunks to write
+   * @param {Chunk | FileLike | List<Chunk | FileLike | Value> | Value} slice
+   *  The chunk or chunks to write
    * @return {Event[]}
    *  List of events
    */
-  function write(this: void, slice: Chunk[]): Event[] {
-    chunks = push(chunks, slice.flatMap(chunk => {
-      /* v8 ignore next 2 */ return typeof chunk === 'string'
-        ? preprocess(chunk)
+  function write(
+    this: void,
+    slice: Chunk | FileLike | List<Chunk | FileLike | Value> | Value
+  ): Event[] {
+    chunks = push(chunks, [...toList(slice)].flatMap(chunk => {
+      return typeof chunk !== 'number' && chunk !== codes.eof
+        ? preprocess(chunk, options.encoding)
         : chunk
     }))
 
     tokenize()
 
-    // exit if not done, resolvers might change stuff
-    /* v8 ignore next */ if (!eos()) return []
+    // exit if not done, resolvers might change stuff.
+    if (!eos(chunks[chunks.length - 1])) return []
 
-    result(initialize, 0)
-    context.events = resolveAll(resolveAllConstructs, context.events, context)
+    // resolve events.
+    onsuccessfulconstruct(initialize, { from: 0 })
+    context.events = resolveAll(resolveAlls, context.events, context)
+
     return context.events
   }
 }

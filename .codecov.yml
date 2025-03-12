@@ -28,6 +28,10 @@ component_management:
       name: constructs
       paths:
         - src/constructs/*.mts
+    - component_id: internal
+      name: internal
+      paths:
+        - src/internal/*.mts
     - component_id: utils
       name: utils
       paths:
@@ -100,3 +104,4 @@ profiling:
     - src/constructs/initialize.mts
     - src/create-tokenizer.mts
     - src/preprocess.mts
+    - src/tokenize.mts

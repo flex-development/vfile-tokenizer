@@ -1878,6 +1878,7 @@ __metadata:
     eslint-plugin-promise: "npm:7.2.1"
     eslint-plugin-unicorn: "npm:57.0.0"
     eslint-plugin-yml: "npm:1.17.0"
+    gemoji: "npm:8.1.0"
     globals: "npm:16.0.0"
     growl: "npm:1.10.5"
     husky: "npm:9.1.7"
@@ -1885,7 +1886,6 @@ __metadata:
     jsonc-eslint-parser: "npm:2.4.0"
     micromark-core-commonmark: "npm:2.0.3"
     micromark-util-character: "npm:2.1.1"
-    micromark-util-chunked: "npm:2.0.1"
     node-notifier: "npm:10.0.1"
     prettier: "npm:3.5.3"
     remark: "npm:15.0.1"
@@ -5532,6 +5532,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gemoji@npm:8.1.0":
+  version: 8.1.0
+  resolution: "gemoji@npm:8.1.0"
+  checksum: 10/42d8616dfdfc91d06a051a356e74083c62f628e518dbb2611d88d3edcce9ab422b0254f1e6fe37b78c7ddec4bceb71a39f63f93c6fc9bd6cdab57801f6d33e07
+  languageName: node
+  linkType: hard
+
 "gensequence@npm:^7.0.0":
   version: 7.0.0
   resolution: "gensequence@npm:7.0.0"
@@ -7566,7 +7573,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"micromark-util-chunked@npm:2.0.1, micromark-util-chunked@npm:^2.0.0":
+"micromark-util-chunked@npm:^2.0.0":
   version: 2.0.1
   resolution: "micromark-util-chunked@npm:2.0.1"
   dependencies:

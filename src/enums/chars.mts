@@ -64,6 +64,8 @@ const chars = {
   gt: '>',
   hash: '#',
   ht: '\t',
+  hyphen: '-', // -
+  leftAngleBracket: '<',
   leftBrace: '{',
   leftBracket: '[',
   leftParen: '(',
@@ -106,6 +108,7 @@ const chars = {
   question: '?',
   quotation: '"',
   replacement: '�',
+  rightAngleBracket: '>',
   rightBrace: '}',
   rightBracket: ']',
   rightParen: ')',

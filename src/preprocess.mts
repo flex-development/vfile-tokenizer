@@ -3,41 +3,43 @@
  * @module vfile-tokenizer/preprocess
  */
 
-import { codes } from '#enums/index'
+import codes from '#enums/codes'
+import constants from '#enums/constants'
 import type {
   Code,
   Column,
   Encoding,
   FileLike,
+  Preprocess,
   PreprocessOptions,
-  Preprocessor,
   Value
 } from '@flex-development/vfile-tokenizer'
 
 /**
  * Create a preprocessor to turn a value into character code chunks.
  *
+ * @see {@linkcode Preprocess}
  * @see {@linkcode PreprocessOptions}
- * @see {@linkcode Preprocessor}
  *
  * @this {void}
  *
  * @param {PreprocessOptions | null | undefined} [options]
  *  Configuration options
- * @return {Preprocessor}
+ * @return {Preprocess}
  *  Character code preprocessor
  */
 function preprocess(
   this: void,
   options?: PreprocessOptions | null | undefined
-): Preprocessor {
-  const { tabSize = 2 } = options ?? {}
-  return preprocessor
+): Preprocess {
+  return Object.defineProperties(preprocessor.bind(options ?? {}), {
+    name: { value: 'preprocess' }
+  })
 
   /**
    * Turn `value` into character code chunks.
    *
-   * @this {void}
+   * @this {PreprocessOptions}
    *
    * @param {FileLike | Value | null | undefined} value
    *  The value to preprocess
@@ -50,7 +52,7 @@ function preprocess(
    *  Character code chunks
    */
   function preprocessor(
-    this: void,
+    this: PreprocessOptions,
     value: FileLike | Value | null | undefined,
     encoding?: Encoding | null | undefined,
     end?: boolean | null | undefined
@@ -62,17 +64,23 @@ function preprocess(
      */
     const chunks: Code[] = []
 
-    if (
-      (typeof value === 'string' && value) ||
-      (typeof value === 'object' && value)
-    ) {
-      value = typeof value === 'object' && 'value' in value
-        ? value.value
-        : value
+    /**
+     * Number of spaces a tab is equivalent to.
+     *
+     * @const {number} tabSize
+     */
+    const tabSize: number = this.tabSize ?? constants.tabSize
 
-      value = typeof value === 'string'
-        ? value.toString()
-        : new TextDecoder(encoding ?? undefined).decode(value)
+    if (value === null) {
+      chunks.push(codes.break)
+    } else if (value !== undefined) {
+      if (typeof value === 'object' && 'value' in value) {
+        value = value.value
+      }
+
+      if (typeof value !== 'string') {
+        value = new TextDecoder(encoding ?? undefined).decode(value)
+      }
 
       /**
        * Current column.

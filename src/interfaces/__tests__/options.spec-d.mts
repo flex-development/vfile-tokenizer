@@ -9,9 +9,11 @@ import type { Point } from '@flex-development/vfile-location'
 import type {
   CodeCheck,
   CreateInitialConstruct,
+  Encoding,
   FinalizeContext,
   InitialConstruct,
-  Preprocessor,
+  List,
+  Preprocess,
   TokenFactory
 } from '@flex-development/vfile-tokenizer'
 
@@ -22,16 +24,22 @@ describe('unit-d:interfaces/Options', () => {
       .toEqualTypeOf<Nilable<string>>()
   })
 
-  it('should match [disabled?: readonly string[] | null | undefined]', () => {
+  it('should match [disabled?: List<string> | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('disabled')
-      .toEqualTypeOf<Nilable<readonly string[]>>()
+      .toEqualTypeOf<Nilable<List<string>>>()
   })
 
   it('should match [eol?: CodeCheck | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('eol')
       .toEqualTypeOf<Nilable<CodeCheck>>()
+  })
+
+  it('should match [encoding?: Encoding | null | undefined]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('encoding')
+      .toEqualTypeOf<Nilable<Encoding>>()
   })
 
   it('should match [finalizeContext?: FinalizeContext | null | undefined]', () => {
@@ -46,16 +54,16 @@ describe('unit-d:interfaces/Options', () => {
       .toEqualTypeOf<Nilable<Point>>()
   })
 
-  it('should match [initialize: CreateInitialConstruct | InitialConstruct]', () => {
+  it('should match [initial: CreateInitialConstruct | InitialConstruct]', () => {
     expectTypeOf<TestSubject>()
-      .toHaveProperty('initialize')
+      .toHaveProperty('initial')
       .toEqualTypeOf<CreateInitialConstruct | InitialConstruct>()
   })
 
-  it('should match [preprocess?: Preprocessor | null | undefined]', () => {
+  it('should match [preprocess?: Preprocess | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('preprocess')
-      .toEqualTypeOf<Nilable<Preprocessor>>()
+      .toEqualTypeOf<Nilable<Preprocess>>()
   })
 
   it('should match [token?: TokenFactory | null | undefined]', () => {

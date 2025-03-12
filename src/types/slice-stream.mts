@@ -16,7 +16,7 @@ import type { Code, Position } from '@flex-development/vfile-tokenizer'
  * @param {Position} range
  *  Position in stream
  * @return {Code[]}
- *  List of chunks
+ *  List of chunks in stream spanning `range`
  */
 type SliceStream = (this: void, range: Position) => Code[]
 

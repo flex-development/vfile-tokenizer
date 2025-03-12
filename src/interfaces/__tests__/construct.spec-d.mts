@@ -4,7 +4,7 @@
  */
 
 import type TestSubject from '#interfaces/construct'
-import type { Optional } from '@flex-development/tutils'
+import type { Nilable } from '@flex-development/tutils'
 import type {
   Guard,
   Resolver,
@@ -12,46 +12,46 @@ import type {
 } from '@flex-development/vfile-tokenizer'
 
 describe('unit-d:interfaces/Construct', () => {
-  it('should match [name?: string | undefined]', () => {
+  it('should match [name?: string | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('name')
-      .toEqualTypeOf<Optional<string>>()
+      .toEqualTypeOf<Nilable<string>>()
   })
 
-  it('should match [partial?: boolean | undefined]', () => {
+  it('should match [partial?: boolean | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('partial')
-      .toEqualTypeOf<Optional<boolean>>()
+      .toEqualTypeOf<Nilable<boolean>>()
   })
 
-  it('should match [previous?: Guard | undefined]', () => {
+  it('should match [previous?: Guard | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('previous')
-      .toEqualTypeOf<Optional<Guard>>()
+      .toEqualTypeOf<Nilable<Guard>>()
   })
 
-  it('should match [resolve?: Resolver | undefined]', () => {
+  it('should match [resolve?: Resolver | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('resolve')
-      .toEqualTypeOf<Optional<Resolver>>()
+      .toEqualTypeOf<Nilable<Resolver>>()
   })
 
-  it('should match [resolveAll?: Resolver | undefined]', () => {
+  it('should match [resolveAll?: Resolver | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('resolveAll')
-      .toEqualTypeOf<Optional<Resolver>>()
+      .toEqualTypeOf<Nilable<Resolver>>()
   })
 
-  it('should match [resolveTo?: Resolver | undefined]', () => {
+  it('should match [resolveTo?: Resolver | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('resolveTo')
-      .toEqualTypeOf<Optional<Resolver>>()
+      .toEqualTypeOf<Nilable<Resolver>>()
   })
 
-  it('should match [test?: Guard | undefined]', () => {
+  it('should match [test?: Guard | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('test')
-      .toEqualTypeOf<Optional<Guard>>()
+      .toEqualTypeOf<Nilable<Guard>>()
   })
 
   it('should match [tokenize: Tokenizer]', () => {

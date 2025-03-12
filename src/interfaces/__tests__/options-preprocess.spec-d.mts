@@ -4,12 +4,12 @@
  */
 
 import type TestSubject from '#interfaces/options-preprocess'
-import type { Optional } from '@flex-development/tutils'
+import type { Nilable } from '@flex-development/tutils'
 
 describe('unit-d:interfaces/PreprocessOptions', () => {
-  it('should match [tabSize?: number | undefined]', () => {
+  it('should match [tabSize?: number | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('tabSize')
-      .toEqualTypeOf<Optional<number>>()
+      .toEqualTypeOf<Nilable<number>>()
   })
 })

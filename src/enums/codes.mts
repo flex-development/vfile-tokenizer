@@ -76,6 +76,7 @@ const codes = {
   asterisk: 42, // *
   plus: 43, // +
   comma: 44, // ,
+  hyphen: 45, // -
   minus: 45, // -
   dot: 46, // .
   slash: 47, // /
@@ -91,9 +92,11 @@ const codes = {
   digit9: 57, // 9
   colon: 58, // =
   semicolon: 59, // ;
+  leftAngleBracket: 60, // <
   lt: 60, // <
   equal: 61, // =
   gt: 62, // >
+  rightAngleBracket: 62, // >
   question: 63, // ?
   at: 64, // @
   uppercaseA: 65, // A

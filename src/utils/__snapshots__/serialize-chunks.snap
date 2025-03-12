@@ -1,0 +1,12 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`unit:utils/serializeChunks > should return string value of \`chunks\` (0) 1`] = `
+"
+
+
+"
+`;
+
+exports[`unit:utils/serializeChunks > should return string value of \`chunks\` (1) 1`] = `"	1"`;
+
+exports[`unit:utils/serializeChunks > should return string value of \`chunks\` (2) 1`] = `"  2"`;

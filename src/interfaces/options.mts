@@ -8,9 +8,11 @@ import type { Point } from '@flex-development/vfile-location'
 import type {
   CodeCheck,
   CreateInitialConstruct,
+  Encoding,
   FinalizeContext,
   InitialConstruct,
-  Preprocessor,
+  List,
+  Preprocess,
   TokenFactory
 } from '@flex-development/vfile-tokenizer'
 
@@ -26,9 +28,11 @@ interface Options {
   debug?: string | null | undefined
 
   /**
-   * Disabled construct names.
+   * List of disabled construct names.
+   *
+   * @see {@linkcode List}
    */
-  disabled?: readonly string[] | null | undefined
+  disabled?: List<string> | null | undefined
 
   /**
    * Line ending code check.
@@ -36,6 +40,14 @@ interface Options {
    * @see {@linkcode CodeCheck}
    */
   eol?: CodeCheck | null | undefined
+
+  /**
+   * The character encoding to use when converting a {@linkcode Uint8Array} to
+   * character code chunks.
+   *
+   * @see {@linkcode Encoding}
+   */
+  encoding?: Encoding | null | undefined
 
   /**
    * Finalize the tokenization context.
@@ -59,14 +71,14 @@ interface Options {
    * @see {@linkcode CreateInitialConstruct}
    * @see {@linkcode InitialConstruct}
    */
-  initialize: CreateInitialConstruct | InitialConstruct
+  initial: CreateInitialConstruct | InitialConstruct
 
   /**
    * Turn a value into character code chunks.
    *
-   * @see {@linkcode Preprocessor}
+   * @see {@linkcode Preprocess}
    */
-  preprocess?: Preprocessor | null | undefined
+  preprocess?: Preprocess | null | undefined
 
   /**
    * Create a new token.

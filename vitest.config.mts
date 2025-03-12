@@ -30,11 +30,6 @@ function config(env: ConfigEnv): ViteUserConfig {
     },
     test: {
       allowOnly: !ci,
-      benchmark: {
-        include: ['**/__tests__/*.bench.spec.mts?(x)'],
-        outputJson: '__tests__/benchmark.json',
-        reporters: ['default', new Notifier()]
-      },
       chaiConfig: {
         includeStack: true,
         showDiff: true,
@@ -46,7 +41,6 @@ function config(env: ConfigEnv): ViteUserConfig {
         clean: true,
         cleanOnRerun: true,
         exclude: [
-          '**/__tests__/*.bench.spec.mts?(x)',
           '**/*.d.mts',
           '**/__mocks__/',
           '**/__tests__/',
@@ -141,7 +135,7 @@ function config(env: ConfigEnv): ViteUserConfig {
         printBasicPrototype: false,
         printFunctionName: true
       },
-      snapshotSerializers: ['./__tests__/serializers/token.mts'],
+      snapshotSerializers: [],
       typecheck: {
         allowJs: false,
         checker: 'tsc',

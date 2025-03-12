@@ -21,6 +21,11 @@ import type {
  */
 interface TokenizeContext {
   /**
+   * Index of chunk being tokenized.
+   */
+  chunk?: number | null | undefined
+
+  /**
    * The current character code.
    *
    * @see {@linkcode Code}
@@ -34,7 +39,7 @@ interface TokenizeContext {
    *
    * @see {@linkcode Construct}
    */
-  currentConstruct?: Construct | undefined
+  currentConstruct?: Construct | null | undefined
 
   /**
    * Define a skip.
@@ -53,7 +58,7 @@ interface TokenizeContext {
   /**
    * Boolean indicating a construct is interrupting another construct.
    */
-  interrupt?: boolean | undefined
+  interrupt?: boolean | null | undefined
 
   /**
    * The next character code.

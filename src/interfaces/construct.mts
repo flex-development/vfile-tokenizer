@@ -16,51 +16,51 @@ interface Construct {
   /**
    * Name of the construct, used to toggle constructs off.
    */
-  name?: string | undefined
+  name?: string | null | undefined
 
   /**
    * Whether this construct represents a partial construct.
    */
-  partial?: boolean | undefined
+  partial?: boolean | null | undefined
 
   /**
    * Check if the previous character code can come before this construct.
    *
    * @see {@linkcode Guard}
    */
-  previous?: Guard | undefined
+  previous?: Guard | null | undefined
 
   /**
    * Resolve the events parsed by {@linkcode tokenize}.
    *
    * @see {@linkcode Resolver}
    */
-  resolve?: Resolver | undefined
+  resolve?: Resolver | null | undefined
 
   /**
    * Resolve all events when the content is complete, from the start to the end.
    *
-   * > 👉 **Note**: Only used if {@linkcode tokenize} is successful once in the
-   * > content.
+   * > 👉 **Note**: Only used if {@linkcode tokenize} is successful at least
+   * > once in the content.
    *
    * @see {@linkcode Resolver}
    */
-  resolveAll?: Resolver | undefined
+  resolveAll?: Resolver | null | undefined
 
   /**
-   * Resolve the events from the start of the content (which may include other
-   * constructs) to the last one parsed by {@linkcode tokenize}.
+   * Resolve the events parsed from the start of the content (which may include
+   * other constructs) to the last one parsed by {@linkcode tokenize}.
    *
    * @see {@linkcode Resolver}
    */
-  resolveTo?: Resolver | undefined
+  resolveTo?: Resolver | null | undefined
 
   /**
    * Check if the current character code can start this construct.
    *
    * @see {@linkcode Guard}
    */
-  test?: Guard | undefined
+  test?: Guard | null | undefined
 
   /**
    * Set up a state machine to handle character codes streaming in.

@@ -11,6 +11,6 @@ import type { TokenTypeMap } from '@flex-development/vfile-tokenizer'
  * To register custom token types, augment {@linkcode TokenTypeMap}. They will
  * be added to this union automatically.
  */
-type TokenType = Extract<keyof TokenTypeMap, string>
+type TokenType = TokenTypeMap[keyof TokenTypeMap]
 
 export type { TokenType as default }

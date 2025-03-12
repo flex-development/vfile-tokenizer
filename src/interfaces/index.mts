@@ -11,6 +11,7 @@ export type { default as Options } from '#interfaces/options'
 export type {
   default as PreprocessOptions
 } from '#interfaces/options-preprocess'
+export type { default as TokenizeOptions } from '#interfaces/options-tokenize'
 export type { default as Place } from '#interfaces/place'
 export type { default as Position } from '#interfaces/position'
 export type { default as Token } from '#interfaces/token'

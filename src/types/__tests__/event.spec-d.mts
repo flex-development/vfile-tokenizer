@@ -12,7 +12,7 @@ import type {
 } from '@flex-development/vfile-tokenizer'
 
 describe('unit-d:types/Event', () => {
-  type T = tt.typeMetadata
+  type T = tt.eof
   type Subject = TestSubject<T>
 
   it('should match [0: EventType]', () => {

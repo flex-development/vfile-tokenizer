@@ -2,9 +2,12 @@
 
 exports[`e2e:utils > should expose public api 1`] = `
 [
-  "isLineEnding",
+  "eof",
+  "eos",
+  "eol",
+  "push",
   "resolveAll",
-  "resolveSlice",
-  "resolveTokenList",
+  "serializeChunks",
+  "splice",
 ]
 `;

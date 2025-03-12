@@ -4,7 +4,7 @@
  */
 
 import type TestSubject from '#interfaces/tokenize-context'
-import type { Optional } from '@flex-development/tutils'
+import type { Nilable } from '@flex-development/tutils'
 import type {
   Code,
   Construct,
@@ -18,14 +18,20 @@ import type {
 } from '@flex-development/vfile-tokenizer'
 
 describe('unit-d:interfaces/TokenizeContext', () => {
+  it('should match [chunk?: number | null | undefined]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('chunk')
+      .toEqualTypeOf<Nilable<number>>()
+  })
+
   it('should match [code: Code]', () => {
     expectTypeOf<TestSubject>().toHaveProperty('code').toEqualTypeOf<Code>()
   })
 
-  it('should match [currentConstruct?: Construct | undefined]', () => {
+  it('should match [currentConstruct?: Construct | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('currentConstruct')
-      .toEqualTypeOf<Optional<Construct>>()
+      .toEqualTypeOf<Nilable<Construct>>()
   })
 
   it('should match [defineSkip: DefineSkip]', () => {
@@ -40,10 +46,10 @@ describe('unit-d:interfaces/TokenizeContext', () => {
       .toEqualTypeOf<Event[]>()
   })
 
-  it('should match [interrupt?: boolean | undefined]', () => {
+  it('should match [interrupt?: boolean | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('interrupt')
-      .toEqualTypeOf<Optional<boolean>>()
+      .toEqualTypeOf<Nilable<boolean>>()
   })
 
   it('should match [next: Code]', () => {

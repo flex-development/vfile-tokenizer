@@ -29,15 +29,15 @@ export default [
     ]
   },
   {
-    files: ['__fixtures__/markdown/*.md'],
+    files: ['__fixtures__/constructs/*.mts'],
     rules: {
-      'mdx/remark': 0
+      'unicorn/no-this-assignment': 0
     }
   },
   {
-    files: ['__tests__/constructs/*.mts'],
+    files: ['__fixtures__/markdown/*.md'],
     rules: {
-      'unicorn/no-this-assignment': 0
+      'mdx/remark': 0
     }
   },
   {

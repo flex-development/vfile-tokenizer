@@ -7,7 +7,11 @@ import type TestSubject from '#types/token-type'
 import type { TokenTypeMap } from '@flex-development/vfile-tokenizer'
 
 describe('unit-d:interfaces/TokenType', () => {
-  it('should equal keyof TokenTypeMap', () => {
-    expectTypeOf<TestSubject>().toEqualTypeOf<keyof TokenTypeMap>()
+  it('should equal TokenTypeMap[keyof TokenTypeMap]', () => {
+    // Arrange
+    type Expect = TokenTypeMap[keyof TokenTypeMap]
+
+    // Expect
+    expectTypeOf<TestSubject>().toEqualTypeOf<Expect>()
   })
 })

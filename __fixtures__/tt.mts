@@ -3,14 +3,19 @@
  * @module fixtures/tt
  */
 
+import type { TokenType } from '@flex-development/vfile-tokenizer'
+
 /**
  * Token types.
  *
- * @enum {string}
+ * @enum {TokenType}
  */
 enum tt {
   eof = 'eof',
-  typeMetadata = 'typeMetadata'
+  flag = 'flag',
+  id = 'id',
+  operand = 'operand',
+  shortcode = 'shortcode'
 }
 
 export default tt

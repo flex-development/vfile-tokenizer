@@ -3,7 +3,7 @@
  * @module vfile-tokenizer/utils/tests/functional/resolveAll
  */
 
-import { ev } from '#enums/index'
+import ev from '#enums/ev'
 import tt from '#fixtures/tt'
 import testSubject from '#utils/resolve-all'
 import type {

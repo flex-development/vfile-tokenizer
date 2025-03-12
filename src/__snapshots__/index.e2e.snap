@@ -7,11 +7,15 @@ exports[`e2e:vfile-tokenizer > should expose public api 1`] = `
   "chars",
   "codes",
   "ev",
+  "createPreprocess",
   "preprocess",
   "tokenize",
-  "isLineEnding",
+  "eof",
+  "eos",
+  "eol",
+  "push",
   "resolveAll",
-  "resolveSlice",
-  "resolveTokenList",
+  "serializeChunks",
+  "splice",
 ]
 `;
