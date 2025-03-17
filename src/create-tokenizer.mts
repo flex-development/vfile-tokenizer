@@ -400,7 +400,10 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
           if (context.code === codes.break && peek() !== codes.break) {
             context.previous = context.code
             context.code = code
-            if (options.moveOnBreak) move(context.previous)
+
+            if (options.moveOnBreak && context.code !== codes.eof) {
+              move(context.previous)
+            }
           }
 
           /**
@@ -769,8 +772,7 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
       if (!Array.isArray(chunk)) { // not in buffer chunk.
         assert(place._bufferIndex < 0, 'expected negative `_bufferIndex`')
         code = chunk
-      } else { // in buffer chunk.
-        assert(place._bufferIndex >= 0, 'expected non-negative `_bufferIndex`')
+      } else { // in or at end of buffer chunk.
         code = chunk[place._bufferIndex]
       }
     }

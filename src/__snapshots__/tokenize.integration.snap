@@ -179,6 +179,46 @@ exports[`integration:tokenize > should work with constructs (1) 1`] = `
       "value": "",
     },
   ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 14,
+        "line": 1,
+        "offset": 13,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 14,
+        "line": 1,
+        "offset": 13,
+      },
+      "type": "eof",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 14,
+        "line": 1,
+        "offset": 13,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 14,
+        "line": 1,
+        "offset": 13,
+      },
+      "type": "eof",
+    },
+  ],
 ]
 `;
 
@@ -314,6 +354,46 @@ exports[`integration:tokenize > should work with constructs (2) 1`] = `
       },
       "type": "operand",
       "value": "3",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 3,
+        "column": 18,
+        "line": 1,
+        "offset": 17,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 18,
+        "line": 1,
+        "offset": 17,
+      },
+      "type": "eof",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 3,
+        "column": 18,
+        "line": 1,
+        "offset": 17,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 18,
+        "line": 1,
+        "offset": 17,
+      },
+      "type": "eof",
     },
   ],
 ]
@@ -544,6 +624,46 @@ exports[`integration:tokenize > should work with constructs (4) 1`] = `
       },
       "type": "operand",
       "value": "@flex-development/vfile-tokenizer",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 3,
+        "column": 43,
+        "line": 1,
+        "offset": 42,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 43,
+        "line": 1,
+        "offset": 42,
+      },
+      "type": "eof",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 3,
+        "column": 43,
+        "line": 1,
+        "offset": 42,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 43,
+        "line": 1,
+        "offset": 42,
+      },
+      "type": "eof",
     },
   ],
 ]

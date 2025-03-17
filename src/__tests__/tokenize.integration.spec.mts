@@ -22,8 +22,8 @@ import type {
   EventType,
   FileLike,
   List,
+  Options,
   Token,
-  TokenizeOptions,
   Value
 } from '@flex-development/vfile-tokenizer'
 import pkg from '@flex-development/vfile-tokenizer/package.json'
@@ -54,7 +54,7 @@ describe('integration:tokenize', () => {
 
   it.each<[
     value: FileLike | List<FileLike | Value> | Value | null | undefined,
-    options?: Partial<TokenizeOptions> | null | undefined
+    options?: Partial<Options> | null | undefined
   ]>([
     [['hello', 'world']],
     [read('__fixtures__/markdown/code-fenced.md'), { tabSize: 2 }]

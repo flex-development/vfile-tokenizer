@@ -5,6 +5,7 @@
 
 import codes from '#enums/codes'
 import tt from '#fixtures/tt'
+import eos from '#utils/eof'
 import type {
   Code,
   Construct,
@@ -21,25 +22,11 @@ import { ok as assert } from 'devlop'
  */
 const eof: Construct = {
   name: tt.eof,
-  test: testEOF,
+  test: eos,
   tokenize: tokenizeEOF
 }
 
 export default eof
-
-/**
- * Check if the current character `code` can start the end of file construct.
- *
- * @this {TokenizeContext}
- *
- * @param {Code} code
- *  The current character code
- * @return {boolean}
- *  `true` if `code` can start construct
- */
-function testEOF(this: TokenizeContext, code: Code): boolean {
-  return code === codes.eof
-}
 
 /**
  * Tokenize the end of file.

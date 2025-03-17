@@ -10,8 +10,8 @@ import type {
   Event,
   FileLike,
   List,
+  Options,
   TokenizeContext,
-  TokenizeOptions,
   Value
 } from '@flex-development/vfile-tokenizer'
 
@@ -21,34 +21,37 @@ import type {
  * @see {@linkcode Event}
  * @see {@linkcode FileLike}
  * @see {@linkcode List}
- * @see {@linkcode TokenizeOptions}
+ * @see {@linkcode Options}
+ * @see {@linkcode TokenizeContext}
  * @see {@linkcode Value}
  *
  * @this {void}
  *
  * @param {FileLike | List<FileLike | Value> | Value | null | undefined} value
  *  The file, value, or list of files and/or values to tokenize
- * @param {TokenizeOptions} options
- *  Configuration options
+ * @param {Options | TokenizeContext} options
+ *  Configuration options or the tokenizer to use
  * @return {Event[]}
  *  List of events
  */
 function tokenize(
   this: void,
   value: FileLike | List<FileLike | Value> | Value | null | undefined,
-  options: TokenizeOptions
+  options: Options | TokenizeContext
 ): Event[] {
   /**
    * Tokenize context.
    *
-   * @const {TokenizeContext} context
+   * @var {TokenizeContext} context
    */
-  const context: TokenizeContext = options.tokenizer ?? createTokenizer(options)
+  let context: TokenizeContext = options as TokenizeContext
+
+  // create tokenizer.
+  if (!('write' in options)) context = createTokenizer(options)
 
   // write chunks to stream.
   if (value !== null && value !== undefined) {
-    for (const chunk of toList(value)) context.write(chunk)
-    context.write(codes.eof)
+    for (const chunk of [...toList(value), codes.eof]) context.write(chunk)
   }
 
   return [...context.events]

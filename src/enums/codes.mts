@@ -90,7 +90,7 @@ const codes = {
   digit7: 55, // 7
   digit8: 56, // 8
   digit9: 57, // 9
-  colon: 58, // =
+  colon: 58, // :
   semicolon: 59, // ;
   leftAngleBracket: 60, // <
   lt: 60, // <
