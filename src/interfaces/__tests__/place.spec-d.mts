@@ -11,6 +11,12 @@ describe('unit-d:interfaces/Place', () => {
     expectTypeOf<TestSubject>().toExtend<Point>()
   })
 
+  it('should match [_bufferIndex: number]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('_bufferIndex')
+      .toEqualTypeOf<number>()
+  })
+
   it('should match [_index: number]', () => {
     expectTypeOf<TestSubject>().toHaveProperty('_index').toEqualTypeOf<number>()
   })

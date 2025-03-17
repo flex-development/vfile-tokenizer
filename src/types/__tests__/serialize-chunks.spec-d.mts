@@ -12,10 +12,10 @@ describe('unit-d:types/SerializeChunks', () => {
   })
 
   describe('parameters', () => {
-    it('should be callable with [Chunk[], (boolean | null | undefined)?]', () => {
+    it('should be callable with [(Chunk | string)[], (boolean | null | undefined)?]', () => {
       expectTypeOf<TestSubject>()
         .parameters
-        .toEqualTypeOf<[Chunk[], (boolean | null | undefined)?]>()
+        .toEqualTypeOf<[(Chunk | string)[], (boolean | null | undefined)?]>()
     })
   })
 

@@ -5,20 +5,22 @@
 
 import chars from '#enums/chars'
 import codes from '#enums/codes'
-import type { Chunk } from '@flex-development/vfile-tokenizer'
+import size from '#internal/size'
+import type { Chunk, List } from '@flex-development/vfile-tokenizer'
 import { ok } from 'devlop'
 
 /**
  * Get the string value of a slice of `chunks`.
  *
  * @see {@linkcode Chunk}
+ * @see {@linkcode List}
  *
  * @category
  *  utils
  *
  * @this {void}
  *
- * @param {Chunk[]} chunks
+ * @param {List<Chunk | string>} chunks
  *  The chunks to serialize
  * @param {boolean | null | undefined} [expandTabs]
  *  Whether to expand tabs
@@ -27,7 +29,7 @@ import { ok } from 'devlop'
  */
 function serializeChunks(
   this: void,
-  chunks: Chunk[],
+  chunks: List<Chunk | string>,
   expandTabs?: boolean | null | undefined
 ): string {
   /**
@@ -51,13 +53,13 @@ function serializeChunks(
    */
   let tab: boolean = false
 
-  while (++index < chunks.length) {
+  while (++index < size(chunks)) {
     /**
      * Current chunk.
      *
      * @const {Chunk} chunk
      */
-    const chunk: Chunk = chunks[index] as Chunk
+    const chunk: Chunk | string = [...chunks][index] as Chunk | string
 
     /**
      * Serialized chunk.
@@ -66,7 +68,9 @@ function serializeChunks(
      */
     let value: string
 
-    if (typeof chunk === 'string') {
+    if (Array.isArray(chunk)) {
+      value = serializeChunks(chunk, expandTabs)
+    } else if (typeof chunk === 'string') {
       value = chunk
     } else {
       switch (chunk) {

@@ -47,6 +47,7 @@ const chars = {
   dle: '\u0010',
   dollar: '$',
   dot: '.',
+  ellipsis: '...',
   em: '\u0019',
   empty: '',
   enq: '\u0005',

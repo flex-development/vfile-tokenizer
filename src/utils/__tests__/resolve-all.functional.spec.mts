@@ -25,7 +25,7 @@ describe('functional:utils/resolveAll', () => {
   let token: Token
 
   beforeEach(() => {
-    point = { _index: 0, column: 1, line: 1, offset: 0 }
+    point = { _bufferIndex: -1, _index: 0, column: 1, line: 1, offset: 0 }
     token = { end: point, start: point, type: tt.eof }
 
     context = {} as unknown as TokenizeContext

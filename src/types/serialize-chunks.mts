@@ -12,7 +12,7 @@ import type { Chunk } from '@flex-development/vfile-tokenizer'
  *
  * @this {void}
  *
- * @param {Chunk[]} chunks
+ * @param {(Chunk | string)[]} chunks
  *  The chunks to serialize
  * @param {boolean | null | undefined} [expandTabs]
  *  Whether to expand tabs
@@ -21,7 +21,7 @@ import type { Chunk } from '@flex-development/vfile-tokenizer'
  */
 type SerializeChunks = (
   this: void,
-  chunks: Chunk[],
+  chunks: (Chunk | string)[],
   expandTabs?: boolean | null | undefined
 ) => string
 

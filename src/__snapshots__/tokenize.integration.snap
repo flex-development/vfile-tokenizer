@@ -6,108 +6,84 @@ exports[`integration:tokenize > should work with constructs (0) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 3,
+        "_bufferIndex": 1,
+        "_index": 0,
         "column": 1,
         "line": 2,
-        "offset": 2,
-      },
-      "start": {
-        "_index": 2,
-        "column": 3,
-        "line": 1,
         "offset": 1,
       },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
       "type": "lineEnding",
+      "value": "\\n",
     },
   ],
   [
     "exit",
     {
       "end": {
-        "_index": 3,
+        "_bufferIndex": 1,
+        "_index": 0,
         "column": 1,
         "line": 2,
-        "offset": 2,
-      },
-      "start": {
-        "_index": 2,
-        "column": 3,
-        "line": 1,
         "offset": 1,
       },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
       "type": "lineEnding",
+      "value": "\\n",
     },
   ],
   [
     "enter",
     {
       "end": {
-        "_index": 4,
+        "_bufferIndex": -1,
+        "_index": 1,
         "column": 1,
         "line": 3,
         "offset": 3,
       },
       "start": {
-        "_index": 3,
+        "_bufferIndex": 1,
+        "_index": 0,
         "column": 1,
         "line": 2,
-        "offset": 2,
+        "offset": 1,
       },
       "type": "lineEnding",
+      "value": "\\r\\n",
     },
   ],
   [
     "exit",
     {
       "end": {
-        "_index": 4,
+        "_bufferIndex": -1,
+        "_index": 1,
         "column": 1,
         "line": 3,
         "offset": 3,
       },
       "start": {
-        "_index": 3,
+        "_bufferIndex": 1,
+        "_index": 0,
         "column": 1,
         "line": 2,
-        "offset": 2,
+        "offset": 1,
       },
       "type": "lineEnding",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 5,
-        "column": 1,
-        "line": 4,
-        "offset": 5,
-      },
-      "start": {
-        "_index": 4,
-        "column": 1,
-        "line": 3,
-        "offset": 3,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 5,
-        "column": 1,
-        "line": 4,
-        "offset": 5,
-      },
-      "start": {
-        "_index": 4,
-        "column": 1,
-        "line": 3,
-        "offset": 3,
-      },
-      "type": "lineEnding",
+      "value": "\\r\\n",
     },
   ],
 ]
@@ -118,127 +94,89 @@ exports[`integration:tokenize > should work with constructs (1) 1`] = `
   [
     "enter",
     {
-      "chunk": 0,
       "end": {
-        "_index": 12,
+        "_bufferIndex": 12,
+        "_index": 0,
         "column": 13,
         "line": 1,
         "offset": 12,
       },
       "long": true,
       "start": {
+        "_bufferIndex": 0,
         "_index": 0,
         "column": 1,
         "line": 1,
         "offset": 0,
       },
       "type": "flag",
-      "value": "--conditions",
+      "value": "--standalone",
     },
   ],
   [
     "exit",
     {
-      "chunk": 0,
       "end": {
-        "_index": 12,
+        "_bufferIndex": 12,
+        "_index": 0,
         "column": 13,
         "line": 1,
         "offset": 12,
       },
       "long": true,
       "start": {
+        "_bufferIndex": 0,
         "_index": 0,
         "column": 1,
         "line": 1,
         "offset": 0,
       },
       "type": "flag",
-      "value": "--conditions",
+      "value": "--standalone",
     },
   ],
   [
     "enter",
     {
       "attached": true,
-      "chunk": 0,
       "end": {
-        "_index": 28,
-        "column": 29,
+        "_bufferIndex": 13,
+        "_index": 0,
+        "column": 14,
         "line": 1,
-        "offset": 28,
+        "offset": 13,
       },
       "start": {
-        "_index": 13,
+        "_bufferIndex": 13,
+        "_index": 0,
         "column": 14,
         "line": 1,
         "offset": 13,
       },
       "type": "operand",
-      "value": "vfile-tokenizer",
+      "value": "",
     },
   ],
   [
     "exit",
     {
       "attached": true,
-      "chunk": 0,
       "end": {
-        "_index": 28,
-        "column": 29,
+        "_bufferIndex": 13,
+        "_index": 0,
+        "column": 14,
         "line": 1,
-        "offset": 28,
+        "offset": 13,
       },
       "start": {
-        "_index": 13,
+        "_bufferIndex": 13,
+        "_index": 0,
         "column": 14,
         "line": 1,
         "offset": 13,
       },
       "type": "operand",
-      "value": "vfile-tokenizer",
-    },
-  ],
-  [
-    "enter",
-    {
-      "chunk": 1,
-      "end": {
-        "_index": 36,
-        "column": 37,
-        "line": 1,
-        "offset": 36,
-      },
-      "long": true,
-      "start": {
-        "_index": 29,
-        "column": 30,
-        "line": 1,
-        "offset": 29,
-      },
-      "type": "flag",
-      "value": "--debug",
-    },
-  ],
-  [
-    "exit",
-    {
-      "chunk": 1,
-      "end": {
-        "_index": 36,
-        "column": 37,
-        "line": 1,
-        "offset": 36,
-      },
-      "long": true,
-      "start": {
-        "_index": 29,
-        "column": 30,
-        "line": 1,
-        "offset": 29,
-      },
-      "type": "flag",
-      "value": "--debug",
+      "value": "",
     },
   ],
 ]
@@ -249,127 +187,133 @@ exports[`integration:tokenize > should work with constructs (2) 1`] = `
   [
     "enter",
     {
-      "chunk": 0,
-      "emoji": "🏗️",
       "end": {
-        "_index": 23,
-        "column": 24,
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 8,
         "line": 1,
-        "offset": 23,
+        "offset": 7,
       },
+      "long": true,
       "start": {
+        "_bufferIndex": 0,
         "_index": 0,
         "column": 1,
         "line": 1,
         "offset": 0,
       },
-      "type": "shortcode",
-      "value": ":building_construction:",
+      "type": "flag",
+      "value": "--debug",
     },
   ],
   [
     "exit",
     {
-      "chunk": 0,
-      "emoji": "🏗️",
       "end": {
-        "_index": 23,
-        "column": 24,
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 8,
         "line": 1,
-        "offset": 23,
+        "offset": 7,
       },
+      "long": true,
       "start": {
+        "_bufferIndex": 0,
         "_index": 0,
         "column": 1,
         "line": 1,
         "offset": 0,
       },
-      "type": "shortcode",
-      "value": ":building_construction:",
+      "type": "flag",
+      "value": "--debug",
     },
   ],
   [
     "enter",
     {
-      "chunk": 0,
-      "emoji": "📦",
       "end": {
-        "_index": 33,
-        "column": 34,
+        "_bufferIndex": 7,
+        "_index": 1,
+        "column": 16,
         "line": 1,
-        "offset": 33,
+        "offset": 15,
       },
+      "long": true,
       "start": {
-        "_index": 24,
-        "column": 25,
+        "_bufferIndex": 0,
+        "_index": 1,
+        "column": 9,
         "line": 1,
-        "offset": 24,
+        "offset": 8,
       },
-      "type": "shortcode",
-      "value": ":package:",
+      "type": "flag",
+      "value": "--color",
     },
   ],
   [
     "exit",
     {
-      "chunk": 0,
-      "emoji": "📦",
       "end": {
-        "_index": 33,
-        "column": 34,
+        "_bufferIndex": 7,
+        "_index": 1,
+        "column": 16,
         "line": 1,
-        "offset": 33,
+        "offset": 15,
       },
+      "long": true,
       "start": {
-        "_index": 24,
-        "column": 25,
+        "_bufferIndex": 0,
+        "_index": 1,
+        "column": 9,
         "line": 1,
-        "offset": 24,
+        "offset": 8,
       },
-      "type": "shortcode",
-      "value": ":package:",
+      "type": "flag",
+      "value": "--color",
     },
   ],
   [
     "enter",
     {
-      "chunk": 0,
-      "emoji": "👍",
+      "attached": true,
       "end": {
-        "_index": 38,
-        "column": 39,
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 18,
         "line": 1,
-        "offset": 38,
+        "offset": 17,
       },
       "start": {
-        "_index": 34,
-        "column": 35,
+        "_bufferIndex": 8,
+        "_index": 1,
+        "column": 17,
         "line": 1,
-        "offset": 34,
+        "offset": 16,
       },
-      "type": "shortcode",
-      "value": ":+1:",
+      "type": "operand",
+      "value": "3",
     },
   ],
   [
     "exit",
     {
-      "chunk": 0,
-      "emoji": "👍",
+      "attached": true,
       "end": {
-        "_index": 38,
-        "column": 39,
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 18,
         "line": 1,
-        "offset": 38,
+        "offset": 17,
       },
       "start": {
-        "_index": 34,
-        "column": 35,
+        "_bufferIndex": 8,
+        "_index": 1,
+        "column": 17,
         "line": 1,
-        "offset": 34,
+        "offset": 16,
       },
-      "type": "shortcode",
-      "value": ":+1:",
+      "type": "operand",
+      "value": "3",
     },
   ],
 ]
@@ -381,2674 +325,132 @@ exports[`integration:tokenize > should work with constructs (3) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 19,
-        "column": 4,
-        "line": 3,
-        "offset": 19,
+        "_bufferIndex": 5,
+        "_index": 0,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
       },
+      "long": true,
       "start": {
+        "_bufferIndex": 0,
         "_index": 0,
         "column": 1,
         "line": 1,
         "offset": 0,
       },
-      "type": "codeFenced",
+      "type": "flag",
+      "value": "--max",
     },
   ],
   [
-    "enter",
+    "exit",
     {
       "end": {
-        "_index": 3,
-        "column": 4,
+        "_bufferIndex": 5,
+        "_index": 0,
+        "column": 6,
         "line": 1,
-        "offset": 3,
+        "offset": 5,
       },
+      "long": true,
       "start": {
+        "_bufferIndex": 0,
         "_index": 0,
         "column": 1,
         "line": 1,
         "offset": 0,
       },
-      "type": "codeFencedFence",
+      "type": "flag",
+      "value": "--max",
     },
   ],
   [
     "enter",
     {
+      "attached": true,
       "end": {
-        "_index": 3,
-        "column": 4,
-        "line": 1,
-        "offset": 3,
-      },
-      "start": {
+        "_bufferIndex": 6,
         "_index": 0,
-        "column": 1,
+        "column": 7,
         "line": 1,
-        "offset": 0,
-      },
-      "type": "codeFencedFenceSequence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 3,
-        "column": 4,
-        "line": 1,
-        "offset": 3,
+        "offset": 6,
       },
       "start": {
+        "_bufferIndex": 6,
         "_index": 0,
-        "column": 1,
+        "column": 7,
         "line": 1,
-        "offset": 0,
+        "offset": 6,
       },
-      "type": "codeFencedFenceSequence",
+      "type": "operand",
+      "value": "",
     },
   ],
   [
     "exit",
     {
+      "attached": true,
       "end": {
-        "_index": 3,
-        "column": 4,
-        "line": 1,
-        "offset": 3,
-      },
-      "start": {
+        "_bufferIndex": 6,
         "_index": 0,
-        "column": 1,
+        "column": 7,
         "line": 1,
-        "offset": 0,
-      },
-      "type": "codeFencedFence",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 4,
-        "column": 1,
-        "line": 2,
-        "offset": 4,
+        "offset": 6,
       },
       "start": {
-        "_index": 3,
-        "column": 4,
-        "line": 1,
-        "offset": 3,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 4,
-        "column": 1,
-        "line": 2,
-        "offset": 4,
-      },
-      "start": {
-        "_index": 3,
-        "column": 4,
-        "line": 1,
-        "offset": 3,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 15,
-        "column": 12,
-        "line": 2,
-        "offset": 15,
-      },
-      "start": {
-        "_index": 4,
-        "column": 1,
-        "line": 2,
-        "offset": 4,
-      },
-      "type": "codeFlowValue",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 15,
-        "column": 12,
-        "line": 2,
-        "offset": 15,
-      },
-      "start": {
-        "_index": 4,
-        "column": 1,
-        "line": 2,
-        "offset": 4,
-      },
-      "type": "codeFlowValue",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 16,
-        "column": 1,
-        "line": 3,
-        "offset": 16,
-      },
-      "start": {
-        "_index": 15,
-        "column": 12,
-        "line": 2,
-        "offset": 15,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 16,
-        "column": 1,
-        "line": 3,
-        "offset": 16,
-      },
-      "start": {
-        "_index": 15,
-        "column": 12,
-        "line": 2,
-        "offset": 15,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 19,
-        "column": 4,
-        "line": 3,
-        "offset": 19,
-      },
-      "start": {
-        "_index": 16,
-        "column": 1,
-        "line": 3,
-        "offset": 16,
-      },
-      "type": "codeFencedFence",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 19,
-        "column": 4,
-        "line": 3,
-        "offset": 19,
-      },
-      "start": {
-        "_index": 16,
-        "column": 1,
-        "line": 3,
-        "offset": 16,
-      },
-      "type": "codeFencedFenceSequence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 19,
-        "column": 4,
-        "line": 3,
-        "offset": 19,
-      },
-      "start": {
-        "_index": 16,
-        "column": 1,
-        "line": 3,
-        "offset": 16,
-      },
-      "type": "codeFencedFenceSequence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 19,
-        "column": 4,
-        "line": 3,
-        "offset": 19,
-      },
-      "start": {
-        "_index": 16,
-        "column": 1,
-        "line": 3,
-        "offset": 16,
-      },
-      "type": "codeFencedFence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 19,
-        "column": 4,
-        "line": 3,
-        "offset": 19,
-      },
-      "start": {
+        "_bufferIndex": 6,
         "_index": 0,
-        "column": 1,
+        "column": 7,
         "line": 1,
-        "offset": 0,
+        "offset": 6,
       },
-      "type": "codeFenced",
+      "type": "operand",
+      "value": "",
     },
   ],
   [
     "enter",
     {
+      "attached": false,
       "end": {
-        "_index": 58,
-        "column": 4,
-        "line": 7,
-        "offset": 58,
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
       },
       "start": {
-        "_index": 21,
-        "column": 1,
-        "line": 5,
-        "offset": 21,
-      },
-      "type": "codeFenced",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 26,
-        "column": 6,
-        "line": 5,
-        "offset": 26,
-      },
-      "start": {
-        "_index": 21,
-        "column": 1,
-        "line": 5,
-        "offset": 21,
-      },
-      "type": "codeFencedFence",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 24,
-        "column": 4,
-        "line": 5,
-        "offset": 24,
-      },
-      "start": {
-        "_index": 21,
-        "column": 1,
-        "line": 5,
-        "offset": 21,
-      },
-      "type": "codeFencedFenceSequence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 24,
-        "column": 4,
-        "line": 5,
-        "offset": 24,
-      },
-      "start": {
-        "_index": 21,
-        "column": 1,
-        "line": 5,
-        "offset": 21,
-      },
-      "type": "codeFencedFenceSequence",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 26,
-        "column": 6,
-        "line": 5,
-        "offset": 26,
-      },
-      "start": {
-        "_index": 24,
-        "column": 4,
-        "line": 5,
-        "offset": 24,
-      },
-      "type": "codeFencedFenceInfo",
-    },
-  ],
-  [
-    "enter",
-    {
-      "contentType": "string",
-      "end": {
-        "_index": 26,
-        "column": 6,
-        "line": 5,
-        "offset": 26,
-      },
-      "start": {
-        "_index": 24,
-        "column": 4,
-        "line": 5,
-        "offset": 24,
-      },
-      "type": "chunkString",
-    },
-  ],
-  [
-    "exit",
-    {
-      "contentType": "string",
-      "end": {
-        "_index": 26,
-        "column": 6,
-        "line": 5,
-        "offset": 26,
-      },
-      "start": {
-        "_index": 24,
-        "column": 4,
-        "line": 5,
-        "offset": 24,
-      },
-      "type": "chunkString",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 26,
-        "column": 6,
-        "line": 5,
-        "offset": 26,
-      },
-      "start": {
-        "_index": 24,
-        "column": 4,
-        "line": 5,
-        "offset": 24,
-      },
-      "type": "codeFencedFenceInfo",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 26,
-        "column": 6,
-        "line": 5,
-        "offset": 26,
-      },
-      "start": {
-        "_index": 21,
-        "column": 1,
-        "line": 5,
-        "offset": 21,
-      },
-      "type": "codeFencedFence",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 27,
-        "column": 1,
-        "line": 6,
-        "offset": 27,
-      },
-      "start": {
-        "_index": 26,
-        "column": 6,
-        "line": 5,
-        "offset": 26,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 27,
-        "column": 1,
-        "line": 6,
-        "offset": 27,
-      },
-      "start": {
-        "_index": 26,
-        "column": 6,
-        "line": 5,
-        "offset": 26,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 54,
-        "column": 28,
-        "line": 6,
-        "offset": 54,
-      },
-      "start": {
-        "_index": 27,
-        "column": 1,
-        "line": 6,
-        "offset": 27,
-      },
-      "type": "codeFlowValue",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 54,
-        "column": 28,
-        "line": 6,
-        "offset": 54,
-      },
-      "start": {
-        "_index": 27,
-        "column": 1,
-        "line": 6,
-        "offset": 27,
-      },
-      "type": "codeFlowValue",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 55,
-        "column": 1,
-        "line": 7,
-        "offset": 55,
-      },
-      "start": {
-        "_index": 54,
-        "column": 28,
-        "line": 6,
-        "offset": 54,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 55,
-        "column": 1,
-        "line": 7,
-        "offset": 55,
-      },
-      "start": {
-        "_index": 54,
-        "column": 28,
-        "line": 6,
-        "offset": 54,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 58,
-        "column": 4,
-        "line": 7,
-        "offset": 58,
-      },
-      "start": {
-        "_index": 55,
-        "column": 1,
-        "line": 7,
-        "offset": 55,
-      },
-      "type": "codeFencedFence",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 58,
-        "column": 4,
-        "line": 7,
-        "offset": 58,
-      },
-      "start": {
-        "_index": 55,
-        "column": 1,
-        "line": 7,
-        "offset": 55,
-      },
-      "type": "codeFencedFenceSequence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 58,
-        "column": 4,
-        "line": 7,
-        "offset": 58,
-      },
-      "start": {
-        "_index": 55,
-        "column": 1,
-        "line": 7,
-        "offset": 55,
-      },
-      "type": "codeFencedFenceSequence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 58,
-        "column": 4,
-        "line": 7,
-        "offset": 58,
-      },
-      "start": {
-        "_index": 55,
-        "column": 1,
-        "line": 7,
-        "offset": 55,
-      },
-      "type": "codeFencedFence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 58,
-        "column": 4,
-        "line": 7,
-        "offset": 58,
-      },
-      "start": {
-        "_index": 21,
-        "column": 1,
-        "line": 5,
-        "offset": 21,
-      },
-      "type": "codeFenced",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 98,
-        "column": 4,
-        "line": 11,
-        "offset": 98,
-      },
-      "start": {
-        "_index": 60,
-        "column": 1,
-        "line": 9,
-        "offset": 60,
-      },
-      "type": "codeFenced",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 72,
-        "column": 13,
-        "line": 9,
-        "offset": 72,
-      },
-      "start": {
-        "_index": 60,
-        "column": 1,
-        "line": 9,
-        "offset": 60,
-      },
-      "type": "codeFencedFence",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 63,
-        "column": 4,
-        "line": 9,
-        "offset": 63,
-      },
-      "start": {
-        "_index": 60,
-        "column": 1,
-        "line": 9,
-        "offset": 60,
-      },
-      "type": "codeFencedFenceSequence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 63,
-        "column": 4,
-        "line": 9,
-        "offset": 63,
-      },
-      "start": {
-        "_index": 60,
-        "column": 1,
-        "line": 9,
-        "offset": 60,
-      },
-      "type": "codeFencedFenceSequence",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 65,
-        "column": 6,
-        "line": 9,
-        "offset": 65,
-      },
-      "start": {
-        "_index": 63,
-        "column": 4,
-        "line": 9,
-        "offset": 63,
-      },
-      "type": "codeFencedFenceInfo",
-    },
-  ],
-  [
-    "enter",
-    {
-      "contentType": "string",
-      "end": {
-        "_index": 65,
-        "column": 6,
-        "line": 9,
-        "offset": 65,
-      },
-      "start": {
-        "_index": 63,
-        "column": 4,
-        "line": 9,
-        "offset": 63,
-      },
-      "type": "chunkString",
-    },
-  ],
-  [
-    "exit",
-    {
-      "contentType": "string",
-      "end": {
-        "_index": 65,
-        "column": 6,
-        "line": 9,
-        "offset": 65,
-      },
-      "start": {
-        "_index": 63,
-        "column": 4,
-        "line": 9,
-        "offset": 63,
-      },
-      "type": "chunkString",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 65,
-        "column": 6,
-        "line": 9,
-        "offset": 65,
-      },
-      "start": {
-        "_index": 63,
-        "column": 4,
-        "line": 9,
-        "offset": 63,
-      },
-      "type": "codeFencedFenceInfo",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 66,
+        "_bufferIndex": 0,
+        "_index": 1,
         "column": 7,
-        "line": 9,
-        "offset": 66,
+        "line": 1,
+        "offset": 6,
       },
-      "start": {
-        "_index": 65,
-        "column": 6,
-        "line": 9,
-        "offset": 65,
-      },
-      "type": "whitespace",
+      "type": "operand",
+      "value": "0",
     },
   ],
   [
     "exit",
     {
+      "attached": false,
       "end": {
-        "_index": 66,
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 1,
         "column": 7,
-        "line": 9,
-        "offset": 66,
-      },
-      "start": {
-        "_index": 65,
-        "column": 6,
-        "line": 9,
-        "offset": 65,
-      },
-      "type": "whitespace",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 72,
-        "column": 13,
-        "line": 9,
-        "offset": 72,
-      },
-      "start": {
-        "_index": 66,
-        "column": 7,
-        "line": 9,
-        "offset": 66,
-      },
-      "type": "codeFencedFenceMeta",
-    },
-  ],
-  [
-    "enter",
-    {
-      "contentType": "string",
-      "end": {
-        "_index": 72,
-        "column": 13,
-        "line": 9,
-        "offset": 72,
-      },
-      "start": {
-        "_index": 66,
-        "column": 7,
-        "line": 9,
-        "offset": 66,
-      },
-      "type": "chunkString",
-    },
-  ],
-  [
-    "exit",
-    {
-      "contentType": "string",
-      "end": {
-        "_index": 72,
-        "column": 13,
-        "line": 9,
-        "offset": 72,
-      },
-      "start": {
-        "_index": 66,
-        "column": 7,
-        "line": 9,
-        "offset": 66,
-      },
-      "type": "chunkString",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 72,
-        "column": 13,
-        "line": 9,
-        "offset": 72,
-      },
-      "start": {
-        "_index": 66,
-        "column": 7,
-        "line": 9,
-        "offset": 66,
-      },
-      "type": "codeFencedFenceMeta",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 72,
-        "column": 13,
-        "line": 9,
-        "offset": 72,
-      },
-      "start": {
-        "_index": 60,
-        "column": 1,
-        "line": 9,
-        "offset": 60,
-      },
-      "type": "codeFencedFence",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 73,
-        "column": 1,
-        "line": 10,
-        "offset": 73,
-      },
-      "start": {
-        "_index": 72,
-        "column": 13,
-        "line": 9,
-        "offset": 72,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 73,
-        "column": 1,
-        "line": 10,
-        "offset": 73,
-      },
-      "start": {
-        "_index": 72,
-        "column": 13,
-        "line": 9,
-        "offset": 72,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 94,
-        "column": 22,
-        "line": 10,
-        "offset": 94,
-      },
-      "start": {
-        "_index": 73,
-        "column": 1,
-        "line": 10,
-        "offset": 73,
-      },
-      "type": "codeFlowValue",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 94,
-        "column": 22,
-        "line": 10,
-        "offset": 94,
-      },
-      "start": {
-        "_index": 73,
-        "column": 1,
-        "line": 10,
-        "offset": 73,
-      },
-      "type": "codeFlowValue",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 95,
-        "column": 1,
-        "line": 11,
-        "offset": 95,
-      },
-      "start": {
-        "_index": 94,
-        "column": 22,
-        "line": 10,
-        "offset": 94,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 95,
-        "column": 1,
-        "line": 11,
-        "offset": 95,
-      },
-      "start": {
-        "_index": 94,
-        "column": 22,
-        "line": 10,
-        "offset": 94,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 98,
-        "column": 4,
-        "line": 11,
-        "offset": 98,
-      },
-      "start": {
-        "_index": 95,
-        "column": 1,
-        "line": 11,
-        "offset": 95,
-      },
-      "type": "codeFencedFence",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 98,
-        "column": 4,
-        "line": 11,
-        "offset": 98,
-      },
-      "start": {
-        "_index": 95,
-        "column": 1,
-        "line": 11,
-        "offset": 95,
-      },
-      "type": "codeFencedFenceSequence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 98,
-        "column": 4,
-        "line": 11,
-        "offset": 98,
-      },
-      "start": {
-        "_index": 95,
-        "column": 1,
-        "line": 11,
-        "offset": 95,
-      },
-      "type": "codeFencedFenceSequence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 98,
-        "column": 4,
-        "line": 11,
-        "offset": 98,
-      },
-      "start": {
-        "_index": 95,
-        "column": 1,
-        "line": 11,
-        "offset": 95,
-      },
-      "type": "codeFencedFence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 98,
-        "column": 4,
-        "line": 11,
-        "offset": 98,
-      },
-      "start": {
-        "_index": 60,
-        "column": 1,
-        "line": 9,
-        "offset": 60,
-      },
-      "type": "codeFenced",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 131,
-        "column": 4,
-        "line": 15,
-        "offset": 131,
-      },
-      "start": {
-        "_index": 100,
-        "column": 1,
-        "line": 13,
-        "offset": 100,
-      },
-      "type": "codeFenced",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 103,
-        "column": 4,
-        "line": 13,
-        "offset": 103,
-      },
-      "start": {
-        "_index": 100,
-        "column": 1,
-        "line": 13,
-        "offset": 100,
-      },
-      "type": "codeFencedFence",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 103,
-        "column": 4,
-        "line": 13,
-        "offset": 103,
-      },
-      "start": {
-        "_index": 100,
-        "column": 1,
-        "line": 13,
-        "offset": 100,
-      },
-      "type": "codeFencedFenceSequence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 103,
-        "column": 4,
-        "line": 13,
-        "offset": 103,
-      },
-      "start": {
-        "_index": 100,
-        "column": 1,
-        "line": 13,
-        "offset": 100,
-      },
-      "type": "codeFencedFenceSequence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 103,
-        "column": 4,
-        "line": 13,
-        "offset": 103,
-      },
-      "start": {
-        "_index": 100,
-        "column": 1,
-        "line": 13,
-        "offset": 100,
-      },
-      "type": "codeFencedFence",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 104,
-        "column": 1,
-        "line": 14,
-        "offset": 104,
-      },
-      "start": {
-        "_index": 103,
-        "column": 4,
-        "line": 13,
-        "offset": 103,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 104,
-        "column": 1,
-        "line": 14,
-        "offset": 104,
-      },
-      "start": {
-        "_index": 103,
-        "column": 4,
-        "line": 13,
-        "offset": 103,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 127,
-        "column": 24,
-        "line": 14,
-        "offset": 127,
-      },
-      "start": {
-        "_index": 104,
-        "column": 1,
-        "line": 14,
-        "offset": 104,
-      },
-      "type": "codeFlowValue",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 127,
-        "column": 24,
-        "line": 14,
-        "offset": 127,
-      },
-      "start": {
-        "_index": 104,
-        "column": 1,
-        "line": 14,
-        "offset": 104,
-      },
-      "type": "codeFlowValue",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 128,
-        "column": 1,
-        "line": 15,
-        "offset": 128,
-      },
-      "start": {
-        "_index": 127,
-        "column": 24,
-        "line": 14,
-        "offset": 127,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 128,
-        "column": 1,
-        "line": 15,
-        "offset": 128,
-      },
-      "start": {
-        "_index": 127,
-        "column": 24,
-        "line": 14,
-        "offset": 127,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 131,
-        "column": 4,
-        "line": 15,
-        "offset": 131,
-      },
-      "start": {
-        "_index": 128,
-        "column": 1,
-        "line": 15,
-        "offset": 128,
-      },
-      "type": "codeFencedFence",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 131,
-        "column": 4,
-        "line": 15,
-        "offset": 131,
-      },
-      "start": {
-        "_index": 128,
-        "column": 1,
-        "line": 15,
-        "offset": 128,
-      },
-      "type": "codeFencedFenceSequence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 131,
-        "column": 4,
-        "line": 15,
-        "offset": 131,
-      },
-      "start": {
-        "_index": 128,
-        "column": 1,
-        "line": 15,
-        "offset": 128,
-      },
-      "type": "codeFencedFenceSequence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 131,
-        "column": 4,
-        "line": 15,
-        "offset": 131,
-      },
-      "start": {
-        "_index": 128,
-        "column": 1,
-        "line": 15,
-        "offset": 128,
-      },
-      "type": "codeFencedFence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 131,
-        "column": 4,
-        "line": 15,
-        "offset": 131,
-      },
-      "start": {
-        "_index": 100,
-        "column": 1,
-        "line": 13,
-        "offset": 100,
-      },
-      "type": "codeFenced",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 154,
-        "column": 22,
-        "line": 17,
-        "offset": 154,
-      },
-      "start": {
-        "_index": 133,
-        "column": 1,
-        "line": 17,
-        "offset": 133,
-      },
-      "type": "codeText",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 136,
-        "column": 4,
-        "line": 17,
-        "offset": 136,
-      },
-      "start": {
-        "_index": 133,
-        "column": 1,
-        "line": 17,
-        "offset": 133,
-      },
-      "type": "codeTextSequence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 136,
-        "column": 4,
-        "line": 17,
-        "offset": 136,
-      },
-      "start": {
-        "_index": 133,
-        "column": 1,
-        "line": 17,
-        "offset": 133,
-      },
-      "type": "codeTextSequence",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 151,
-        "column": 19,
-        "line": 17,
-        "offset": 151,
-      },
-      "start": {
-        "_index": 136,
-        "column": 4,
-        "line": 17,
-        "offset": 136,
-      },
-      "type": "codeTextData",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 151,
-        "column": 19,
-        "line": 17,
-        "offset": 151,
-      },
-      "start": {
-        "_index": 136,
-        "column": 4,
-        "line": 17,
-        "offset": 136,
-      },
-      "type": "codeTextData",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 154,
-        "column": 22,
-        "line": 17,
-        "offset": 154,
-      },
-      "start": {
-        "_index": 151,
-        "column": 19,
-        "line": 17,
-        "offset": 151,
-      },
-      "type": "codeTextSequence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 154,
-        "column": 22,
-        "line": 17,
-        "offset": 154,
-      },
-      "start": {
-        "_index": 151,
-        "column": 19,
-        "line": 17,
-        "offset": 151,
-      },
-      "type": "codeTextSequence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 154,
-        "column": 22,
-        "line": 17,
-        "offset": 154,
-      },
-      "start": {
-        "_index": 133,
-        "column": 1,
-        "line": 17,
-        "offset": 133,
-      },
-      "type": "codeText",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 181,
-        "column": 4,
-        "line": 21,
-        "offset": 181,
-      },
-      "start": {
-        "_index": 156,
-        "column": 1,
-        "line": 19,
-        "offset": 156,
-      },
-      "type": "codeFenced",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 173,
-        "column": 18,
-        "line": 19,
-        "offset": 173,
-      },
-      "start": {
-        "_index": 156,
-        "column": 1,
-        "line": 19,
-        "offset": 156,
-      },
-      "type": "codeFencedFence",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 159,
-        "column": 4,
-        "line": 19,
-        "offset": 159,
-      },
-      "start": {
-        "_index": 156,
-        "column": 1,
-        "line": 19,
-        "offset": 156,
-      },
-      "type": "codeFencedFenceSequence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 159,
-        "column": 4,
-        "line": 19,
-        "offset": 159,
-      },
-      "start": {
-        "_index": 156,
-        "column": 1,
-        "line": 19,
-        "offset": 156,
-      },
-      "type": "codeFencedFenceSequence",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 165,
-        "column": 10,
-        "line": 19,
-        "offset": 165,
-      },
-      "start": {
-        "_index": 159,
-        "column": 4,
-        "line": 19,
-        "offset": 159,
-      },
-      "type": "codeFencedFenceInfo",
-    },
-  ],
-  [
-    "enter",
-    {
-      "contentType": "string",
-      "end": {
-        "_index": 165,
-        "column": 10,
-        "line": 19,
-        "offset": 165,
-      },
-      "start": {
-        "_index": 159,
-        "column": 4,
-        "line": 19,
-        "offset": 159,
-      },
-      "type": "chunkString",
-    },
-  ],
-  [
-    "exit",
-    {
-      "contentType": "string",
-      "end": {
-        "_index": 165,
-        "column": 10,
-        "line": 19,
-        "offset": 165,
-      },
-      "start": {
-        "_index": 159,
-        "column": 4,
-        "line": 19,
-        "offset": 159,
-      },
-      "type": "chunkString",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 165,
-        "column": 10,
-        "line": 19,
-        "offset": 165,
-      },
-      "start": {
-        "_index": 159,
-        "column": 4,
-        "line": 19,
-        "offset": 159,
-      },
-      "type": "codeFencedFenceInfo",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 166,
-        "column": 11,
-        "line": 19,
-        "offset": 166,
-      },
-      "start": {
-        "_index": 165,
-        "column": 10,
-        "line": 19,
-        "offset": 165,
-      },
-      "type": "whitespace",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 166,
-        "column": 11,
-        "line": 19,
-        "offset": 166,
-      },
-      "start": {
-        "_index": 165,
-        "column": 10,
-        "line": 19,
-        "offset": 165,
-      },
-      "type": "whitespace",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 173,
-        "column": 18,
-        "line": 19,
-        "offset": 173,
-      },
-      "start": {
-        "_index": 166,
-        "column": 11,
-        "line": 19,
-        "offset": 166,
-      },
-      "type": "codeFencedFenceMeta",
-    },
-  ],
-  [
-    "enter",
-    {
-      "contentType": "string",
-      "end": {
-        "_index": 173,
-        "column": 18,
-        "line": 19,
-        "offset": 173,
-      },
-      "start": {
-        "_index": 166,
-        "column": 11,
-        "line": 19,
-        "offset": 166,
-      },
-      "type": "chunkString",
-    },
-  ],
-  [
-    "exit",
-    {
-      "contentType": "string",
-      "end": {
-        "_index": 173,
-        "column": 18,
-        "line": 19,
-        "offset": 173,
-      },
-      "start": {
-        "_index": 166,
-        "column": 11,
-        "line": 19,
-        "offset": 166,
-      },
-      "type": "chunkString",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 173,
-        "column": 18,
-        "line": 19,
-        "offset": 173,
-      },
-      "start": {
-        "_index": 166,
-        "column": 11,
-        "line": 19,
-        "offset": 166,
-      },
-      "type": "codeFencedFenceMeta",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 173,
-        "column": 18,
-        "line": 19,
-        "offset": 173,
-      },
-      "start": {
-        "_index": 156,
-        "column": 1,
-        "line": 19,
-        "offset": 156,
-      },
-      "type": "codeFencedFence",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 174,
-        "column": 1,
-        "line": 20,
-        "offset": 174,
-      },
-      "start": {
-        "_index": 173,
-        "column": 18,
-        "line": 19,
-        "offset": 173,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 174,
-        "column": 1,
-        "line": 20,
-        "offset": 174,
-      },
-      "start": {
-        "_index": 173,
-        "column": 18,
-        "line": 19,
-        "offset": 173,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 177,
-        "column": 4,
-        "line": 20,
-        "offset": 177,
-      },
-      "start": {
-        "_index": 174,
-        "column": 1,
-        "line": 20,
-        "offset": 174,
-      },
-      "type": "codeFlowValue",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 177,
-        "column": 4,
-        "line": 20,
-        "offset": 177,
-      },
-      "start": {
-        "_index": 174,
-        "column": 1,
-        "line": 20,
-        "offset": 174,
-      },
-      "type": "codeFlowValue",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 178,
-        "column": 1,
-        "line": 21,
-        "offset": 178,
-      },
-      "start": {
-        "_index": 177,
-        "column": 4,
-        "line": 20,
-        "offset": 177,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 178,
-        "column": 1,
-        "line": 21,
-        "offset": 178,
-      },
-      "start": {
-        "_index": 177,
-        "column": 4,
-        "line": 20,
-        "offset": 177,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 181,
-        "column": 4,
-        "line": 21,
-        "offset": 181,
-      },
-      "start": {
-        "_index": 178,
-        "column": 1,
-        "line": 21,
-        "offset": 178,
-      },
-      "type": "codeFencedFence",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 181,
-        "column": 4,
-        "line": 21,
-        "offset": 181,
-      },
-      "start": {
-        "_index": 178,
-        "column": 1,
-        "line": 21,
-        "offset": 178,
-      },
-      "type": "codeFencedFenceSequence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 181,
-        "column": 4,
-        "line": 21,
-        "offset": 181,
-      },
-      "start": {
-        "_index": 178,
-        "column": 1,
-        "line": 21,
-        "offset": 178,
-      },
-      "type": "codeFencedFenceSequence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 181,
-        "column": 4,
-        "line": 21,
-        "offset": 181,
-      },
-      "start": {
-        "_index": 178,
-        "column": 1,
-        "line": 21,
-        "offset": 178,
-      },
-      "type": "codeFencedFence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 181,
-        "column": 4,
-        "line": 21,
-        "offset": 181,
-      },
-      "start": {
-        "_index": 156,
-        "column": 1,
-        "line": 19,
-        "offset": 156,
-      },
-      "type": "codeFenced",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 195,
-        "column": 4,
-        "line": 26,
-        "offset": 195,
-      },
-      "start": {
-        "_index": 183,
-        "column": 1,
-        "line": 23,
-        "offset": 183,
-      },
-      "type": "codeFenced",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 186,
-        "column": 4,
-        "line": 23,
-        "offset": 186,
-      },
-      "start": {
-        "_index": 183,
-        "column": 1,
-        "line": 23,
-        "offset": 183,
-      },
-      "type": "codeFencedFence",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 186,
-        "column": 4,
-        "line": 23,
-        "offset": 186,
-      },
-      "start": {
-        "_index": 183,
-        "column": 1,
-        "line": 23,
-        "offset": 183,
-      },
-      "type": "codeFencedFenceSequence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 186,
-        "column": 4,
-        "line": 23,
-        "offset": 186,
-      },
-      "start": {
-        "_index": 183,
-        "column": 1,
-        "line": 23,
-        "offset": 183,
-      },
-      "type": "codeFencedFenceSequence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 186,
-        "column": 4,
-        "line": 23,
-        "offset": 186,
-      },
-      "start": {
-        "_index": 183,
-        "column": 1,
-        "line": 23,
-        "offset": 183,
-      },
-      "type": "codeFencedFence",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 187,
-        "column": 1,
-        "line": 24,
-        "offset": 187,
-      },
-      "start": {
-        "_index": 186,
-        "column": 4,
-        "line": 23,
-        "offset": 186,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 187,
-        "column": 1,
-        "line": 24,
-        "offset": 187,
-      },
-      "start": {
-        "_index": 186,
-        "column": 4,
-        "line": 23,
-        "offset": 186,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 188,
-        "column": 1,
-        "line": 25,
-        "offset": 188,
-      },
-      "start": {
-        "_index": 187,
-        "column": 1,
-        "line": 24,
-        "offset": 187,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 188,
-        "column": 1,
-        "line": 25,
-        "offset": 188,
-      },
-      "start": {
-        "_index": 187,
-        "column": 1,
-        "line": 24,
-        "offset": 187,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 191,
-        "column": 4,
-        "line": 25,
-        "offset": 191,
-      },
-      "start": {
-        "_index": 188,
-        "column": 1,
-        "line": 25,
-        "offset": 188,
-      },
-      "type": "codeFlowValue",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 191,
-        "column": 4,
-        "line": 25,
-        "offset": 191,
-      },
-      "start": {
-        "_index": 188,
-        "column": 1,
-        "line": 25,
-        "offset": 188,
-      },
-      "type": "codeFlowValue",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 192,
-        "column": 1,
-        "line": 26,
-        "offset": 192,
-      },
-      "start": {
-        "_index": 191,
-        "column": 4,
-        "line": 25,
-        "offset": 191,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 192,
-        "column": 1,
-        "line": 26,
-        "offset": 192,
-      },
-      "start": {
-        "_index": 191,
-        "column": 4,
-        "line": 25,
-        "offset": 191,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 195,
-        "column": 4,
-        "line": 26,
-        "offset": 195,
-      },
-      "start": {
-        "_index": 192,
-        "column": 1,
-        "line": 26,
-        "offset": 192,
-      },
-      "type": "codeFencedFence",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 195,
-        "column": 4,
-        "line": 26,
-        "offset": 195,
-      },
-      "start": {
-        "_index": 192,
-        "column": 1,
-        "line": 26,
-        "offset": 192,
-      },
-      "type": "codeFencedFenceSequence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 195,
-        "column": 4,
-        "line": 26,
-        "offset": 195,
-      },
-      "start": {
-        "_index": 192,
-        "column": 1,
-        "line": 26,
-        "offset": 192,
-      },
-      "type": "codeFencedFenceSequence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 195,
-        "column": 4,
-        "line": 26,
-        "offset": 195,
-      },
-      "start": {
-        "_index": 192,
-        "column": 1,
-        "line": 26,
-        "offset": 192,
-      },
-      "type": "codeFencedFence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 195,
-        "column": 4,
-        "line": 26,
-        "offset": 195,
-      },
-      "start": {
-        "_index": 183,
-        "column": 1,
-        "line": 23,
-        "offset": 183,
-      },
-      "type": "codeFenced",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 209,
-        "column": 4,
-        "line": 31,
-        "offset": 209,
-      },
-      "start": {
-        "_index": 197,
-        "column": 1,
-        "line": 28,
-        "offset": 197,
-      },
-      "type": "codeFenced",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 200,
-        "column": 4,
-        "line": 28,
-        "offset": 200,
-      },
-      "start": {
-        "_index": 197,
-        "column": 1,
-        "line": 28,
-        "offset": 197,
-      },
-      "type": "codeFencedFence",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 200,
-        "column": 4,
-        "line": 28,
-        "offset": 200,
-      },
-      "start": {
-        "_index": 197,
-        "column": 1,
-        "line": 28,
-        "offset": 197,
-      },
-      "type": "codeFencedFenceSequence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 200,
-        "column": 4,
-        "line": 28,
-        "offset": 200,
-      },
-      "start": {
-        "_index": 197,
-        "column": 1,
-        "line": 28,
-        "offset": 197,
-      },
-      "type": "codeFencedFenceSequence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 200,
-        "column": 4,
-        "line": 28,
-        "offset": 200,
-      },
-      "start": {
-        "_index": 197,
-        "column": 1,
-        "line": 28,
-        "offset": 197,
-      },
-      "type": "codeFencedFence",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 201,
-        "column": 1,
-        "line": 29,
-        "offset": 201,
-      },
-      "start": {
-        "_index": 200,
-        "column": 4,
-        "line": 28,
-        "offset": 200,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 201,
-        "column": 1,
-        "line": 29,
-        "offset": 201,
-      },
-      "start": {
-        "_index": 200,
-        "column": 4,
-        "line": 28,
-        "offset": 200,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 204,
-        "column": 4,
-        "line": 29,
-        "offset": 204,
-      },
-      "start": {
-        "_index": 201,
-        "column": 1,
-        "line": 29,
-        "offset": 201,
-      },
-      "type": "codeFlowValue",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 204,
-        "column": 4,
-        "line": 29,
-        "offset": 204,
-      },
-      "start": {
-        "_index": 201,
-        "column": 1,
-        "line": 29,
-        "offset": 201,
-      },
-      "type": "codeFlowValue",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 205,
-        "column": 1,
-        "line": 30,
-        "offset": 205,
-      },
-      "start": {
-        "_index": 204,
-        "column": 4,
-        "line": 29,
-        "offset": 204,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 205,
-        "column": 1,
-        "line": 30,
-        "offset": 205,
-      },
-      "start": {
-        "_index": 204,
-        "column": 4,
-        "line": 29,
-        "offset": 204,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 206,
-        "column": 1,
-        "line": 31,
-        "offset": 206,
-      },
-      "start": {
-        "_index": 205,
-        "column": 1,
-        "line": 30,
-        "offset": 205,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 206,
-        "column": 1,
-        "line": 31,
-        "offset": 206,
-      },
-      "start": {
-        "_index": 205,
-        "column": 1,
-        "line": 30,
-        "offset": 205,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 209,
-        "column": 4,
-        "line": 31,
-        "offset": 209,
-      },
-      "start": {
-        "_index": 206,
-        "column": 1,
-        "line": 31,
-        "offset": 206,
-      },
-      "type": "codeFencedFence",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 209,
-        "column": 4,
-        "line": 31,
-        "offset": 209,
-      },
-      "start": {
-        "_index": 206,
-        "column": 1,
-        "line": 31,
-        "offset": 206,
-      },
-      "type": "codeFencedFenceSequence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 209,
-        "column": 4,
-        "line": 31,
-        "offset": 209,
-      },
-      "start": {
-        "_index": 206,
-        "column": 1,
-        "line": 31,
-        "offset": 206,
-      },
-      "type": "codeFencedFenceSequence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 209,
-        "column": 4,
-        "line": 31,
-        "offset": 209,
-      },
-      "start": {
-        "_index": 206,
-        "column": 1,
-        "line": 31,
-        "offset": 206,
-      },
-      "type": "codeFencedFence",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 209,
-        "column": 4,
-        "line": 31,
-        "offset": 209,
-      },
-      "start": {
-        "_index": 197,
-        "column": 1,
-        "line": 28,
-        "offset": 197,
-      },
-      "type": "codeFenced",
+        "line": 1,
+        "offset": 6,
+      },
+      "type": "operand",
+      "value": "0",
     },
   ],
 ]
@@ -3060,720 +462,88 @@ exports[`integration:tokenize > should work with constructs (4) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 42,
-        "column": 23,
-        "line": 4,
-        "offset": 42,
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
       },
+      "long": true,
       "start": {
+        "_bufferIndex": 0,
         "_index": 0,
         "column": 1,
         "line": 1,
         "offset": 0,
       },
-      "type": "codeIndented",
+      "type": "flag",
+      "value": "--project",
     },
   ],
   [
-    "enter",
+    "exit",
     {
       "end": {
-        "_index": 4,
-        "column": 5,
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 10,
         "line": 1,
-        "offset": 4,
+        "offset": 9,
       },
+      "long": true,
       "start": {
+        "_bufferIndex": 0,
         "_index": 0,
         "column": 1,
         "line": 1,
         "offset": 0,
       },
-      "type": "linePrefix",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 4,
-        "column": 5,
-        "line": 1,
-        "offset": 4,
-      },
-      "start": {
-        "_index": 0,
-        "column": 1,
-        "line": 1,
-        "offset": 0,
-      },
-      "type": "linePrefix",
+      "type": "flag",
+      "value": "--project",
     },
   ],
   [
     "enter",
     {
+      "attached": false,
       "end": {
-        "_index": 17,
-        "column": 18,
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 43,
         "line": 1,
-        "offset": 17,
-      },
-      "start": {
-        "_index": 4,
-        "column": 5,
-        "line": 1,
-        "offset": 4,
-      },
-      "type": "codeFlowValue",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 17,
-        "column": 18,
-        "line": 1,
-        "offset": 17,
-      },
-      "start": {
-        "_index": 4,
-        "column": 5,
-        "line": 1,
-        "offset": 4,
-      },
-      "type": "codeFlowValue",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 18,
-        "column": 1,
-        "line": 2,
-        "offset": 18,
-      },
-      "start": {
-        "_index": 17,
-        "column": 18,
-        "line": 1,
-        "offset": 17,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 18,
-        "column": 1,
-        "line": 2,
-        "offset": 18,
-      },
-      "start": {
-        "_index": 17,
-        "column": 18,
-        "line": 1,
-        "offset": 17,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 19,
-        "column": 1,
-        "line": 3,
-        "offset": 19,
-      },
-      "start": {
-        "_index": 18,
-        "column": 1,
-        "line": 2,
-        "offset": 18,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 19,
-        "column": 1,
-        "line": 3,
-        "offset": 19,
-      },
-      "start": {
-        "_index": 18,
-        "column": 1,
-        "line": 2,
-        "offset": 18,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 20,
-        "column": 1,
-        "line": 4,
-        "offset": 20,
-      },
-      "start": {
-        "_index": 19,
-        "column": 1,
-        "line": 3,
-        "offset": 19,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 20,
-        "column": 1,
-        "line": 4,
-        "offset": 20,
-      },
-      "start": {
-        "_index": 19,
-        "column": 1,
-        "line": 3,
-        "offset": 19,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 24,
-        "column": 5,
-        "line": 4,
-        "offset": 24,
-      },
-      "start": {
-        "_index": 20,
-        "column": 1,
-        "line": 4,
-        "offset": 20,
-      },
-      "type": "linePrefix",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 24,
-        "column": 5,
-        "line": 4,
-        "offset": 24,
-      },
-      "start": {
-        "_index": 20,
-        "column": 1,
-        "line": 4,
-        "offset": 20,
-      },
-      "type": "linePrefix",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 42,
-        "column": 23,
-        "line": 4,
         "offset": 42,
       },
       "start": {
-        "_index": 24,
-        "column": 5,
-        "line": 4,
-        "offset": 24,
-      },
-      "type": "codeFlowValue",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 42,
-        "column": 23,
-        "line": 4,
-        "offset": 42,
-      },
-      "start": {
-        "_index": 24,
-        "column": 5,
-        "line": 4,
-        "offset": 24,
-      },
-      "type": "codeFlowValue",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 42,
-        "column": 23,
-        "line": 4,
-        "offset": 42,
-      },
-      "start": {
-        "_index": 0,
-        "column": 1,
+        "_bufferIndex": 0,
+        "_index": 1,
+        "column": 10,
         "line": 1,
-        "offset": 0,
+        "offset": 9,
       },
-      "type": "codeIndented",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 86,
-        "column": 14,
-        "line": 8,
-        "offset": 86,
-      },
-      "start": {
-        "_index": 62,
-        "column": 1,
-        "line": 7,
-        "offset": 62,
-      },
-      "type": "codeIndented",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 66,
-        "column": 5,
-        "line": 7,
-        "offset": 66,
-      },
-      "start": {
-        "_index": 62,
-        "column": 1,
-        "line": 7,
-        "offset": 62,
-      },
-      "type": "linePrefix",
+      "type": "operand",
+      "value": "@flex-development/vfile-tokenizer",
     },
   ],
   [
     "exit",
     {
+      "attached": false,
       "end": {
-        "_index": 66,
-        "column": 5,
-        "line": 7,
-        "offset": 66,
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 43,
+        "line": 1,
+        "offset": 42,
       },
       "start": {
-        "_index": 62,
-        "column": 1,
-        "line": 7,
-        "offset": 62,
+        "_bufferIndex": 0,
+        "_index": 1,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
       },
-      "type": "linePrefix",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 72,
-        "column": 11,
-        "line": 7,
-        "offset": 72,
-      },
-      "start": {
-        "_index": 66,
-        "column": 5,
-        "line": 7,
-        "offset": 66,
-      },
-      "type": "codeFlowValue",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 72,
-        "column": 11,
-        "line": 7,
-        "offset": 72,
-      },
-      "start": {
-        "_index": 66,
-        "column": 5,
-        "line": 7,
-        "offset": 66,
-      },
-      "type": "codeFlowValue",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 73,
-        "column": 1,
-        "line": 8,
-        "offset": 73,
-      },
-      "start": {
-        "_index": 72,
-        "column": 11,
-        "line": 7,
-        "offset": 72,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 73,
-        "column": 1,
-        "line": 8,
-        "offset": 73,
-      },
-      "start": {
-        "_index": 72,
-        "column": 11,
-        "line": 7,
-        "offset": 72,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 77,
-        "column": 5,
-        "line": 8,
-        "offset": 77,
-      },
-      "start": {
-        "_index": 73,
-        "column": 1,
-        "line": 8,
-        "offset": 73,
-      },
-      "type": "linePrefix",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 77,
-        "column": 5,
-        "line": 8,
-        "offset": 77,
-      },
-      "start": {
-        "_index": 73,
-        "column": 1,
-        "line": 8,
-        "offset": 73,
-      },
-      "type": "linePrefix",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 86,
-        "column": 14,
-        "line": 8,
-        "offset": 86,
-      },
-      "start": {
-        "_index": 77,
-        "column": 5,
-        "line": 8,
-        "offset": 77,
-      },
-      "type": "codeFlowValue",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 86,
-        "column": 14,
-        "line": 8,
-        "offset": 86,
-      },
-      "start": {
-        "_index": 77,
-        "column": 5,
-        "line": 8,
-        "offset": 77,
-      },
-      "type": "codeFlowValue",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 86,
-        "column": 14,
-        "line": 8,
-        "offset": 86,
-      },
-      "start": {
-        "_index": 62,
-        "column": 1,
-        "line": 7,
-        "offset": 62,
-      },
-      "type": "codeIndented",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 148,
-        "column": 17,
-        "line": 14,
-        "offset": 145,
-      },
-      "start": {
-        "_index": 106,
-        "column": 1,
-        "line": 13,
-        "offset": 105,
-      },
-      "type": "codeIndented",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 110,
-        "column": 5,
-        "line": 13,
-        "offset": 108,
-      },
-      "start": {
-        "_index": 106,
-        "column": 1,
-        "line": 13,
-        "offset": 105,
-      },
-      "type": "linePrefix",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 110,
-        "column": 5,
-        "line": 13,
-        "offset": 108,
-      },
-      "start": {
-        "_index": 106,
-        "column": 1,
-        "line": 13,
-        "offset": 105,
-      },
-      "type": "linePrefix",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 131,
-        "column": 26,
-        "line": 13,
-        "offset": 129,
-      },
-      "start": {
-        "_index": 110,
-        "column": 5,
-        "line": 13,
-        "offset": 108,
-      },
-      "type": "codeFlowValue",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 131,
-        "column": 26,
-        "line": 13,
-        "offset": 129,
-      },
-      "start": {
-        "_index": 110,
-        "column": 5,
-        "line": 13,
-        "offset": 108,
-      },
-      "type": "codeFlowValue",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 132,
-        "column": 1,
-        "line": 14,
-        "offset": 130,
-      },
-      "start": {
-        "_index": 131,
-        "column": 26,
-        "line": 13,
-        "offset": 129,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 132,
-        "column": 1,
-        "line": 14,
-        "offset": 130,
-      },
-      "start": {
-        "_index": 131,
-        "column": 26,
-        "line": 13,
-        "offset": 129,
-      },
-      "type": "lineEnding",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 136,
-        "column": 5,
-        "line": 14,
-        "offset": 133,
-      },
-      "start": {
-        "_index": 132,
-        "column": 1,
-        "line": 14,
-        "offset": 130,
-      },
-      "type": "linePrefix",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 136,
-        "column": 5,
-        "line": 14,
-        "offset": 133,
-      },
-      "start": {
-        "_index": 132,
-        "column": 1,
-        "line": 14,
-        "offset": 130,
-      },
-      "type": "linePrefix",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_index": 148,
-        "column": 17,
-        "line": 14,
-        "offset": 145,
-      },
-      "start": {
-        "_index": 136,
-        "column": 5,
-        "line": 14,
-        "offset": 133,
-      },
-      "type": "codeFlowValue",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 148,
-        "column": 17,
-        "line": 14,
-        "offset": 145,
-      },
-      "start": {
-        "_index": 136,
-        "column": 5,
-        "line": 14,
-        "offset": 133,
-      },
-      "type": "codeFlowValue",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_index": 148,
-        "column": 17,
-        "line": 14,
-        "offset": 145,
-      },
-      "start": {
-        "_index": 106,
-        "column": 1,
-        "line": 13,
-        "offset": 105,
-      },
-      "type": "codeIndented",
+      "type": "operand",
+      "value": "@flex-development/vfile-tokenizer",
     },
   ],
 ]
@@ -3784,14 +554,958 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
   [
     "enter",
     {
+      "emoji": "🏗️",
       "end": {
-        "_index": 30,
+        "_bufferIndex": 23,
+        "_index": 0,
+        "column": 24,
+        "line": 1,
+        "offset": 23,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "shortcode",
+      "value": ":building_construction:",
+    },
+  ],
+  [
+    "exit",
+    {
+      "emoji": "🏗️",
+      "end": {
+        "_bufferIndex": 23,
+        "_index": 0,
+        "column": 24,
+        "line": 1,
+        "offset": 23,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "shortcode",
+      "value": ":building_construction:",
+    },
+  ],
+  [
+    "enter",
+    {
+      "emoji": "📦",
+      "end": {
+        "_bufferIndex": 33,
+        "_index": 0,
+        "column": 34,
+        "line": 1,
+        "offset": 33,
+      },
+      "start": {
+        "_bufferIndex": 24,
+        "_index": 0,
+        "column": 25,
+        "line": 1,
+        "offset": 24,
+      },
+      "type": "shortcode",
+      "value": ":package:",
+    },
+  ],
+  [
+    "exit",
+    {
+      "emoji": "📦",
+      "end": {
+        "_bufferIndex": 33,
+        "_index": 0,
+        "column": 34,
+        "line": 1,
+        "offset": 33,
+      },
+      "start": {
+        "_bufferIndex": 24,
+        "_index": 0,
+        "column": 25,
+        "line": 1,
+        "offset": 24,
+      },
+      "type": "shortcode",
+      "value": ":package:",
+    },
+  ],
+  [
+    "enter",
+    {
+      "emoji": "👍",
+      "end": {
+        "_bufferIndex": 53,
+        "_index": 0,
+        "column": 8,
+        "line": 3,
+        "offset": 53,
+      },
+      "start": {
+        "_bufferIndex": 49,
+        "_index": 0,
+        "column": 4,
+        "line": 3,
+        "offset": 49,
+      },
+      "type": "shortcode",
+      "value": ":+1:",
+    },
+  ],
+  [
+    "exit",
+    {
+      "emoji": "👍",
+      "end": {
+        "_bufferIndex": 53,
+        "_index": 0,
+        "column": 8,
+        "line": 3,
+        "offset": 53,
+      },
+      "start": {
+        "_bufferIndex": 49,
+        "_index": 0,
+        "column": 4,
+        "line": 3,
+        "offset": 49,
+      },
+      "type": "shortcode",
+      "value": ":+1:",
+    },
+  ],
+]
+`;
+
+exports[`integration:tokenize > should work with constructs (6) 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 42,
+        "_index": 0,
+        "column": 23,
+        "line": 4,
+        "offset": 42,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "codeIndented",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "linePrefix",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "linePrefix",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 17,
+        "_index": 0,
+        "column": 18,
+        "line": 1,
+        "offset": 17,
+      },
+      "start": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "codeFlowValue",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 17,
+        "_index": 0,
+        "column": 18,
+        "line": 1,
+        "offset": 17,
+      },
+      "start": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "codeFlowValue",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 18,
+        "_index": 0,
+        "column": 1,
+        "line": 2,
+        "offset": 18,
+      },
+      "start": {
+        "_bufferIndex": 17,
+        "_index": 0,
+        "column": 18,
+        "line": 1,
+        "offset": 17,
+      },
+      "type": "lineEnding",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 18,
+        "_index": 0,
+        "column": 1,
+        "line": 2,
+        "offset": 18,
+      },
+      "start": {
+        "_bufferIndex": 17,
+        "_index": 0,
+        "column": 18,
+        "line": 1,
+        "offset": 17,
+      },
+      "type": "lineEnding",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 19,
+        "_index": 0,
+        "column": 1,
+        "line": 3,
+        "offset": 19,
+      },
+      "start": {
+        "_bufferIndex": 18,
+        "_index": 0,
+        "column": 1,
+        "line": 2,
+        "offset": 18,
+      },
+      "type": "lineEnding",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 19,
+        "_index": 0,
+        "column": 1,
+        "line": 3,
+        "offset": 19,
+      },
+      "start": {
+        "_bufferIndex": 18,
+        "_index": 0,
+        "column": 1,
+        "line": 2,
+        "offset": 18,
+      },
+      "type": "lineEnding",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 20,
+        "_index": 0,
+        "column": 1,
+        "line": 4,
+        "offset": 20,
+      },
+      "start": {
+        "_bufferIndex": 19,
+        "_index": 0,
+        "column": 1,
+        "line": 3,
+        "offset": 19,
+      },
+      "type": "lineEnding",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 20,
+        "_index": 0,
+        "column": 1,
+        "line": 4,
+        "offset": 20,
+      },
+      "start": {
+        "_bufferIndex": 19,
+        "_index": 0,
+        "column": 1,
+        "line": 3,
+        "offset": 19,
+      },
+      "type": "lineEnding",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 24,
+        "_index": 0,
+        "column": 5,
+        "line": 4,
+        "offset": 24,
+      },
+      "start": {
+        "_bufferIndex": 20,
+        "_index": 0,
+        "column": 1,
+        "line": 4,
+        "offset": 20,
+      },
+      "type": "linePrefix",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 24,
+        "_index": 0,
+        "column": 5,
+        "line": 4,
+        "offset": 24,
+      },
+      "start": {
+        "_bufferIndex": 20,
+        "_index": 0,
+        "column": 1,
+        "line": 4,
+        "offset": 20,
+      },
+      "type": "linePrefix",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 42,
+        "_index": 0,
+        "column": 23,
+        "line": 4,
+        "offset": 42,
+      },
+      "start": {
+        "_bufferIndex": 24,
+        "_index": 0,
+        "column": 5,
+        "line": 4,
+        "offset": 24,
+      },
+      "type": "codeFlowValue",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 42,
+        "_index": 0,
+        "column": 23,
+        "line": 4,
+        "offset": 42,
+      },
+      "start": {
+        "_bufferIndex": 24,
+        "_index": 0,
+        "column": 5,
+        "line": 4,
+        "offset": 24,
+      },
+      "type": "codeFlowValue",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 42,
+        "_index": 0,
+        "column": 23,
+        "line": 4,
+        "offset": 42,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "codeIndented",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 86,
+        "_index": 0,
+        "column": 14,
+        "line": 8,
+        "offset": 86,
+      },
+      "start": {
+        "_bufferIndex": 62,
+        "_index": 0,
+        "column": 1,
+        "line": 7,
+        "offset": 62,
+      },
+      "type": "codeIndented",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 66,
+        "_index": 0,
+        "column": 5,
+        "line": 7,
+        "offset": 66,
+      },
+      "start": {
+        "_bufferIndex": 62,
+        "_index": 0,
+        "column": 1,
+        "line": 7,
+        "offset": 62,
+      },
+      "type": "linePrefix",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 66,
+        "_index": 0,
+        "column": 5,
+        "line": 7,
+        "offset": 66,
+      },
+      "start": {
+        "_bufferIndex": 62,
+        "_index": 0,
+        "column": 1,
+        "line": 7,
+        "offset": 62,
+      },
+      "type": "linePrefix",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 72,
+        "_index": 0,
+        "column": 11,
+        "line": 7,
+        "offset": 72,
+      },
+      "start": {
+        "_bufferIndex": 66,
+        "_index": 0,
+        "column": 5,
+        "line": 7,
+        "offset": 66,
+      },
+      "type": "codeFlowValue",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 72,
+        "_index": 0,
+        "column": 11,
+        "line": 7,
+        "offset": 72,
+      },
+      "start": {
+        "_bufferIndex": 66,
+        "_index": 0,
+        "column": 5,
+        "line": 7,
+        "offset": 66,
+      },
+      "type": "codeFlowValue",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 73,
+        "_index": 0,
+        "column": 1,
+        "line": 8,
+        "offset": 73,
+      },
+      "start": {
+        "_bufferIndex": 72,
+        "_index": 0,
+        "column": 11,
+        "line": 7,
+        "offset": 72,
+      },
+      "type": "lineEnding",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 73,
+        "_index": 0,
+        "column": 1,
+        "line": 8,
+        "offset": 73,
+      },
+      "start": {
+        "_bufferIndex": 72,
+        "_index": 0,
+        "column": 11,
+        "line": 7,
+        "offset": 72,
+      },
+      "type": "lineEnding",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 77,
+        "_index": 0,
+        "column": 5,
+        "line": 8,
+        "offset": 77,
+      },
+      "start": {
+        "_bufferIndex": 73,
+        "_index": 0,
+        "column": 1,
+        "line": 8,
+        "offset": 73,
+      },
+      "type": "linePrefix",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 77,
+        "_index": 0,
+        "column": 5,
+        "line": 8,
+        "offset": 77,
+      },
+      "start": {
+        "_bufferIndex": 73,
+        "_index": 0,
+        "column": 1,
+        "line": 8,
+        "offset": 73,
+      },
+      "type": "linePrefix",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 86,
+        "_index": 0,
+        "column": 14,
+        "line": 8,
+        "offset": 86,
+      },
+      "start": {
+        "_bufferIndex": 77,
+        "_index": 0,
+        "column": 5,
+        "line": 8,
+        "offset": 77,
+      },
+      "type": "codeFlowValue",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 86,
+        "_index": 0,
+        "column": 14,
+        "line": 8,
+        "offset": 86,
+      },
+      "start": {
+        "_bufferIndex": 77,
+        "_index": 0,
+        "column": 5,
+        "line": 8,
+        "offset": 77,
+      },
+      "type": "codeFlowValue",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 86,
+        "_index": 0,
+        "column": 14,
+        "line": 8,
+        "offset": 86,
+      },
+      "start": {
+        "_bufferIndex": 62,
+        "_index": 0,
+        "column": 1,
+        "line": 7,
+        "offset": 62,
+      },
+      "type": "codeIndented",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 148,
+        "_index": 0,
+        "column": 17,
+        "line": 14,
+        "offset": 145,
+      },
+      "start": {
+        "_bufferIndex": 106,
+        "_index": 0,
+        "column": 1,
+        "line": 13,
+        "offset": 105,
+      },
+      "type": "codeIndented",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 110,
+        "_index": 0,
+        "column": 5,
+        "line": 13,
+        "offset": 108,
+      },
+      "start": {
+        "_bufferIndex": 106,
+        "_index": 0,
+        "column": 1,
+        "line": 13,
+        "offset": 105,
+      },
+      "type": "linePrefix",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 110,
+        "_index": 0,
+        "column": 5,
+        "line": 13,
+        "offset": 108,
+      },
+      "start": {
+        "_bufferIndex": 106,
+        "_index": 0,
+        "column": 1,
+        "line": 13,
+        "offset": 105,
+      },
+      "type": "linePrefix",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 131,
+        "_index": 0,
+        "column": 26,
+        "line": 13,
+        "offset": 129,
+      },
+      "start": {
+        "_bufferIndex": 110,
+        "_index": 0,
+        "column": 5,
+        "line": 13,
+        "offset": 108,
+      },
+      "type": "codeFlowValue",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 131,
+        "_index": 0,
+        "column": 26,
+        "line": 13,
+        "offset": 129,
+      },
+      "start": {
+        "_bufferIndex": 110,
+        "_index": 0,
+        "column": 5,
+        "line": 13,
+        "offset": 108,
+      },
+      "type": "codeFlowValue",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 132,
+        "_index": 0,
+        "column": 1,
+        "line": 14,
+        "offset": 130,
+      },
+      "start": {
+        "_bufferIndex": 131,
+        "_index": 0,
+        "column": 26,
+        "line": 13,
+        "offset": 129,
+      },
+      "type": "lineEnding",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 132,
+        "_index": 0,
+        "column": 1,
+        "line": 14,
+        "offset": 130,
+      },
+      "start": {
+        "_bufferIndex": 131,
+        "_index": 0,
+        "column": 26,
+        "line": 13,
+        "offset": 129,
+      },
+      "type": "lineEnding",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 136,
+        "_index": 0,
+        "column": 5,
+        "line": 14,
+        "offset": 133,
+      },
+      "start": {
+        "_bufferIndex": 132,
+        "_index": 0,
+        "column": 1,
+        "line": 14,
+        "offset": 130,
+      },
+      "type": "linePrefix",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 136,
+        "_index": 0,
+        "column": 5,
+        "line": 14,
+        "offset": 133,
+      },
+      "start": {
+        "_bufferIndex": 132,
+        "_index": 0,
+        "column": 1,
+        "line": 14,
+        "offset": 130,
+      },
+      "type": "linePrefix",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 148,
+        "_index": 0,
+        "column": 17,
+        "line": 14,
+        "offset": 145,
+      },
+      "start": {
+        "_bufferIndex": 136,
+        "_index": 0,
+        "column": 5,
+        "line": 14,
+        "offset": 133,
+      },
+      "type": "codeFlowValue",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 148,
+        "_index": 0,
+        "column": 17,
+        "line": 14,
+        "offset": 145,
+      },
+      "start": {
+        "_bufferIndex": 136,
+        "_index": 0,
+        "column": 5,
+        "line": 14,
+        "offset": 133,
+      },
+      "type": "codeFlowValue",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 148,
+        "_index": 0,
+        "column": 17,
+        "line": 14,
+        "offset": 145,
+      },
+      "start": {
+        "_bufferIndex": 106,
+        "_index": 0,
+        "column": 1,
+        "line": 13,
+        "offset": 105,
+      },
+      "type": "codeIndented",
+    },
+  ],
+]
+`;
+
+exports[`integration:tokenize > should work with constructs (7) 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 30,
+        "_index": 0,
         "column": 31,
         "line": 1,
         "offset": 30,
       },
       "start": {
-        "_index": 27,
+        "_bufferIndex": 27,
+        "_index": 0,
         "column": 28,
         "line": 1,
         "offset": 27,
@@ -3803,13 +1517,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 28,
+        "_bufferIndex": 28,
+        "_index": 0,
         "column": 29,
         "line": 1,
         "offset": 28,
       },
       "start": {
-        "_index": 27,
+        "_bufferIndex": 27,
+        "_index": 0,
         "column": 28,
         "line": 1,
         "offset": 27,
@@ -3821,13 +1537,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 28,
+        "_bufferIndex": 28,
+        "_index": 0,
         "column": 29,
         "line": 1,
         "offset": 28,
       },
       "start": {
-        "_index": 27,
+        "_bufferIndex": 27,
+        "_index": 0,
         "column": 28,
         "line": 1,
         "offset": 27,
@@ -3839,13 +1557,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 29,
+        "_bufferIndex": 29,
+        "_index": 0,
         "column": 30,
         "line": 1,
         "offset": 29,
       },
       "start": {
-        "_index": 28,
+        "_bufferIndex": 28,
+        "_index": 0,
         "column": 29,
         "line": 1,
         "offset": 28,
@@ -3857,13 +1577,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 29,
+        "_bufferIndex": 29,
+        "_index": 0,
         "column": 30,
         "line": 1,
         "offset": 29,
       },
       "start": {
-        "_index": 28,
+        "_bufferIndex": 28,
+        "_index": 0,
         "column": 29,
         "line": 1,
         "offset": 28,
@@ -3875,13 +1597,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 30,
+        "_bufferIndex": 30,
+        "_index": 0,
         "column": 31,
         "line": 1,
         "offset": 30,
       },
       "start": {
-        "_index": 29,
+        "_bufferIndex": 29,
+        "_index": 0,
         "column": 30,
         "line": 1,
         "offset": 29,
@@ -3893,13 +1617,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 30,
+        "_bufferIndex": 30,
+        "_index": 0,
         "column": 31,
         "line": 1,
         "offset": 30,
       },
       "start": {
-        "_index": 29,
+        "_bufferIndex": 29,
+        "_index": 0,
         "column": 30,
         "line": 1,
         "offset": 29,
@@ -3911,13 +1637,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 30,
+        "_bufferIndex": 30,
+        "_index": 0,
         "column": 31,
         "line": 1,
         "offset": 30,
       },
       "start": {
-        "_index": 27,
+        "_bufferIndex": 27,
+        "_index": 0,
         "column": 28,
         "line": 1,
         "offset": 27,
@@ -3929,13 +1657,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 36,
+        "_bufferIndex": 36,
+        "_index": 0,
         "column": 37,
         "line": 1,
         "offset": 36,
       },
       "start": {
-        "_index": 32,
+        "_bufferIndex": 32,
+        "_index": 0,
         "column": 33,
         "line": 1,
         "offset": 32,
@@ -3947,13 +1677,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 33,
+        "_bufferIndex": 33,
+        "_index": 0,
         "column": 34,
         "line": 1,
         "offset": 33,
       },
       "start": {
-        "_index": 32,
+        "_bufferIndex": 32,
+        "_index": 0,
         "column": 33,
         "line": 1,
         "offset": 32,
@@ -3965,13 +1697,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 33,
+        "_bufferIndex": 33,
+        "_index": 0,
         "column": 34,
         "line": 1,
         "offset": 33,
       },
       "start": {
-        "_index": 32,
+        "_bufferIndex": 32,
+        "_index": 0,
         "column": 33,
         "line": 1,
         "offset": 32,
@@ -3983,13 +1717,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 35,
+        "_bufferIndex": 35,
+        "_index": 0,
         "column": 36,
         "line": 1,
         "offset": 35,
       },
       "start": {
-        "_index": 33,
+        "_bufferIndex": 33,
+        "_index": 0,
         "column": 34,
         "line": 1,
         "offset": 33,
@@ -4001,13 +1737,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 35,
+        "_bufferIndex": 35,
+        "_index": 0,
         "column": 36,
         "line": 1,
         "offset": 35,
       },
       "start": {
-        "_index": 33,
+        "_bufferIndex": 33,
+        "_index": 0,
         "column": 34,
         "line": 1,
         "offset": 33,
@@ -4019,13 +1757,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 36,
+        "_bufferIndex": 36,
+        "_index": 0,
         "column": 37,
         "line": 1,
         "offset": 36,
       },
       "start": {
-        "_index": 35,
+        "_bufferIndex": 35,
+        "_index": 0,
         "column": 36,
         "line": 1,
         "offset": 35,
@@ -4037,13 +1777,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 36,
+        "_bufferIndex": 36,
+        "_index": 0,
         "column": 37,
         "line": 1,
         "offset": 36,
       },
       "start": {
-        "_index": 35,
+        "_bufferIndex": 35,
+        "_index": 0,
         "column": 36,
         "line": 1,
         "offset": 35,
@@ -4055,13 +1797,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 36,
+        "_bufferIndex": 36,
+        "_index": 0,
         "column": 37,
         "line": 1,
         "offset": 36,
       },
       "start": {
-        "_index": 32,
+        "_bufferIndex": 32,
+        "_index": 0,
         "column": 33,
         "line": 1,
         "offset": 32,
@@ -4073,13 +1817,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 42,
+        "_bufferIndex": 42,
+        "_index": 0,
         "column": 43,
         "line": 1,
         "offset": 42,
       },
       "start": {
-        "_index": 38,
+        "_bufferIndex": 38,
+        "_index": 0,
         "column": 39,
         "line": 1,
         "offset": 38,
@@ -4091,13 +1837,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 39,
+        "_bufferIndex": 39,
+        "_index": 0,
         "column": 40,
         "line": 1,
         "offset": 39,
       },
       "start": {
-        "_index": 38,
+        "_bufferIndex": 38,
+        "_index": 0,
         "column": 39,
         "line": 1,
         "offset": 38,
@@ -4109,13 +1857,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 39,
+        "_bufferIndex": 39,
+        "_index": 0,
         "column": 40,
         "line": 1,
         "offset": 39,
       },
       "start": {
-        "_index": 38,
+        "_bufferIndex": 38,
+        "_index": 0,
         "column": 39,
         "line": 1,
         "offset": 38,
@@ -4127,13 +1877,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 41,
+        "_bufferIndex": 41,
+        "_index": 0,
         "column": 42,
         "line": 1,
         "offset": 41,
       },
       "start": {
-        "_index": 39,
+        "_bufferIndex": 39,
+        "_index": 0,
         "column": 40,
         "line": 1,
         "offset": 39,
@@ -4145,13 +1897,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 41,
+        "_bufferIndex": 41,
+        "_index": 0,
         "column": 42,
         "line": 1,
         "offset": 41,
       },
       "start": {
-        "_index": 39,
+        "_bufferIndex": 39,
+        "_index": 0,
         "column": 40,
         "line": 1,
         "offset": 39,
@@ -4163,13 +1917,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 42,
+        "_bufferIndex": 42,
+        "_index": 0,
         "column": 43,
         "line": 1,
         "offset": 42,
       },
       "start": {
-        "_index": 41,
+        "_bufferIndex": 41,
+        "_index": 0,
         "column": 42,
         "line": 1,
         "offset": 41,
@@ -4181,13 +1937,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 42,
+        "_bufferIndex": 42,
+        "_index": 0,
         "column": 43,
         "line": 1,
         "offset": 42,
       },
       "start": {
-        "_index": 41,
+        "_bufferIndex": 41,
+        "_index": 0,
         "column": 42,
         "line": 1,
         "offset": 41,
@@ -4199,13 +1957,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 42,
+        "_bufferIndex": 42,
+        "_index": 0,
         "column": 43,
         "line": 1,
         "offset": 42,
       },
       "start": {
-        "_index": 38,
+        "_bufferIndex": 38,
+        "_index": 0,
         "column": 39,
         "line": 1,
         "offset": 38,
@@ -4217,13 +1977,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 49,
+        "_bufferIndex": 49,
+        "_index": 0,
         "column": 50,
         "line": 1,
         "offset": 49,
       },
       "start": {
-        "_index": 44,
+        "_bufferIndex": 44,
+        "_index": 0,
         "column": 45,
         "line": 1,
         "offset": 44,
@@ -4235,13 +1997,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 45,
+        "_bufferIndex": 45,
+        "_index": 0,
         "column": 46,
         "line": 1,
         "offset": 45,
       },
       "start": {
-        "_index": 44,
+        "_bufferIndex": 44,
+        "_index": 0,
         "column": 45,
         "line": 1,
         "offset": 44,
@@ -4253,13 +2017,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 45,
+        "_bufferIndex": 45,
+        "_index": 0,
         "column": 46,
         "line": 1,
         "offset": 45,
       },
       "start": {
-        "_index": 44,
+        "_bufferIndex": 44,
+        "_index": 0,
         "column": 45,
         "line": 1,
         "offset": 44,
@@ -4271,13 +2037,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 46,
+        "_bufferIndex": 46,
+        "_index": 0,
         "column": 47,
         "line": 1,
         "offset": 46,
       },
       "start": {
-        "_index": 45,
+        "_bufferIndex": 45,
+        "_index": 0,
         "column": 46,
         "line": 1,
         "offset": 45,
@@ -4289,13 +2057,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 46,
+        "_bufferIndex": 46,
+        "_index": 0,
         "column": 47,
         "line": 1,
         "offset": 46,
       },
       "start": {
-        "_index": 45,
+        "_bufferIndex": 45,
+        "_index": 0,
         "column": 46,
         "line": 1,
         "offset": 45,
@@ -4307,13 +2077,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 47,
+        "_bufferIndex": 47,
+        "_index": 0,
         "column": 48,
         "line": 1,
         "offset": 47,
       },
       "start": {
-        "_index": 46,
+        "_bufferIndex": 46,
+        "_index": 0,
         "column": 47,
         "line": 1,
         "offset": 46,
@@ -4325,13 +2097,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 47,
+        "_bufferIndex": 47,
+        "_index": 0,
         "column": 48,
         "line": 1,
         "offset": 47,
       },
       "start": {
-        "_index": 46,
+        "_bufferIndex": 46,
+        "_index": 0,
         "column": 47,
         "line": 1,
         "offset": 46,
@@ -4343,13 +2117,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 48,
+        "_bufferIndex": 48,
+        "_index": 0,
         "column": 49,
         "line": 1,
         "offset": 48,
       },
       "start": {
-        "_index": 47,
+        "_bufferIndex": 47,
+        "_index": 0,
         "column": 48,
         "line": 1,
         "offset": 47,
@@ -4361,13 +2137,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 48,
+        "_bufferIndex": 48,
+        "_index": 0,
         "column": 49,
         "line": 1,
         "offset": 48,
       },
       "start": {
-        "_index": 47,
+        "_bufferIndex": 47,
+        "_index": 0,
         "column": 48,
         "line": 1,
         "offset": 47,
@@ -4379,13 +2157,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 49,
+        "_bufferIndex": 49,
+        "_index": 0,
         "column": 50,
         "line": 1,
         "offset": 49,
       },
       "start": {
-        "_index": 48,
+        "_bufferIndex": 48,
+        "_index": 0,
         "column": 49,
         "line": 1,
         "offset": 48,
@@ -4397,13 +2177,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 49,
+        "_bufferIndex": 49,
+        "_index": 0,
         "column": 50,
         "line": 1,
         "offset": 49,
       },
       "start": {
-        "_index": 48,
+        "_bufferIndex": 48,
+        "_index": 0,
         "column": 49,
         "line": 1,
         "offset": 48,
@@ -4415,13 +2197,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 49,
+        "_bufferIndex": 49,
+        "_index": 0,
         "column": 50,
         "line": 1,
         "offset": 49,
       },
       "start": {
-        "_index": 44,
+        "_bufferIndex": 44,
+        "_index": 0,
         "column": 45,
         "line": 1,
         "offset": 44,
@@ -4433,13 +2217,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 56,
+        "_bufferIndex": 56,
+        "_index": 0,
         "column": 2,
         "line": 2,
         "offset": 56,
       },
       "start": {
-        "_index": 51,
+        "_bufferIndex": 51,
+        "_index": 0,
         "column": 52,
         "line": 1,
         "offset": 51,
@@ -4451,13 +2237,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 52,
+        "_bufferIndex": 52,
+        "_index": 0,
         "column": 53,
         "line": 1,
         "offset": 52,
       },
       "start": {
-        "_index": 51,
+        "_bufferIndex": 51,
+        "_index": 0,
         "column": 52,
         "line": 1,
         "offset": 51,
@@ -4469,13 +2257,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 52,
+        "_bufferIndex": 52,
+        "_index": 0,
         "column": 53,
         "line": 1,
         "offset": 52,
       },
       "start": {
-        "_index": 51,
+        "_bufferIndex": 51,
+        "_index": 0,
         "column": 52,
         "line": 1,
         "offset": 51,
@@ -4487,13 +2277,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 53,
+        "_bufferIndex": 53,
+        "_index": 0,
         "column": 54,
         "line": 1,
         "offset": 53,
       },
       "start": {
-        "_index": 52,
+        "_bufferIndex": 52,
+        "_index": 0,
         "column": 53,
         "line": 1,
         "offset": 52,
@@ -4505,13 +2297,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 53,
+        "_bufferIndex": 53,
+        "_index": 0,
         "column": 54,
         "line": 1,
         "offset": 53,
       },
       "start": {
-        "_index": 52,
+        "_bufferIndex": 52,
+        "_index": 0,
         "column": 53,
         "line": 1,
         "offset": 52,
@@ -4523,13 +2317,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 54,
+        "_bufferIndex": 54,
+        "_index": 0,
         "column": 55,
         "line": 1,
         "offset": 54,
       },
       "start": {
-        "_index": 53,
+        "_bufferIndex": 53,
+        "_index": 0,
         "column": 54,
         "line": 1,
         "offset": 53,
@@ -4541,13 +2337,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 54,
+        "_bufferIndex": 54,
+        "_index": 0,
         "column": 55,
         "line": 1,
         "offset": 54,
       },
       "start": {
-        "_index": 53,
+        "_bufferIndex": 53,
+        "_index": 0,
         "column": 54,
         "line": 1,
         "offset": 53,
@@ -4559,13 +2357,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 55,
+        "_bufferIndex": 55,
+        "_index": 0,
         "column": 1,
         "line": 2,
         "offset": 55,
       },
       "start": {
-        "_index": 54,
+        "_bufferIndex": 54,
+        "_index": 0,
         "column": 55,
         "line": 1,
         "offset": 54,
@@ -4577,13 +2377,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 55,
+        "_bufferIndex": 55,
+        "_index": 0,
         "column": 1,
         "line": 2,
         "offset": 55,
       },
       "start": {
-        "_index": 54,
+        "_bufferIndex": 54,
+        "_index": 0,
         "column": 55,
         "line": 1,
         "offset": 54,
@@ -4595,13 +2397,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 56,
+        "_bufferIndex": 56,
+        "_index": 0,
         "column": 2,
         "line": 2,
         "offset": 56,
       },
       "start": {
-        "_index": 55,
+        "_bufferIndex": 55,
+        "_index": 0,
         "column": 1,
         "line": 2,
         "offset": 55,
@@ -4613,13 +2417,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 56,
+        "_bufferIndex": 56,
+        "_index": 0,
         "column": 2,
         "line": 2,
         "offset": 56,
       },
       "start": {
-        "_index": 55,
+        "_bufferIndex": 55,
+        "_index": 0,
         "column": 1,
         "line": 2,
         "offset": 55,
@@ -4631,13 +2437,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 56,
+        "_bufferIndex": 56,
+        "_index": 0,
         "column": 2,
         "line": 2,
         "offset": 56,
       },
       "start": {
-        "_index": 51,
+        "_bufferIndex": 51,
+        "_index": 0,
         "column": 52,
         "line": 1,
         "offset": 51,
@@ -4649,13 +2457,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 63,
+        "_bufferIndex": 63,
+        "_index": 0,
         "column": 2,
         "line": 3,
         "offset": 63,
       },
       "start": {
-        "_index": 58,
+        "_bufferIndex": 58,
+        "_index": 0,
         "column": 4,
         "line": 2,
         "offset": 58,
@@ -4667,13 +2477,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 59,
+        "_bufferIndex": 59,
+        "_index": 0,
         "column": 5,
         "line": 2,
         "offset": 59,
       },
       "start": {
-        "_index": 58,
+        "_bufferIndex": 58,
+        "_index": 0,
         "column": 4,
         "line": 2,
         "offset": 58,
@@ -4685,13 +2497,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 59,
+        "_bufferIndex": 59,
+        "_index": 0,
         "column": 5,
         "line": 2,
         "offset": 59,
       },
       "start": {
-        "_index": 58,
+        "_bufferIndex": 58,
+        "_index": 0,
         "column": 4,
         "line": 2,
         "offset": 58,
@@ -4703,13 +2517,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 60,
+        "_bufferIndex": 60,
+        "_index": 0,
         "column": 6,
         "line": 2,
         "offset": 60,
       },
       "start": {
-        "_index": 59,
+        "_bufferIndex": 59,
+        "_index": 0,
         "column": 5,
         "line": 2,
         "offset": 59,
@@ -4721,13 +2537,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 60,
+        "_bufferIndex": 60,
+        "_index": 0,
         "column": 6,
         "line": 2,
         "offset": 60,
       },
       "start": {
-        "_index": 59,
+        "_bufferIndex": 59,
+        "_index": 0,
         "column": 5,
         "line": 2,
         "offset": 59,
@@ -4739,13 +2557,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 61,
+        "_bufferIndex": 61,
+        "_index": 0,
         "column": 7,
         "line": 2,
         "offset": 61,
       },
       "start": {
-        "_index": 60,
+        "_bufferIndex": 60,
+        "_index": 0,
         "column": 6,
         "line": 2,
         "offset": 60,
@@ -4757,13 +2577,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 61,
+        "_bufferIndex": 61,
+        "_index": 0,
         "column": 7,
         "line": 2,
         "offset": 61,
       },
       "start": {
-        "_index": 60,
+        "_bufferIndex": 60,
+        "_index": 0,
         "column": 6,
         "line": 2,
         "offset": 60,
@@ -4775,13 +2597,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 62,
+        "_bufferIndex": 62,
+        "_index": 0,
         "column": 1,
         "line": 3,
         "offset": 62,
       },
       "start": {
-        "_index": 61,
+        "_bufferIndex": 61,
+        "_index": 0,
         "column": 7,
         "line": 2,
         "offset": 61,
@@ -4793,13 +2617,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 62,
+        "_bufferIndex": 62,
+        "_index": 0,
         "column": 1,
         "line": 3,
         "offset": 62,
       },
       "start": {
-        "_index": 61,
+        "_bufferIndex": 61,
+        "_index": 0,
         "column": 7,
         "line": 2,
         "offset": 61,
@@ -4811,13 +2637,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 63,
+        "_bufferIndex": 63,
+        "_index": 0,
         "column": 2,
         "line": 3,
         "offset": 63,
       },
       "start": {
-        "_index": 62,
+        "_bufferIndex": 62,
+        "_index": 0,
         "column": 1,
         "line": 3,
         "offset": 62,
@@ -4829,13 +2657,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 63,
+        "_bufferIndex": 63,
+        "_index": 0,
         "column": 2,
         "line": 3,
         "offset": 63,
       },
       "start": {
-        "_index": 62,
+        "_bufferIndex": 62,
+        "_index": 0,
         "column": 1,
         "line": 3,
         "offset": 62,
@@ -4847,13 +2677,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 63,
+        "_bufferIndex": 63,
+        "_index": 0,
         "column": 2,
         "line": 3,
         "offset": 63,
       },
       "start": {
-        "_index": 58,
+        "_bufferIndex": 58,
+        "_index": 0,
         "column": 4,
         "line": 2,
         "offset": 58,
@@ -4865,13 +2697,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 69,
+        "_bufferIndex": 69,
+        "_index": 0,
         "column": 2,
         "line": 4,
         "offset": 69,
       },
       "start": {
-        "_index": 65,
+        "_bufferIndex": 65,
+        "_index": 0,
         "column": 4,
         "line": 3,
         "offset": 65,
@@ -4883,13 +2717,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 66,
+        "_bufferIndex": 66,
+        "_index": 0,
         "column": 5,
         "line": 3,
         "offset": 66,
       },
       "start": {
-        "_index": 65,
+        "_bufferIndex": 65,
+        "_index": 0,
         "column": 4,
         "line": 3,
         "offset": 65,
@@ -4901,13 +2737,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 66,
+        "_bufferIndex": 66,
+        "_index": 0,
         "column": 5,
         "line": 3,
         "offset": 66,
       },
       "start": {
-        "_index": 65,
+        "_bufferIndex": 65,
+        "_index": 0,
         "column": 4,
         "line": 3,
         "offset": 65,
@@ -4919,13 +2757,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 67,
+        "_bufferIndex": 67,
+        "_index": 0,
         "column": 6,
         "line": 3,
         "offset": 67,
       },
       "start": {
-        "_index": 66,
+        "_bufferIndex": 66,
+        "_index": 0,
         "column": 5,
         "line": 3,
         "offset": 66,
@@ -4937,13 +2777,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 67,
+        "_bufferIndex": 67,
+        "_index": 0,
         "column": 6,
         "line": 3,
         "offset": 67,
       },
       "start": {
-        "_index": 66,
+        "_bufferIndex": 66,
+        "_index": 0,
         "column": 5,
         "line": 3,
         "offset": 66,
@@ -4955,13 +2797,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 68,
+        "_bufferIndex": 68,
+        "_index": 0,
         "column": 1,
         "line": 4,
         "offset": 68,
       },
       "start": {
-        "_index": 67,
+        "_bufferIndex": 67,
+        "_index": 0,
         "column": 6,
         "line": 3,
         "offset": 67,
@@ -4973,13 +2817,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 68,
+        "_bufferIndex": 68,
+        "_index": 0,
         "column": 1,
         "line": 4,
         "offset": 68,
       },
       "start": {
-        "_index": 67,
+        "_bufferIndex": 67,
+        "_index": 0,
         "column": 6,
         "line": 3,
         "offset": 67,
@@ -4991,13 +2837,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 69,
+        "_bufferIndex": 69,
+        "_index": 0,
         "column": 2,
         "line": 4,
         "offset": 69,
       },
       "start": {
-        "_index": 68,
+        "_bufferIndex": 68,
+        "_index": 0,
         "column": 1,
         "line": 4,
         "offset": 68,
@@ -5009,13 +2857,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 69,
+        "_bufferIndex": 69,
+        "_index": 0,
         "column": 2,
         "line": 4,
         "offset": 69,
       },
       "start": {
-        "_index": 68,
+        "_bufferIndex": 68,
+        "_index": 0,
         "column": 1,
         "line": 4,
         "offset": 68,
@@ -5027,13 +2877,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 69,
+        "_bufferIndex": 69,
+        "_index": 0,
         "column": 2,
         "line": 4,
         "offset": 69,
       },
       "start": {
-        "_index": 65,
+        "_bufferIndex": 65,
+        "_index": 0,
         "column": 4,
         "line": 3,
         "offset": 65,
@@ -5045,13 +2897,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 75,
+        "_bufferIndex": 75,
+        "_index": 0,
         "column": 3,
         "line": 5,
         "offset": 75,
       },
       "start": {
-        "_index": 71,
+        "_bufferIndex": 71,
+        "_index": 0,
         "column": 4,
         "line": 4,
         "offset": 71,
@@ -5063,13 +2917,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 72,
+        "_bufferIndex": 72,
+        "_index": 0,
         "column": 5,
         "line": 4,
         "offset": 72,
       },
       "start": {
-        "_index": 71,
+        "_bufferIndex": 71,
+        "_index": 0,
         "column": 4,
         "line": 4,
         "offset": 71,
@@ -5081,13 +2937,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 72,
+        "_bufferIndex": 72,
+        "_index": 0,
         "column": 5,
         "line": 4,
         "offset": 72,
       },
       "start": {
-        "_index": 71,
+        "_bufferIndex": 71,
+        "_index": 0,
         "column": 4,
         "line": 4,
         "offset": 71,
@@ -5099,13 +2957,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 73,
+        "_bufferIndex": 73,
+        "_index": 0,
         "column": 1,
         "line": 5,
         "offset": 73,
       },
       "start": {
-        "_index": 72,
+        "_bufferIndex": 72,
+        "_index": 0,
         "column": 5,
         "line": 4,
         "offset": 72,
@@ -5117,13 +2977,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 73,
+        "_bufferIndex": 73,
+        "_index": 0,
         "column": 1,
         "line": 5,
         "offset": 73,
       },
       "start": {
-        "_index": 72,
+        "_bufferIndex": 72,
+        "_index": 0,
         "column": 5,
         "line": 4,
         "offset": 72,
@@ -5135,13 +2997,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 74,
+        "_bufferIndex": 74,
+        "_index": 0,
         "column": 2,
         "line": 5,
         "offset": 74,
       },
       "start": {
-        "_index": 73,
+        "_bufferIndex": 73,
+        "_index": 0,
         "column": 1,
         "line": 5,
         "offset": 73,
@@ -5153,13 +3017,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 74,
+        "_bufferIndex": 74,
+        "_index": 0,
         "column": 2,
         "line": 5,
         "offset": 74,
       },
       "start": {
-        "_index": 73,
+        "_bufferIndex": 73,
+        "_index": 0,
         "column": 1,
         "line": 5,
         "offset": 73,
@@ -5171,13 +3037,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 75,
+        "_bufferIndex": 75,
+        "_index": 0,
         "column": 3,
         "line": 5,
         "offset": 75,
       },
       "start": {
-        "_index": 74,
+        "_bufferIndex": 74,
+        "_index": 0,
         "column": 2,
         "line": 5,
         "offset": 74,
@@ -5189,13 +3057,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 75,
+        "_bufferIndex": 75,
+        "_index": 0,
         "column": 3,
         "line": 5,
         "offset": 75,
       },
       "start": {
-        "_index": 74,
+        "_bufferIndex": 74,
+        "_index": 0,
         "column": 2,
         "line": 5,
         "offset": 74,
@@ -5207,13 +3077,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 75,
+        "_bufferIndex": 75,
+        "_index": 0,
         "column": 3,
         "line": 5,
         "offset": 75,
       },
       "start": {
-        "_index": 71,
+        "_bufferIndex": 71,
+        "_index": 0,
         "column": 4,
         "line": 4,
         "offset": 71,
@@ -5225,13 +3097,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 117,
+        "_bufferIndex": 117,
+        "_index": 0,
         "column": 14,
         "line": 8,
         "offset": 116,
       },
       "start": {
-        "_index": 83,
+        "_bufferIndex": 83,
+        "_index": 0,
         "column": 6,
         "line": 7,
         "offset": 83,
@@ -5243,13 +3117,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 84,
+        "_bufferIndex": 84,
+        "_index": 0,
         "column": 7,
         "line": 7,
         "offset": 84,
       },
       "start": {
-        "_index": 83,
+        "_bufferIndex": 83,
+        "_index": 0,
         "column": 6,
         "line": 7,
         "offset": 83,
@@ -5261,13 +3137,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 84,
+        "_bufferIndex": 84,
+        "_index": 0,
         "column": 7,
         "line": 7,
         "offset": 84,
       },
       "start": {
-        "_index": 83,
+        "_bufferIndex": 83,
+        "_index": 0,
         "column": 6,
         "line": 7,
         "offset": 83,
@@ -5279,13 +3157,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 103,
+        "_bufferIndex": 103,
+        "_index": 0,
         "column": 26,
         "line": 7,
         "offset": 103,
       },
       "start": {
-        "_index": 84,
+        "_bufferIndex": 84,
+        "_index": 0,
         "column": 7,
         "line": 7,
         "offset": 84,
@@ -5297,13 +3177,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 103,
+        "_bufferIndex": 103,
+        "_index": 0,
         "column": 26,
         "line": 7,
         "offset": 103,
       },
       "start": {
-        "_index": 84,
+        "_bufferIndex": 84,
+        "_index": 0,
         "column": 7,
         "line": 7,
         "offset": 84,
@@ -5315,13 +3197,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 104,
+        "_bufferIndex": 104,
+        "_index": 0,
         "column": 1,
         "line": 8,
         "offset": 104,
       },
       "start": {
-        "_index": 103,
+        "_bufferIndex": 103,
+        "_index": 0,
         "column": 26,
         "line": 7,
         "offset": 103,
@@ -5333,13 +3217,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 104,
+        "_bufferIndex": 104,
+        "_index": 0,
         "column": 1,
         "line": 8,
         "offset": 104,
       },
       "start": {
-        "_index": 103,
+        "_bufferIndex": 103,
+        "_index": 0,
         "column": 26,
         "line": 7,
         "offset": 103,
@@ -5351,13 +3237,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 116,
+        "_bufferIndex": 116,
+        "_index": 0,
         "column": 13,
         "line": 8,
         "offset": 115,
       },
       "start": {
-        "_index": 104,
+        "_bufferIndex": 104,
+        "_index": 0,
         "column": 1,
         "line": 8,
         "offset": 104,
@@ -5369,13 +3257,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 116,
+        "_bufferIndex": 116,
+        "_index": 0,
         "column": 13,
         "line": 8,
         "offset": 115,
       },
       "start": {
-        "_index": 104,
+        "_bufferIndex": 104,
+        "_index": 0,
         "column": 1,
         "line": 8,
         "offset": 104,
@@ -5387,13 +3277,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "enter",
     {
       "end": {
-        "_index": 117,
+        "_bufferIndex": 117,
+        "_index": 0,
         "column": 14,
         "line": 8,
         "offset": 116,
       },
       "start": {
-        "_index": 116,
+        "_bufferIndex": 116,
+        "_index": 0,
         "column": 13,
         "line": 8,
         "offset": 115,
@@ -5405,13 +3297,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 117,
+        "_bufferIndex": 117,
+        "_index": 0,
         "column": 14,
         "line": 8,
         "offset": 116,
       },
       "start": {
-        "_index": 116,
+        "_bufferIndex": 116,
+        "_index": 0,
         "column": 13,
         "line": 8,
         "offset": 115,
@@ -5423,13 +3317,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     "exit",
     {
       "end": {
-        "_index": 117,
+        "_bufferIndex": 117,
+        "_index": 0,
         "column": 14,
         "line": 8,
         "offset": 116,
       },
       "start": {
-        "_index": 83,
+        "_bufferIndex": 83,
+        "_index": 0,
         "column": 6,
         "line": 7,
         "offset": 83,

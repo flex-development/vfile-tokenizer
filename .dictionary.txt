@@ -12,6 +12,7 @@ gemoji
 ggshield
 gpgsign
 hmarr
+htab
 jchen
 kaisugi
 nvmrc

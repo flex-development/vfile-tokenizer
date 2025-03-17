@@ -3,6 +3,7 @@
  * @module fixtures/constructs/operand
  */
 
+import codes from '#enums/codes'
 import ev from '#enums/ev'
 import tt from '#fixtures/tt'
 import isBreak from '#tests/utils/is-break'
@@ -32,21 +33,6 @@ const operand: Construct = {
 }
 
 export default operand
-
-declare module '@flex-development/vfile-tokenizer' {
-  interface TokenInfo {
-    value?: string | null | undefined
-  }
-
-  interface TokenFields {
-    attached?: boolean | null | undefined
-    chunk?: number | null | undefined
-  }
-
-  interface TokenTypeMap {
-    operand: tt.operand
-  }
-}
 
 /**
  * Check if the previous character `code` can come before an operand.
@@ -163,17 +149,8 @@ function tokenizeOperand(
    *  Next state
    */
   function operand(this: void, code: Code): State | undefined {
-    if (isBreak(code)) return nok(code)
-
-    /**
-     * Whether the operand was attached to a flag (e.g. `--long-flag=value`).
-     *
-     * @const {boolean} attached
-     */
-    const attached: boolean = !isBreak(self.previous)
-
-    effects.enter(tt.operand, { attached, chunk: self.chunk })
-    return inside(code)
+    effects.enter(tt.operand, { attached: self.previous === codes.equal })
+    return (isBreak(code) ? nok : inside)(code)
   }
 
   /**

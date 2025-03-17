@@ -5,9 +5,14 @@ exports[`e2e:utils > should expose public api 1`] = `
   "eof",
   "eos",
   "eol",
+  "isCode",
   "push",
   "resolveAll",
   "serializeChunks",
+  "sliceChunks",
+  "sliceSerialize",
   "splice",
+  "htab",
+  "tab",
 ]
 `;

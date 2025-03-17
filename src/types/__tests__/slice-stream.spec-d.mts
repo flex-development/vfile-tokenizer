@@ -4,7 +4,7 @@
  */
 
 import type TestSubject from '#types/slice-stream'
-import type { Code, Position } from '@flex-development/vfile-tokenizer'
+import type { Chunk, Position } from '@flex-development/vfile-tokenizer'
 
 describe('unit-d:types/SliceStream', () => {
   it('should match [this: void]', () => {
@@ -18,8 +18,8 @@ describe('unit-d:types/SliceStream', () => {
   })
 
   describe('returns', () => {
-    it('should return Code[]', () => {
-      expectTypeOf<TestSubject>().returns.toEqualTypeOf<Code[]>()
+    it('should return Chunk[]', () => {
+      expectTypeOf<TestSubject>().returns.toEqualTypeOf<Chunk[]>()
     })
   })
 })

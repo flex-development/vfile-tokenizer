@@ -20,12 +20,6 @@ describe('unit-d:interfaces/TokenizeOptions', () => {
     expectTypeOf<TestSubject>().toExtend<PreprocessOptions>()
   })
 
-  it('should match [break?: boolean | null | undefined]', () => {
-    expectTypeOf<TestSubject>()
-      .toHaveProperty('break')
-      .toEqualTypeOf<Nilable<boolean>>()
-  })
-
   it('should match [tokenizer?: TokenizeContext | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('tokenizer')

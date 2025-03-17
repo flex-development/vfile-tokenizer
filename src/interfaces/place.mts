@@ -14,7 +14,12 @@ import type { Point } from '@flex-development/vfile-location'
  */
 interface Place extends Point {
   /**
-   * Index of character code chunk.
+   * Position in a string chunk (or `-1` when pointing to a numeric chunk).
+   */
+  _bufferIndex: number
+
+  /**
+   * Position in a list of chunks.
    */
   _index: number
 }

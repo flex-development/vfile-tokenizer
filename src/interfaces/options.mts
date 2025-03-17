@@ -13,13 +13,18 @@ import type {
   InitialConstruct,
   List,
   Preprocess,
+  PreprocessOptions,
   TokenFactory
 } from '@flex-development/vfile-tokenizer'
 
 /**
  * Configuration options.
+ *
+ * @see {@linkcode PreprocessOptions}
+ *
+ * @extends {PreprocessOptions}
  */
-interface Options {
+interface Options extends PreprocessOptions {
   /**
    * Debug logger name.
    *
@@ -72,6 +77,11 @@ interface Options {
    * @see {@linkcode InitialConstruct}
    */
   initial: CreateInitialConstruct | InitialConstruct
+
+  /**
+   * Whether to move the position of the tokenizer forward at stream breaks.
+   */
+  moveOnBreak?: boolean | null | undefined
 
   /**
    * Turn a value into character code chunks.

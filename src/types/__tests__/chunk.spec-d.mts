@@ -11,7 +11,7 @@ describe('unit-d:types/Chunk', () => {
     expectTypeOf<TestSubject>().extract<Code>().not.toBeNever()
   })
 
-  it('should extract string', () => {
-    expectTypeOf<TestSubject>().extract<string>().not.toBeNever()
+  it('should extract NonNullable<Code>[]', () => {
+    expectTypeOf<TestSubject>().extract<NonNullable<Code>[]>().not.toBeNever()
   })
 })

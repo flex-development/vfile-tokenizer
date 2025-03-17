@@ -14,6 +14,7 @@ enum tt {
   eof = 'eof',
   flag = 'flag',
   id = 'id',
+  lineEnding = 'lineEnding',
   operand = 'operand',
   shortcode = 'shortcode'
 }

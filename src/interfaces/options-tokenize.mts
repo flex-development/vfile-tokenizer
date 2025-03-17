@@ -4,7 +4,6 @@
  */
 
 import type {
-  codes,
   Options,
   PreprocessOptions,
   TokenizeContext
@@ -20,12 +19,6 @@ import type {
  * @extends {PreprocessOptions}
  */
 interface TokenizeOptions extends Options, PreprocessOptions {
-  /**
-   * Whether to write the stream break code ({@linkcode codes.break}) to
-   * separate chunks.
-   */
-  break?: boolean | null | undefined
-
   /**
    * The tokenizer to use.
    *

@@ -18,12 +18,6 @@ import type {
 } from '@flex-development/vfile-tokenizer'
 
 describe('unit-d:interfaces/TokenizeContext', () => {
-  it('should match [chunk?: number | null | undefined]', () => {
-    expectTypeOf<TestSubject>()
-      .toHaveProperty('chunk')
-      .toEqualTypeOf<Nilable<number>>()
-  })
-
   it('should match [code: Code]', () => {
     expectTypeOf<TestSubject>().toHaveProperty('code').toEqualTypeOf<Code>()
   })
@@ -50,10 +44,6 @@ describe('unit-d:interfaces/TokenizeContext', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('interrupt')
       .toEqualTypeOf<Nilable<boolean>>()
-  })
-
-  it('should match [next: Code]', () => {
-    expectTypeOf<TestSubject>().toHaveProperty('next').toEqualTypeOf<Code>()
   })
 
   it('should match [now: Now]', () => {

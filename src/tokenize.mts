@@ -45,28 +45,10 @@ function tokenize(
    */
   const context: TokenizeContext = options.tokenizer ?? createTokenizer(options)
 
+  // write chunks to stream.
   if (value !== null && value !== undefined) {
-    /**
-     * The chunks to write.
-     *
-     * @const {(FileLike | Value)[]}
-     */
-    const chunks: (FileLike | Value)[] = [...toList(value)]
-
-    if (chunks.length) {
-      for (const [i, chunk] of chunks.entries()) {
-        context.chunk = i
-
-        // write `chunk` to stream.
-        context.write(chunk)
-
-        // end stream or write stream break to separate chunks.
-        if (i === chunks.length - 1) context.write(codes.eof)
-        else if (options.break) context.write(codes.break)
-      }
-
-      context.chunk = null
-    }
+    for (const chunk of toList(value)) context.write(chunk)
+    context.write(codes.eof)
   }
 
   return [...context.events]

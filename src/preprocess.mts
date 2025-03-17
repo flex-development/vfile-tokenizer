@@ -34,7 +34,7 @@ function preprocess(
 ): Preprocess {
   return Object.defineProperties(preprocessor.bind(options ?? {}), {
     name: { value: 'preprocess' }
-  })
+  }) as Preprocess
 
   /**
    * Turn `value` into character code chunks.

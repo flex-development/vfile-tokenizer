@@ -10,6 +10,7 @@ import operand from '#fixtures/constructs/operand'
 import tt from '#fixtures/tt'
 import isBreak from '#tests/utils/is-break'
 import type {
+  Chunk,
   Code,
   Construct,
   Effects,
@@ -37,7 +38,7 @@ import { asciiAlphanumeric } from 'micromark-util-character'
  */
 const longFlag: Construct = {
   name: 'longFlag',
-  previous: isBreak,
+  previous: previousLongFlag,
   resolveTo: resolveToLongFlag,
   test: testLongFlag,
   tokenize: tokenizeLongFlag
@@ -45,24 +46,19 @@ const longFlag: Construct = {
 
 export default longFlag
 
-declare module '@flex-development/vfile-tokenizer' {
-  interface TokenInfo {
-    value?: string | null | undefined
-  }
-
-  interface TokenFields {
-    chunk?: number | null | undefined
-    long?: boolean | null | undefined
-  }
-
-  interface TokenTypeMap {
-    flag: tt.flag
-    flagId: tt.id
-  }
-
-  interface TokenizeContext {
-    delimiter?: boolean | null | undefined
-  }
+/**
+ * Check if the previous character `code` can come before a long flag.
+ *
+ * @this {TokenizeContext}
+ *
+ * @param {Code} code
+ *  The previous character code
+ * @return {boolean}
+ *  `true` if `code` can come before long flag construct
+ */
+function previousLongFlag(this: TokenizeContext, code: Code): boolean {
+  assert(code === this.previous, 'expected previous code')
+  return isBreak(code)
 }
 
 /**
@@ -213,9 +209,7 @@ function tokenizeLongFlag(
    */
   function longFlag(this: void, code: Code): State | undefined {
     assert(code === codes.hyphen, 'expected `-`')
-    effects.enter(tt.flag, { chunk: self.chunk, long: true })
-    effects.consume(code)
-    return after
+    return effects.enter(tt.flag, { long: true }), effects.consume(code), after
   }
 
   /**
@@ -257,7 +251,7 @@ function tokenizeLongFlag(
    */
   function beforeId(this: void, code: Code): State | undefined {
     if (!asciiAlphanumeric(code) && code !== codes.hyphen) return nok(code)
-    return effects.enter(tt.id, { chunk: self.chunk }), id(code)
+    return effects.enter(tt.id), id(code)
   }
 
   /**
@@ -294,27 +288,30 @@ function tokenizeLongFlag(
    */
   function id(this: void, code: Code): State | undefined {
     switch (true) {
-      case asciiAlphanumeric(code):
-      case code === codes.dot:
-      case code === codes.hyphen:
-        return effects.consume(code), id
       case code === codes.equal:
         effects.exit(tt.id)
         effects.exit(tt.flag)
         effects.consume(code)
-        return effects.attempt(operand, ok, ok)
+        if (!isBreak(self.code)) return effects.attempt(operand, ok, ok)
+        effects.enter(tt.operand, { attached: true, value: chars.empty })
+        return effects.exit(tt.operand), ok
       case isBreak(code):
         /**
-         * Flag id codes.
+         * Flag id chunks.
          *
-         * @const {Code[]} flagId
+         * @const {Chunk[]} flagId
          */
-        const flagId: Code[] = self.sliceStream(effects.exit(tt.id))
+        const flagId: Chunk[] = self.sliceStream(effects.exit(tt.id))
 
         // ensure flag is not actually a delimiter.
-        if (flagId.length === 1 && flagId[0] === codes.hyphen) break
+        if (self.serializeChunks(flagId) === chars.hyphen) break
         return effects.exit(tt.flag), ok(code)
+      case asciiAlphanumeric(code):
+      case code === codes.dot:
+      case code === codes.hyphen:
+        return effects.consume(code), id
       default:
+        assert(code !== codes.break, 'expected no break code')
         break
     }
 

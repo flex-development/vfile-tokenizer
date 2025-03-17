@@ -33,23 +33,8 @@ const shortcode: Construct = {
 
 export default shortcode
 
-declare module '@flex-development/vfile-tokenizer' {
-  interface TokenInfo {
-    emoji?: string | null | undefined
-    value?: string | null | undefined
-  }
-
-  interface TokenTypeMap {
-    shortcode: tt.shortcode
-    shortCodeId: tt.id
-  }
-}
-
 /**
  * Check if the previous character `code` can before a shortcode.
- *
- * @see {@linkcode Code}
- * @see {@linkcode TokenizeContext}
  *
  * @this {TokenizeContext}
  *
@@ -64,9 +49,6 @@ function previousShortcode(this: TokenizeContext, code: Code): boolean {
 
 /**
  * Resolve the events parsed by {@linkcode tokenizeShortcode}.
- *
- * @see {@linkcode Event}
- * @see {@linkcode TokenizeContext}
  *
  * @this {void}
  *
@@ -126,10 +108,6 @@ function resolveShortcode(
 /**
  * Tokenize a shortcode.
  *
- * @see {@linkcode Effects}
- * @see {@linkcode State}
- * @see {@linkcode TokenizeContext}
- *
  * @example
  *  ```markdown
  *  > | :building_construction:
@@ -188,10 +166,8 @@ function tokenizeShortcode(
    *  Next state
    */
   function shortcode(this: void, code: Code): State | undefined {
-    assert(code === codes.colon, 'expected `:')
-    effects.enter(tt.shortcode, { chunk: self.chunk })
-    effects.consume(code)
-    return before
+    assert(code === codes.colon, 'expected `:`')
+    return effects.enter(tt.shortcode), effects.consume(code), before
   }
 
   /**
@@ -223,7 +199,7 @@ function tokenizeShortcode(
    *  Next state
    */
   function before(this: void, code: Code): State | undefined {
-    return effects.enter(tt.id, { chunk: self.chunk }), inside(code)
+    return effects.enter(tt.id), inside(code)
   }
 
   /**

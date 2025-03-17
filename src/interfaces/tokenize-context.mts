@@ -21,11 +21,6 @@ import type {
  */
 interface TokenizeContext {
   /**
-   * Index of chunk being tokenized.
-   */
-  chunk?: number | null | undefined
-
-  /**
    * The current character code.
    *
    * @see {@linkcode Code}
@@ -59,13 +54,6 @@ interface TokenizeContext {
    * Boolean indicating a construct is interrupting another construct.
    */
   interrupt?: boolean | null | undefined
-
-  /**
-   * The next character code.
-   *
-   * @see {@linkcode Code}
-   */
-  next: Code
 
   /**
    * Get the current point in the file.

@@ -14,10 +14,15 @@ import type {
   InitialConstruct,
   List,
   Preprocess,
+  PreprocessOptions,
   TokenFactory
 } from '@flex-development/vfile-tokenizer'
 
 describe('unit-d:interfaces/Options', () => {
+  it('should extend PreprocessOptions', () => {
+    expectTypeOf<TestSubject>().toExtend<PreprocessOptions>()
+  })
+
   it('should match [debug?: string | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('debug')
@@ -58,6 +63,12 @@ describe('unit-d:interfaces/Options', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('initial')
       .toEqualTypeOf<CreateInitialConstruct | InitialConstruct>()
+  })
+
+  it('should match [moveOnBreak?: boolean | null | undefined]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('moveOnBreak')
+      .toEqualTypeOf<Nilable<boolean>>()
   })
 
   it('should match [preprocess?: Preprocess | null | undefined]', () => {

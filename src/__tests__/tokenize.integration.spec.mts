@@ -6,9 +6,11 @@
 import initialize from '#constructs/initialize'
 import chars from '#enums/chars'
 import codes from '#enums/codes'
+import cli from '#fixtures/constructs/cli'
 import longFlag from '#fixtures/constructs/flag-long'
 import lineEnding from '#fixtures/constructs/line-ending'
 import micromark from '#fixtures/constructs/micromark'
+import operand from '#fixtures/constructs/operand'
 import shortcode from '#fixtures/constructs/shortcode'
 import constant from '#internal/constant'
 import finalizeMicromarkContext from '#tests/utils/finalize-micromark-context'
@@ -24,6 +26,7 @@ import type {
   TokenizeOptions,
   Value
 } from '@flex-development/vfile-tokenizer'
+import pkg from '@flex-development/vfile-tokenizer/package.json'
 import { readSync as read } from 'to-vfile'
 
 describe('integration:tokenize', () => {
@@ -64,30 +67,15 @@ describe('integration:tokenize', () => {
   })
 
   it.each<Parameters<typeof testSubject>>([
-    [
-      chars.ht + chars.lf + chars.cr + chars.crlf,
-      {
-        initial: initialize(lineEnding)
-      }
-    ],
-    [
-      ['--conditions=vfile-tokenizer', '--debug'],
-      {
-        break: true,
-        initial: initialize([longFlag])
-      }
-    ],
+    [chars.lf + chars.crlf, { initial: initialize(lineEnding) }],
+    ['--standalone=', { initial: initialize(cli) }],
+    [['--debug', '--color=3'], { initial: initialize(cli), moveOnBreak: true }],
+    [['--max=', chars.digit0], { initial: initialize([longFlag, operand]) }],
+    [['--project', pkg.name], { initial: initialize(cli) }],
     [
       read('__fixtures__/gemoji.txt'),
       {
         initial: initialize({ [codes.colon]: shortcode })
-      }
-    ],
-    [
-      read('__fixtures__/markdown/code-fenced.md'),
-      {
-        finalizeContext: finalizeMicromarkContext,
-        initial: initialize(micromark)
       }
     ],
     [
