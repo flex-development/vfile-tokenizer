@@ -10,7 +10,6 @@ import operand from '#fixtures/constructs/operand'
 import tt from '#fixtures/tt'
 import isBreak from '#tests/utils/is-break'
 import type {
-  Chunk,
   Code,
   Construct,
   Effects,
@@ -40,7 +39,6 @@ const longFlag: Construct = {
   name: 'longFlag',
   previous: previousLongFlag,
   resolveTo: resolveToLongFlag,
-  test: testLongFlag,
   tokenize: tokenizeLongFlag
 }
 
@@ -58,7 +56,7 @@ export default longFlag
  */
 function previousLongFlag(this: TokenizeContext, code: Code): boolean {
   assert(code === this.previous, 'expected previous code')
-  return isBreak(code)
+  return isBreak(code) || this.code === codes.break
 }
 
 /**
@@ -116,20 +114,6 @@ function resolveToLongFlag(
   }
 
   return events
-}
-
-/**
- * Check if the current character `code` can start a long flag.
- *
- * @this {TokenizeContext}
- *
- * @param {Code} code
- *  The current character code
- * @return {boolean}
- *  `true` if `code` can start long flag construct
- */
-function testLongFlag(this: TokenizeContext, code: Code): boolean {
-  return !this.delimiter && code === codes.hyphen
 }
 
 /**
@@ -208,7 +192,7 @@ function tokenizeLongFlag(
    *  Next state
    */
   function longFlag(this: void, code: Code): State | undefined {
-    assert(code === codes.hyphen, 'expected `-`')
+    if (code !== codes.hyphen) return nok(code)
     return effects.enter(tt.flag, { long: true }), effects.consume(code), after
   }
 
@@ -295,23 +279,16 @@ function tokenizeLongFlag(
         if (!isBreak(self.code)) return effects.attempt(operand, ok, ok)
         effects.enter(tt.operand, { attached: true, value: chars.empty })
         return effects.exit(tt.operand), ok
-      case isBreak(code):
-        /**
-         * Flag id chunks.
-         *
-         * @const {Chunk[]} flagId
-         */
-        const flagId: Chunk[] = self.sliceStream(effects.exit(tt.id))
-
-        // ensure flag is not actually a delimiter.
-        if (self.serializeChunks(flagId) === chars.hyphen) break
-        return effects.exit(tt.flag), ok(code)
       case asciiAlphanumeric(code):
       case code === codes.dot:
-      case code === codes.hyphen:
         return effects.consume(code), id
+      case code === codes.hyphen:
+        if (self.code !== codes.break) return effects.consume(code), id
+        return effects.exit(tt.id), effects.exit(tt.flag), ok(code)
+      case isBreak(code):
+        if (self.previous === codes.hyphen) break // actually a delimiter.
+        return effects.exit(tt.id), effects.exit(tt.flag), ok(code)
       default:
-        assert(code !== codes.break, 'expected no break code')
         break
     }
 

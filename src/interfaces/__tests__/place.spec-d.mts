@@ -5,19 +5,14 @@
 
 import type TestSubject from '#interfaces/place'
 import type { Point } from '@flex-development/vfile-location'
+import type { RangeInfo } from '@flex-development/vfile-tokenizer'
 
 describe('unit-d:interfaces/Place', () => {
   it('should extend Point', () => {
     expectTypeOf<TestSubject>().toExtend<Point>()
   })
 
-  it('should match [_bufferIndex: number]', () => {
-    expectTypeOf<TestSubject>()
-      .toHaveProperty('_bufferIndex')
-      .toEqualTypeOf<number>()
-  })
-
-  it('should match [_index: number]', () => {
-    expectTypeOf<TestSubject>().toHaveProperty('_index').toEqualTypeOf<number>()
+  it('should extend Range', () => {
+    expectTypeOf<TestSubject>().toExtend<RangeInfo>()
   })
 })

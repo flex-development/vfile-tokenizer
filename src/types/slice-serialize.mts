@@ -3,26 +3,27 @@
  * @module vfile-tokenizer/types/SliceSerialize
  */
 
-import type { Position } from '@flex-development/vfile-tokenizer'
+import type { Range, SerializeOptions } from '@flex-development/vfile-tokenizer'
 
 /**
  * Get the text spanning `range`.
  *
- * @see {@linkcode Position}
+ * @see {@linkcode Range}
+ * @see {@linkcode SerializeOptions}
  *
  * @this {void}
  *
- * @param {Position} range
+ * @param {Range} range
  *  Slice position
- * @param {boolean | null | undefined} [expandTabs]
- *  Whether to expand tabs
+ * @param {SerializeOptions | boolean | null | undefined} [options]
+ *  Options for serializing or whether to expand tabs
  * @return {string}
  *  Serialized slice
  */
 type SliceSerialize = (
   this: void,
-  range: Position,
-  expandTabs?: boolean | null | undefined
+  range: Range,
+  options?: SerializeOptions | boolean | null | undefined
 ) => string
 
 export type { SliceSerialize as default }

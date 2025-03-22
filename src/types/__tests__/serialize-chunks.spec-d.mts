@@ -4,7 +4,7 @@
  */
 
 import type TestSubject from '#types/serialize-chunks'
-import type { Chunk } from '@flex-development/vfile-tokenizer'
+import type { Chunk, SerializeOptions } from '@flex-development/vfile-tokenizer'
 
 describe('unit-d:types/SerializeChunks', () => {
   it('should match [this: void]', () => {
@@ -12,10 +12,15 @@ describe('unit-d:types/SerializeChunks', () => {
   })
 
   describe('parameters', () => {
-    it('should be callable with [(Chunk | string)[], (boolean | null | undefined)?]', () => {
-      expectTypeOf<TestSubject>()
-        .parameters
-        .toEqualTypeOf<[(Chunk | string)[], (boolean | null | undefined)?]>()
+    it('should be callable with [(Chunk | string)[], (SerializeOptions | boolean | null | undefined)?]', () => {
+      // Arrange
+      type Params = [
+        (Chunk | string)[],
+        (SerializeOptions | boolean | null | undefined)?
+      ]
+
+      // Expect
+      expectTypeOf<TestSubject>().parameters.toEqualTypeOf<Params>()
     })
   })
 

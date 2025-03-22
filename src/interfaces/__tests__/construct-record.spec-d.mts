@@ -28,10 +28,4 @@ describe('unit-d:interfaces/ConstructRecord', () => {
       .toHaveProperty('null')
       .toEqualTypeOf<Value>()
   })
-
-  it('should match [nullFirst: ConstructPack | null | undefined]', () => {
-    expectTypeOf<TestSubject>()
-      .toHaveProperty('nullFirst')
-      .toEqualTypeOf<Value>()
-  })
 })

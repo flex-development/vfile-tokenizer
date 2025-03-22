@@ -25,6 +25,8 @@ import type { Code } from '@flex-development/vfile-tokenizer'
  */
 const codes = {
   eof: null,
+  eos: null,
+  empty: Number.NEGATIVE_INFINITY, // empty buffer chunk
   break: -13, // stream break
   vcr: -5, // virtual carriage return (\r)
   vlf: -4, // virtual line feed (\n)

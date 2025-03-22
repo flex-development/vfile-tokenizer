@@ -23,15 +23,6 @@ interface ConstructRecord {
    * @see {@linkcode ConstructPack}
    */
   null?: ConstructPack | null | undefined
-
-  /**
-   * Try tokenizing constructs that start with any character code.
-   *
-   * Takes priority over {@linkcode null} and any mapped character codes.
-   *
-   * @see {@linkcode ConstructPack}
-   */
-  nullFirst?: ConstructPack | null | undefined
 }
 
 export type { ConstructRecord as default }

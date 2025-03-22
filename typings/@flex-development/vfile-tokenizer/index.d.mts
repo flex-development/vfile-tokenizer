@@ -1,4 +1,4 @@
-import type {} from '@flex-development/vfile-tokenizer'
+import type { Effects } from '@flex-development/vfile-tokenizer'
 
 declare module '@flex-development/vfile-tokenizer' {
   interface TokenInfo {
@@ -12,9 +12,12 @@ declare module '@flex-development/vfile-tokenizer' {
   }
 
   interface TokenTypeMap {
-    eof: 'eof'
+    break: 'break'
+    digit: 'digit'
+    end: 'end'
     flag: 'flag'
     id: 'id'
+    letter: 'letter'
     lineEnding: 'lineEnding'
     operand: 'operand'
     shortcode: 'shortcode'
@@ -22,5 +25,6 @@ declare module '@flex-development/vfile-tokenizer' {
 
   interface TokenizeContext {
     delimiter?: boolean | null | undefined
+    readonly effects: Effects
   }
 }

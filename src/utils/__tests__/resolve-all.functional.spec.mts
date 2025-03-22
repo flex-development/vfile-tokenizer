@@ -26,7 +26,7 @@ describe('functional:utils/resolveAll', () => {
 
   beforeEach(() => {
     point = { _bufferIndex: -1, _index: 0, column: 1, line: 1, offset: 0 }
-    token = { end: point, start: point, type: tt.eof }
+    token = { end: point, start: point, type: tt.end }
 
     context = {} as unknown as TokenizeContext
     events = [[ev.enter, token, context], [ev.exit, token, context]]

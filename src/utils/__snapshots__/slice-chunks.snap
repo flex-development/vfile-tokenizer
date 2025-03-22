@@ -1,53 +1,28 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`unit:utils/sliceChunks > should return chunks spanning \`range\` (0) 1`] = `
-[
-  "--conditions",
-]
-`;
+exports[`unit:utils/sliceChunks > should return chunks spanning \`range\` (0) 1`] = `[]`;
 
-exports[`unit:utils/sliceChunks > should return chunks spanning \`range\` (1) 1`] = `
-[
-  "--conditions=",
-  "vfile-tokenize",
-]
-`;
+exports[`unit:utils/sliceChunks > should return chunks spanning \`range\` (1) 1`] = `[]`;
 
 exports[`unit:utils/sliceChunks > should return chunks spanning \`range\` (2) 1`] = `
 [
-  [
-    99,
-    111,
-    110,
-    100,
-    105,
-    116,
-    105,
-    111,
-    110,
-    115,
-  ],
+  "--color",
 ]
 `;
 
 exports[`unit:utils/sliceChunks > should return chunks spanning \`range\` (3) 1`] = `
 [
-  [
-    118,
-    102,
-    105,
-    108,
-    101,
-    45,
-    116,
-    111,
-    107,
-    101,
-    110,
-    105,
-    122,
-    101,
-    114,
-  ],
+  "+",
+  -13,
+  "1",
+]
+`;
+
+exports[`unit:utils/sliceChunks > should return chunks spanning \`range\` (4) 1`] = `
+[
+  51,
+  52,
+  53,
+  54,
 ]
 `;

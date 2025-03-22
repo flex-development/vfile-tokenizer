@@ -4,7 +4,7 @@
  */
 
 import type TestSubject from '#types/slice-serialize'
-import type { Position } from '@flex-development/vfile-tokenizer'
+import type { Range, SerializeOptions } from '@flex-development/vfile-tokenizer'
 
 describe('unit-d:types/SliceSerialize', () => {
   it('should match [this: void]', () => {
@@ -12,10 +12,12 @@ describe('unit-d:types/SliceSerialize', () => {
   })
 
   describe('parameters', () => {
-    it('should be callable with [Position, (boolean | null | undefined)?]', () => {
-      expectTypeOf<TestSubject>()
-        .parameters
-        .toEqualTypeOf<[Position, (boolean | null | undefined)?]>()
+    it('should be callable with [Range, (SerializeOptions | boolean | null | undefined)?]', () => {
+      // Arrange
+      type Params = [Range, (SerializeOptions | boolean | null | undefined)?]
+
+      // Expect
+      expectTypeOf<TestSubject>().parameters.toEqualTypeOf<Params>()
     })
   })
 

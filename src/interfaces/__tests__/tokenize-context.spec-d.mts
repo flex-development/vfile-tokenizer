@@ -9,8 +9,10 @@ import type {
   Code,
   Construct,
   DefineSkip,
+  Encoding,
   Event,
   Now,
+  Preprocess,
   SliceSerialize,
   SliceStream,
   TokenFactory,
@@ -18,6 +20,12 @@ import type {
 } from '@flex-development/vfile-tokenizer'
 
 describe('unit-d:interfaces/TokenizeContext', () => {
+  it('should match [breaks?: boolean | null | undefined]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('breaks')
+      .toEqualTypeOf<Nilable<boolean>>()
+  })
+
   it('should match [code: Code]', () => {
     expectTypeOf<TestSubject>().toHaveProperty('code').toEqualTypeOf<Code>()
   })
@@ -34,6 +42,12 @@ describe('unit-d:interfaces/TokenizeContext', () => {
       .toEqualTypeOf<DefineSkip>()
   })
 
+  it('should match [encoding?: Encoding | null | undefined]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('encoding')
+      .toEqualTypeOf<Nilable<Encoding>>()
+  })
+
   it('should match [events: Event[]]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('events')
@@ -48,6 +62,12 @@ describe('unit-d:interfaces/TokenizeContext', () => {
 
   it('should match [now: Now]', () => {
     expectTypeOf<TestSubject>().toHaveProperty('now').toEqualTypeOf<Now>()
+  })
+
+  it('should match [preprocess: Preprocess]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('preprocess')
+      .toEqualTypeOf<Preprocess>()
   })
 
   it('should match [previous: Code]', () => {

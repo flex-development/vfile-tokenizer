@@ -5,14 +5,20 @@
 
 import serializeChunks from '#utils/serialize-chunks'
 import sliceChunks from '#utils/slice-chunks'
-import type { Chunk, List, Position } from '@flex-development/vfile-tokenizer'
+import type {
+  Chunk,
+  List,
+  Range,
+  SerializeOptions
+} from '@flex-development/vfile-tokenizer'
 
 /**
  * Get the text spanning `range`.
  *
  * @see {@linkcode Chunk}
  * @see {@linkcode List}
- * @see {@linkcode Position}
+ * @see {@linkcode Range}
+ * @see {@linkcode SerializeOptions}
  *
  * @category
  *  utils
@@ -21,20 +27,20 @@ import type { Chunk, List, Position } from '@flex-development/vfile-tokenizer'
  *
  * @param {List<Chunk | string>} chunks
  *  List of chunks
- * @param {Position | null | undefined} [range]
+ * @param {Range} range
  *  Position in stream
- * @param {boolean | null | undefined} [expandTabs]
- *  Whether to expand tabs
+ * @param {SerializeOptions | boolean | null | undefined} [options]
+ *  Options for serializing or whether to expand tabs
  * @return {string}
  *  Serialized slice
  */
 function sliceSerialize(
   this: void,
   chunks: List<Chunk | string>,
-  range?: Position | null | undefined,
-  expandTabs?: boolean | null | undefined
+  range: Range,
+  options?: SerializeOptions | boolean | null | undefined
 ): string {
-  return serializeChunks(sliceChunks(chunks, range), expandTabs)
+  return serializeChunks(sliceChunks(chunks, range), options)
 }
 
 export default sliceSerialize
