@@ -16,7 +16,7 @@ export default toList
  * @template {any} T
  *  The value to convert
  */
-type ToList<T> = T extends List ? T : T[]
+type ToList<T> = T extends List ? T extends Set<infer U> ? U[] : T : T[]
 
 /**
  * Convert `value` to a list.
@@ -34,5 +34,6 @@ type ToList<T> = T extends List ? T : T[]
  *  `value` or array containing `value`
  */
 function toList<T>(this: void, value: T): ToList<T> {
-  return (isList(value) ? value : [value]) as ToList<T>
+  if (Array.isArray(value)) return value as ToList<T>
+  return (isList(value) ? [...value] : [value]) as ToList<T>
 }

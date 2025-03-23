@@ -3,17 +3,21 @@
  * @module vfile-tokenizer/tokenize
  */
 
-import createTokenizer from '#create-tokenizer'
 import codes from '#enums/codes'
-import toList from '#internal/to-list'
+import isList from '#internal/is-list'
+import size from '#internal/size'
+import toTokenizer from '#internal/to-tokenizer'
 import type {
+  Chunk,
+  Code,
   Event,
   FileLike,
   List,
-  Options,
   TokenizeContext,
+  TokenizeOptions,
   Value
 } from '@flex-development/vfile-tokenizer'
+import { ok } from 'devlop'
 
 /**
  * Tokenize `value`.
@@ -21,15 +25,15 @@ import type {
  * @see {@linkcode Event}
  * @see {@linkcode FileLike}
  * @see {@linkcode List}
- * @see {@linkcode Options}
  * @see {@linkcode TokenizeContext}
+ * @see {@linkcode TokenizeOptions}
  * @see {@linkcode Value}
  *
  * @this {void}
  *
  * @param {FileLike | List<FileLike | Value> | Value | null | undefined} value
  *  The file, value, or list of files and/or values to tokenize
- * @param {Options | TokenizeContext} options
+ * @param {TokenizeContext | TokenizeOptions} options
  *  Configuration options or the tokenizer to use
  * @return {Event[]}
  *  List of events
@@ -37,24 +41,68 @@ import type {
 function tokenize(
   this: void,
   value: FileLike | List<FileLike | Value> | Value | null | undefined,
-  options: Options | TokenizeContext
+  options: TokenizeContext | TokenizeOptions
 ): Event[] {
   /**
    * Tokenize context.
    *
-   * @var {TokenizeContext} context
+   * @const {TokenizeContext} context
    */
-  let context: TokenizeContext = options as TokenizeContext
-
-  // create tokenizer.
-  if (!('write' in options)) context = createTokenizer(options)
+  const context: TokenizeContext = toTokenizer(options)
 
   // write chunks to stream.
-  if (value !== null && value !== undefined) {
-    for (const chunk of [...toList(value), codes.eof]) context.write(chunk)
+  if (
+    value === null ||
+    value === undefined ||
+    isList(value) && !size(value)
+  ) {
+    context.write(codes.eof)
+  } else if (!isList(value)) {
+    /**
+     * The chunks to write.
+     *
+     * @const {Code[]} slice
+     */
+    const slice: Code[] = context.preprocess(value, options.encoding, true)
+
+    if (slice.length === 1) { // empty value.
+      ok(slice[0] === codes.eof, 'expected eof code')
+      slice.unshift(codes.empty)
+    }
+
+    context.write(slice)
+  } else {
+    context.breaks = options.breaks
+
+    for (const [i, chunk] of [...value].entries()) {
+      /**
+       * Whether this is the end of the stream.
+       *
+       * @const {boolean} end
+       */
+      const end: boolean = i === size(value) - 1
+
+      /**
+       * The values to write.
+       *
+       * @var {(Chunk | Value)[]} slice
+       */
+      let slice: (Chunk | Value)[] = []
+
+      if (typeof chunk === 'object' && 'value' in chunk) {
+        slice.push(chunk.value)
+      } else {
+        slice.push(chunk)
+      }
+
+      if (context.breaks && !end) slice.push(codes.break)
+      if (end) slice.push(codes.eos)
+
+      context.write(slice)
+    }
   }
 
-  return [...context.events]
+  return context.events
 }
 
 export default tokenize

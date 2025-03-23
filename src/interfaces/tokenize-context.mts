@@ -7,8 +7,10 @@ import type {
   Code,
   Construct,
   DefineSkip,
+  Encoding,
   Event,
   Now,
+  Preprocess,
   SerializeChunks,
   SliceSerialize,
   SliceStream,
@@ -20,6 +22,11 @@ import type {
  * Context object to assist with tokenization.
  */
 interface TokenizeContext {
+  /**
+   * Whether the stream break code was written between chunks.
+   */
+  breaks?: boolean | null | undefined
+
   /**
    * The current character code.
    *
@@ -44,6 +51,14 @@ interface TokenizeContext {
   defineSkip: DefineSkip
 
   /**
+   * The character encoding used when {@linkcode Uint8Array}s are converted to
+   * chunks.
+   *
+   * @see {@linkcode Encoding}
+   */
+  encoding?: Encoding | null | undefined
+
+  /**
    * List of events.
    *
    * @see {@linkcode Event}
@@ -61,6 +76,13 @@ interface TokenizeContext {
    * @see {@linkcode Now}
    */
   now: Now
+
+  /**
+   * Turn a value into character code chunks.
+   *
+   * @see {@linkcode Preprocess}
+   */
+  preprocess: Preprocess
 
   /**
    * The previous character code.

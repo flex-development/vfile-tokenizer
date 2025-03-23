@@ -6,7 +6,6 @@
 import type {
   Chunk,
   Event,
-  FileLike,
   List,
   Value
 } from '@flex-development/vfile-tokenizer'
@@ -16,22 +15,26 @@ import type {
  *
  * The eof code (`null`) can be used to signal end of stream.
  *
+ * > 👉 **Note**: Chunks that are not character codes or buffer chunks (arrays
+ * > containing numeric character codes) will be converted to such using the
+ * > specified character code preprocessor, or the default preprocessor if one
+ * > is not specified.
+ *
  * @see {@linkcode Chunk}
  * @see {@linkcode Event}
- * @see {@linkcode FileLike}
  * @see {@linkcode List}
  * @see {@linkcode Value}
  *
  * @this {void}
  *
- * @param {Chunk | FileLike | List<Chunk | FileLike | Value> | Value} slice
- *  The chunk or chunks to write
+ * @param {Chunk | List<Chunk | Value> | Value} slice
+ *  The chunk, value, or list of chunks and/or values to write
  * @return {Event[]}
  *  List of events
  */
 type Write = (
   this: void,
-  slice: Chunk | FileLike | List<Chunk | FileLike | Value> | Value
+  slice: Chunk | List<Chunk | Value> | Value
 ) => Event[]
 
 export type { Write as default }

@@ -5,7 +5,7 @@
 
 import size from '#internal/size'
 import sliceable from '#internal/sliceable'
-import type { Chunk, List, Position } from '@flex-development/vfile-tokenizer'
+import type { Chunk, List, Range } from '@flex-development/vfile-tokenizer'
 import { ok } from 'devlop'
 
 export default sliceChunks
@@ -15,7 +15,7 @@ export default sliceChunks
  *
  * @see {@linkcode Chunk}
  * @see {@linkcode List}
- * @see {@linkcode Position}
+ * @see {@linkcode Range}
  *
  * @category
  *  utils
@@ -27,7 +27,7 @@ export default sliceChunks
  *
  * @param {List<T>} chunks
  *  List of chunks
- * @param {Position | null | undefined} [range]
+ * @param {Range} range
  *  Position in stream
  * @return {T[]}
  *  List of chunks spanning `range`
@@ -35,7 +35,7 @@ export default sliceChunks
 function sliceChunks<T extends Chunk | string>(
   this: void,
   chunks: List<T>,
-  range?: Position | null | undefined
+  range: Range
 ): T[] {
   /**
    * Slice of chunks.
@@ -44,7 +44,7 @@ function sliceChunks<T extends Chunk | string>(
    */
   let slice: T[] = []
 
-  if (size(chunks) && range) {
+  if (size(chunks)) {
     const { _bufferIndex: endBufferIndex, _index: endIndex } = range.end
     const { _bufferIndex: startBufferIndex, _index: startIndex } = range.start
 
@@ -55,11 +55,8 @@ function sliceChunks<T extends Chunk | string>(
      */
     const list: T[] = [...chunks]
 
-    if (startIndex === endIndex) {
-      ok(endBufferIndex > -1, 'expected non-negative end buffer index')
-      ok(startBufferIndex > -1, 'expected non-negative start buffer index')
+    if (startIndex === endIndex && startBufferIndex > 0 && endBufferIndex > 0) {
       ok(sliceable(list[startIndex]), 'expected buffer chunk')
-
       slice = [list[startIndex].slice(startBufferIndex, endBufferIndex) as T]
     } else {
       slice = list.slice(startIndex, endIndex)
@@ -72,13 +69,12 @@ function sliceChunks<T extends Chunk | string>(
          */
         const head: T | undefined = slice.shift()
 
-        if (sliceable(head)) {
-          slice.unshift(head.slice(startBufferIndex) as T)
-        }
+        if (sliceable(head)) slice.unshift(head.slice(startBufferIndex) as T)
+      }
 
-        if (endBufferIndex && sliceable(list[endIndex])) {
-          slice.push(list[endIndex].slice(0, endBufferIndex) as T)
-        }
+      if (endBufferIndex > 0) {
+        ok(sliceable(list[endIndex]), 'expected buffer chunk')
+        slice.push(list[endIndex].slice(0, endBufferIndex) as T)
       }
     }
   }

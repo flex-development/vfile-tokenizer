@@ -13,7 +13,7 @@ import noop from '#internal/noop'
 import onsuccessfulcheck from '#internal/onsuccessfulcheck'
 import skip from '#internal/skip'
 import toList from '#internal/to-list'
-import createPreprocess from '#preprocess'
+import preprocess from '#preprocess'
 import eos from '#utils/eof'
 import eol from '#utils/eol'
 import isCode from '#utils/is-code'
@@ -31,12 +31,10 @@ import type {
   Code,
   Column,
   Construct,
-  ConstructPack,
   ConstructRecord,
   Constructs,
   Effects,
   Event,
-  FileLike,
   Guard,
   Info,
   InitialConstruct,
@@ -44,9 +42,9 @@ import type {
   List,
   Options,
   Place,
-  Position,
-  Preprocess,
+  Range,
   ReturnHandle,
+  SerializeOptions,
   State,
   Token,
   TokenFactory,
@@ -95,13 +93,6 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
    * @const {Location} location
    */
   const location: Location = new Location(null, options.from)
-
-  /**
-   * Turn a value into character code chunks.
-   *
-   * @const {Preprocess} preprocess
-   */
-  const preprocess: Preprocess = options.preprocess ?? createPreprocess()
 
   /**
    * Constructs with `resolveAll` handlers.
@@ -192,19 +183,28 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
    *
    * @var {TokenizeContext} context
    */
-  let context: TokenizeContext = {
+  let context: TokenizeContext = Object.defineProperties({
     code: codes.eof,
     currentConstruct: undefined,
     defineSkip: createDefineSkip(place, skips, debug),
+    effects,
+    encoding: options.encoding,
     events: [],
     now,
+    preprocess: options.preprocess ?? preprocess(),
     previous: codes.eof,
     serializeChunks,
     sliceSerialize,
     sliceStream,
     token,
     write
-  }
+  }, {
+    effects: {
+      configurable: false,
+      enumerable: false,
+      writable: false
+    }
+  })
 
   place._bufferIndex = lastBufferIndex
   place._index = 0
@@ -269,14 +269,14 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
       fail?: State | undefined
     ): State {
       /**
-       * Current construct.
+       * The current construct.
        *
        * @var {Construct} currentConstruct
        */
       let currentConstruct: Construct
 
       /**
-       * Info passed around.
+       * Internal state.
        *
        * @var {Info} info
        */
@@ -307,7 +307,7 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
        * @this {void}
        *
        * @param {Construct[]} constructs
-       *  Constructs to try
+       *  The list of constructs to try
        * @return {State}
        *  Next state
        */
@@ -315,7 +315,7 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
         list = constructs
         j = 0
 
-        /* v8 ignore next 3 */ if (constructs.length === 0) {
+        if (!constructs.length) {
           assert(fail, 'expected `fail` to be given')
           return fail
         }
@@ -325,31 +325,17 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
       }
 
       /**
-       * Handle a construct record.
+       * Handle an object mapping codes to constructs.
        *
        * @this {void}
        *
        * @param {ConstructRecord} map
-       *  Constructs to try
+       *  The record of constructs to try
        * @return {State}
        *  Next state
        */
       function handleConstructRecord(this: void, map: ConstructRecord): State {
-        return run
-
-        /**
-         * Check if `value` looks like a construct, or list of constructs.
-         *
-         * @this {void}
-         *
-         * @param {unknown} value
-         *  The thing to check
-         * @return {value is ConstructPack}
-         *  `true` if value is an object
-         */
-        function is(this: void, value: unknown): value is ConstructPack {
-          return typeof value === 'object'
-        }
+        return record
 
         /**
          * @this {void}
@@ -359,12 +345,18 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
          * @return {State | undefined}
          *  Next state
          */
-        function run(this: void, code: Code): State | undefined {
-          return handleConstructList([
-            ...[map.nullFirst].flat().filter(value => is(value)),
-            ...[code !== null && map[code]].flat().filter(value => is(value)),
-            ...[map.null].flat().filter(value => is(value))
-          ])(code)
+        function record(this: void, code: Code): State | undefined {
+          /**
+           * List of constructs to try.
+           *
+           * @const {Construct[]} list
+           */
+          const list: Construct[] = []
+
+          code !== codes.eof && map[code] && list.push(...toList(map[code]))
+          map.null && list.push(...toList(map.null))
+
+          return handleConstructList(list)(code)
         }
       }
 
@@ -374,7 +366,7 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
        * @this {void}
        *
        * @param {Construct} construct
-       *  Construct to try
+       *  The construct to try
        * @return {State}
        *  Next state
        */
@@ -390,21 +382,14 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
          *  Next state
          */
         function start(code: Code): State | undefined {
+          debug('start: %o', code)
+
           info = store()
           currentConstruct = construct
 
           if (!construct.partial) context.currentConstruct = construct
 
           context.interrupt = interrupt
-
-          if (context.code === codes.break && peek() !== codes.break) {
-            context.previous = context.code
-            context.code = code
-
-            if (options.moveOnBreak && context.code !== codes.eof) {
-              move(context.previous)
-            }
-          }
 
           /**
            * Check if the previous character code can come before this
@@ -422,22 +407,20 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
            */
           const test: Guard = construct.test ?? constant(true)
 
-          /**
-           * Next state.
-           *
-           * @var {State} state
-           */
-          let state: State = nok
-
           if (
-            !disabled(options.disabled, construct.name) &&
-            previous.call(context, context.previous) &&
-            test.call(context, code)
+            disabled(options.disabled, construct.name) ||
+            !previous.call(context, context.previous) ||
+            !test.call(context, code)
           ) {
-            state = construct.tokenize.call(context, effects, ok, nok)
+            return nok(code)
           }
 
-          return state(code)
+          return construct.tokenize.call(
+            context,
+            context.effects,
+            ok,
+            nok
+          )(code)
         }
       }
 
@@ -448,14 +431,16 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
        *
        * @param {Code} code
        *  The current character code
-       * @return {State | undefined}
+       * @return {State}
        *  Next state
        */
       function ok(this: void, code: Code): State {
         assert(code === expected, 'expected `code` to equal expected code')
         debug('ok: `%o`', code)
+
         consumed = true
         onreturn(currentConstruct, info)
+
         return succ
       }
 
@@ -473,22 +458,16 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
         assert(list, 'expected construct list')
         assert(code === expected, 'expected `code` to equal expected code')
         debug('nok: `%o`', code)
+
         consumed = true
         info.restore()
 
-        /**
-         * Next state.
-         *
-         * @var {State | undefined} state
-         */
-        let state: State | undefined = fail
-
         if (++j < list.length) {
           assert(list[j], 'expected construct')
-          state = handleConstruct(list[j]!)
+          return handleConstruct(list[j]!)
         }
 
-        return state
+        return fail
       }
     }
   }
@@ -504,13 +483,51 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
    */
   function consume(this: void, code: Code): undefined {
     assert(code === expected, 'expected `code` to equal expected code')
-    debug('consume: `%o`', code)
+    debug('consume: `%o`; previous: `%o`', code, context.previous)
     assert(consumed === null, 'expected unconsumed code')
 
-    move(code)
+    if ((options.eol ?? eol)(code)) {
+      place.column = 1
+      place.line++
+      place.offset += code === codes.crlf ? 2 : 1
+      skip(place, skips)
+      debug('position after eol: %o', place)
+    } else if (tab(code)) {
+      place.column += options.tabSize ?? constants.tabSize
+      if (code < 0) place.offset++
+    } else if (code !== codes.eof && code !== codes.vs) {
+      if (code !== codes.break || options.moveOnBreak) {
+        place.column++
+        place.offset++
+      }
+    }
+
+    if (place._bufferIndex < 0) { // not in a buffer chunk.
+      place._index++
+    } else { // inside buffer chunk.
+      lastBufferIndex = ++place._bufferIndex
+
+      /**
+       * Current chunk.
+       *
+       * @const {Chunk | undefined} chunk
+       */
+      const chunk: Chunk | undefined = chunks[place._index]
+
+      assert(Array.isArray(chunk), 'expected buffer chunk')
+
+      // at end of buffer chunk.
+      // points with non-negative `_bufferIndex` values reference strings.
+      if (lastBufferIndex === chunk.length) {
+        place._index++
+        place._bufferIndex = -1
+      }
+    }
+
     context.previous = code
     context.code = peek()
 
+    debug('context.code: `%o`', context.code)
     return consumed = true, void code
   }
 
@@ -539,9 +556,9 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
      * @const {Token} token
      */
     const token: Token = context.token(type, {
-      ...fields,
       start: now(), // eslint-disable-next-line sort-keys
-      end: now()
+      end: now(),
+      ...fields
     })
 
     assert(typeof type === 'string', 'expected `type` to be a string')
@@ -581,15 +598,18 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
     // close token.
     token.end = now()
 
-    // empty token closed at the end of a chunk.
+    // empty token.
     if (
       token.start._index === token.end._index &&
-      token.start._bufferIndex === token.end._bufferIndex &&
-      token.start._bufferIndex < 0 &&
-      Array.isArray(chunks[token.start._index - 1])
+      token.start._bufferIndex === token.end._bufferIndex
     ) {
-      token.start._index = --token.end._index
-      token.start._bufferIndex = token.end._bufferIndex = lastBufferIndex
+      if (
+        token.start._bufferIndex < 0 &&
+        Array.isArray(chunks[token.start._index - 1])
+      ) { // empty token closed at the end of buffer chunk.
+        token.start._index = token.end._index - 1
+        token.start._bufferIndex = lastBufferIndex
+      }
     }
 
     debug('exit: `%s`; %o', token.type, token.end)
@@ -617,67 +637,6 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
     expected = code
     assert(typeof state === 'function', 'expected state function')
     return state = state(code), void code
-  }
-
-  /**
-   * Move the position of the tokenizer forward.
-   *
-   * @this {void}
-   *
-   * @param {Code} code
-   *  The current character code
-   * @return {undefined}
-   */
-  function move(this: void, code: Code): undefined {
-    /**
-     * Whether the tokenizer is at a stream break.
-     *
-     * @const {boolean} streamBreak
-     */
-    const streamBreak: boolean = code === codes.break
-
-    if (!streamBreak || options.moveOnBreak) {
-      if ((options.eol ?? eol)(code)) {
-        place.column = 1
-        place.line++
-        place.offset += code === codes.crlf ? 2 : 1
-        skip(place, skips)
-        debug('position after eol: %o', place)
-      } else if (tab(code)) {
-        place.column += options.tabSize ?? constants.tabSize
-        if (code < 0) place.offset++
-      } else if (code !== codes.eof && code !== codes.vs) {
-        place.column++
-        place.offset++
-      }
-    }
-
-    if (!streamBreak) {
-      if (place._bufferIndex < 0) {
-        place._index++ // not in a buffer chunk.
-      } else {
-        // inside buffer chunk.
-        lastBufferIndex = ++place._bufferIndex
-
-        /**
-         * Current chunk.
-         *
-         * @const {Chunk | undefined} chunk
-         */
-        const chunk: Chunk | undefined = chunks[place._index]
-
-        assert(Array.isArray(chunk), 'expected buffer chunk')
-
-        // at end of buffer chunk.
-        // points with non-negative `_bufferIndex` values reference strings.
-        if (lastBufferIndex === chunk.length) {
-          place._index++
-          place._bufferIndex = -1
-        }
-      }
-    }
-
-    return void code
   }
 
   /**
@@ -785,19 +744,19 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
    *
    * @this {void}
    *
-   * @param {Position} range
+   * @param {Range} range
    *  Position in stream
-   * @param {boolean | null | undefined} [expandTabs]
-   *  Whether to expand tabs
+   * @param {SerializeOptions | boolean | null | undefined} [options]
+   *  Options for serializing or whether to expand tabs
    * @return {string}
    *  Serialized slice
    */
   function sliceSerialize(
     this: void,
-    range: Position,
-    expandTabs?: boolean | null | undefined
+    range: Range,
+    options?: SerializeOptions | boolean | null | undefined
   ): string {
-    return context.serializeChunks(context.sliceStream(range), expandTabs)
+    return context.serializeChunks(context.sliceStream(range), options)
   }
 
   /**
@@ -805,12 +764,12 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
    *
    * @this {void}
    *
-   * @param {Position} range
+   * @param {Range} range
    *  Position in stream
    * @return {Chunk[]}
    *  Chunks in stream spanning `range`
    */
-  function sliceStream(this: void, range: Position): Chunk[] {
+  function sliceStream(this: void, range: Range): Chunk[] {
     return sliceChunks(chunks, range)
   }
 
@@ -910,13 +869,13 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
        */
       const chunk: Chunk | undefined = chunks[chunkIndex]
 
-      assert(chunk !== undefined, 'expected `chunk`')
-
       // deal with character code chunk.
       if (isCode(chunk)) {
         go(chunk)
         continue
       }
+
+      assert(chunk !== undefined, 'expected `chunk`')
 
       // normalize buffer index to loop through buffer chunk.
       if (place._bufferIndex < 0) place._bufferIndex = 0
@@ -946,25 +905,32 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
    *
    * @this {void}
    *
-   * @param {Chunk | FileLike | List<Chunk | FileLike | Value> | Value} slice
-   *  The chunk or chunks to write
+   * @param {Chunk | List<Chunk | Value> | Value} slice
+   *  The chunk, value, or list of chunks and/or values to write
    * @return {Event[]}
    *  List of events
    */
   function write(
     this: void,
-    slice: Chunk | FileLike | List<Chunk | FileLike | Value> | Value
+    slice: Chunk | List<Chunk | Value> | Value
   ): Event[] {
-    chunks = push(chunks, [...toList(slice)].map(chunk => {
-      return !Array.isArray(chunk) && !isCode(chunk)
-        ? preprocess(chunk, options.encoding)
-        : chunk
+    chunks = push(chunks, toList(slice).map(value => {
+      // raw chunk.
+      if (!Array.isArray(value) && !isCode(value)) {
+        value = context.preprocess(value, options.encoding)
+      }
+
+      // empty buffer chunk.
+      if (Array.isArray(value) && !value.length) value = codes.empty
+
+      return value
     }))
 
+    // run constructs on new chunks.
     tokenize()
 
     // exit if not done, resolvers might change stuff.
-    if (!eos(chunks[chunks.length - 1])) return go(codes.break), []
+    if (!eos(chunks.at(-1))) return []
 
     // resolve events.
     onsuccessfulconstruct(initialize, { from: 0 })

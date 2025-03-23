@@ -1,15 +1,15 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`integration:tokenize > should work with constructs (0) 1`] = `
+exports[`integration:tokenize > user constructs > all constructs succeed > should produce events 1`] = `
 [
   [
     "enter",
     {
       "end": {
-        "_bufferIndex": 1,
-        "_index": 0,
-        "column": 1,
-        "line": 2,
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 2,
+        "line": 1,
         "offset": 1,
       },
       "start": {
@@ -18,6 +18,463 @@ exports[`integration:tokenize > should work with constructs (0) 1`] = `
         "column": 1,
         "line": 1,
         "offset": 0,
+      },
+      "type": "letter",
+      "value": "a",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "letter",
+      "value": "a",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "break",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "break",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 3,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 2,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "digit",
+      "value": "1",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 3,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 2,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "digit",
+      "value": "1",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 4,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 3,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "break",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 4,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 3,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "break",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 5,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 4,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "letter",
+      "value": "b",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 5,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 4,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "letter",
+      "value": "b",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 6,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 5,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "type": "break",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 6,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 5,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "type": "break",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 7,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 6,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "type": "digit",
+      "value": "2",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 7,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 6,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "type": "digit",
+      "value": "2",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 8,
+        "column": 9,
+        "line": 1,
+        "offset": 8,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 7,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "type": "break",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 8,
+        "column": 9,
+        "line": 1,
+        "offset": 8,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 7,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "type": "break",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 8,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 8,
+        "column": 9,
+        "line": 1,
+        "offset": 8,
+      },
+      "type": "letter",
+      "value": "c",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 8,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 8,
+        "column": 9,
+        "line": 1,
+        "offset": 8,
+      },
+      "type": "letter",
+      "value": "c",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 9,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 8,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "type": "digit",
+      "value": "3",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 9,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 8,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "type": "digit",
+      "value": "3",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 10,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 9,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "type": "end",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 10,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 9,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "type": "end",
+    },
+  ],
+]
+`;
+
+exports[`integration:tokenize > user constructs > at least one construct succeeds (0) > should produce events 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 3,
+        "column": 1,
+        "line": 2,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 3,
+        "line": 1,
+        "offset": 1,
       },
       "type": "lineEnding",
       "value": "\\n",
@@ -27,18 +484,18 @@ exports[`integration:tokenize > should work with constructs (0) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 1,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 3,
         "column": 1,
         "line": 2,
-        "offset": 1,
+        "offset": 2,
       },
       "start": {
-        "_bufferIndex": 0,
-        "_index": 0,
-        "column": 1,
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 3,
         "line": 1,
-        "offset": 0,
+        "offset": 1,
       },
       "type": "lineEnding",
       "value": "\\n",
@@ -49,17 +506,17 @@ exports[`integration:tokenize > should work with constructs (0) 1`] = `
     {
       "end": {
         "_bufferIndex": -1,
-        "_index": 1,
+        "_index": 4,
         "column": 1,
         "line": 3,
-        "offset": 3,
+        "offset": 4,
       },
       "start": {
-        "_bufferIndex": 1,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 3,
         "column": 1,
         "line": 2,
-        "offset": 1,
+        "offset": 2,
       },
       "type": "lineEnding",
       "value": "\\r\\n",
@@ -70,17 +527,17 @@ exports[`integration:tokenize > should work with constructs (0) 1`] = `
     {
       "end": {
         "_bufferIndex": -1,
-        "_index": 1,
+        "_index": 4,
         "column": 1,
         "line": 3,
-        "offset": 3,
+        "offset": 4,
       },
       "start": {
-        "_bufferIndex": 1,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 3,
         "column": 1,
         "line": 2,
-        "offset": 1,
+        "offset": 2,
       },
       "type": "lineEnding",
       "value": "\\r\\n",
@@ -89,21 +546,21 @@ exports[`integration:tokenize > should work with constructs (0) 1`] = `
 ]
 `;
 
-exports[`integration:tokenize > should work with constructs (1) 1`] = `
+exports[`integration:tokenize > user constructs > at least one construct succeeds (1) > should produce events 1`] = `
 [
   [
     "enter",
     {
       "end": {
-        "_bufferIndex": 12,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 12,
         "column": 13,
         "line": 1,
         "offset": 12,
       },
       "long": true,
       "start": {
-        "_bufferIndex": 0,
+        "_bufferIndex": -1,
         "_index": 0,
         "column": 1,
         "line": 1,
@@ -117,15 +574,15 @@ exports[`integration:tokenize > should work with constructs (1) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 12,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 12,
         "column": 13,
         "line": 1,
         "offset": 12,
       },
       "long": true,
       "start": {
-        "_bufferIndex": 0,
+        "_bufferIndex": -1,
         "_index": 0,
         "column": 1,
         "line": 1,
@@ -140,37 +597,15 @@ exports[`integration:tokenize > should work with constructs (1) 1`] = `
     {
       "attached": true,
       "end": {
-        "_bufferIndex": 13,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 13,
         "column": 14,
         "line": 1,
         "offset": 13,
       },
       "start": {
-        "_bufferIndex": 13,
-        "_index": 0,
-        "column": 14,
-        "line": 1,
-        "offset": 13,
-      },
-      "type": "operand",
-      "value": "",
-    },
-  ],
-  [
-    "exit",
-    {
-      "attached": true,
-      "end": {
-        "_bufferIndex": 13,
-        "_index": 0,
-        "column": 14,
-        "line": 1,
-        "offset": 13,
-      },
-      "start": {
-        "_bufferIndex": 13,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 13,
         "column": 14,
         "line": 1,
         "offset": 13,
@@ -180,180 +615,25 @@ exports[`integration:tokenize > should work with constructs (1) 1`] = `
     },
   ],
   [
-    "enter",
-    {
-      "end": {
-        "_bufferIndex": -1,
-        "_index": 2,
-        "column": 14,
-        "line": 1,
-        "offset": 13,
-      },
-      "start": {
-        "_bufferIndex": -1,
-        "_index": 1,
-        "column": 14,
-        "line": 1,
-        "offset": 13,
-      },
-      "type": "eof",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_bufferIndex": -1,
-        "_index": 2,
-        "column": 14,
-        "line": 1,
-        "offset": 13,
-      },
-      "start": {
-        "_bufferIndex": -1,
-        "_index": 1,
-        "column": 14,
-        "line": 1,
-        "offset": 13,
-      },
-      "type": "eof",
-    },
-  ],
-]
-`;
-
-exports[`integration:tokenize > should work with constructs (2) 1`] = `
-[
-  [
-    "enter",
-    {
-      "end": {
-        "_bufferIndex": -1,
-        "_index": 1,
-        "column": 8,
-        "line": 1,
-        "offset": 7,
-      },
-      "long": true,
-      "start": {
-        "_bufferIndex": 0,
-        "_index": 0,
-        "column": 1,
-        "line": 1,
-        "offset": 0,
-      },
-      "type": "flag",
-      "value": "--debug",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_bufferIndex": -1,
-        "_index": 1,
-        "column": 8,
-        "line": 1,
-        "offset": 7,
-      },
-      "long": true,
-      "start": {
-        "_bufferIndex": 0,
-        "_index": 0,
-        "column": 1,
-        "line": 1,
-        "offset": 0,
-      },
-      "type": "flag",
-      "value": "--debug",
-    },
-  ],
-  [
-    "enter",
-    {
-      "end": {
-        "_bufferIndex": 7,
-        "_index": 1,
-        "column": 16,
-        "line": 1,
-        "offset": 15,
-      },
-      "long": true,
-      "start": {
-        "_bufferIndex": 0,
-        "_index": 1,
-        "column": 9,
-        "line": 1,
-        "offset": 8,
-      },
-      "type": "flag",
-      "value": "--color",
-    },
-  ],
-  [
-    "exit",
-    {
-      "end": {
-        "_bufferIndex": 7,
-        "_index": 1,
-        "column": 16,
-        "line": 1,
-        "offset": 15,
-      },
-      "long": true,
-      "start": {
-        "_bufferIndex": 0,
-        "_index": 1,
-        "column": 9,
-        "line": 1,
-        "offset": 8,
-      },
-      "type": "flag",
-      "value": "--color",
-    },
-  ],
-  [
-    "enter",
-    {
-      "attached": true,
-      "end": {
-        "_bufferIndex": -1,
-        "_index": 2,
-        "column": 18,
-        "line": 1,
-        "offset": 17,
-      },
-      "start": {
-        "_bufferIndex": 8,
-        "_index": 1,
-        "column": 17,
-        "line": 1,
-        "offset": 16,
-      },
-      "type": "operand",
-      "value": "3",
-    },
-  ],
-  [
     "exit",
     {
       "attached": true,
       "end": {
         "_bufferIndex": -1,
-        "_index": 2,
-        "column": 18,
+        "_index": 13,
+        "column": 14,
         "line": 1,
-        "offset": 17,
+        "offset": 13,
       },
       "start": {
-        "_bufferIndex": 8,
-        "_index": 1,
-        "column": 17,
+        "_bufferIndex": -1,
+        "_index": 13,
+        "column": 14,
         "line": 1,
-        "offset": 16,
+        "offset": 13,
       },
       "type": "operand",
-      "value": "3",
+      "value": "",
     },
   ],
   [
@@ -361,19 +641,19 @@ exports[`integration:tokenize > should work with constructs (2) 1`] = `
     {
       "end": {
         "_bufferIndex": -1,
-        "_index": 3,
-        "column": 18,
+        "_index": 14,
+        "column": 14,
         "line": 1,
-        "offset": 17,
+        "offset": 13,
       },
       "start": {
         "_bufferIndex": -1,
-        "_index": 2,
-        "column": 18,
+        "_index": 13,
+        "column": 14,
         "line": 1,
-        "offset": 17,
+        "offset": 13,
       },
-      "type": "eof",
+      "type": "end",
     },
   ],
   [
@@ -381,25 +661,25 @@ exports[`integration:tokenize > should work with constructs (2) 1`] = `
     {
       "end": {
         "_bufferIndex": -1,
-        "_index": 3,
-        "column": 18,
+        "_index": 14,
+        "column": 14,
         "line": 1,
-        "offset": 17,
+        "offset": 13,
       },
       "start": {
         "_bufferIndex": -1,
-        "_index": 2,
-        "column": 18,
+        "_index": 13,
+        "column": 14,
         "line": 1,
-        "offset": 17,
+        "offset": 13,
       },
-      "type": "eof",
+      "type": "end",
     },
   ],
 ]
 `;
 
-exports[`integration:tokenize > should work with constructs (3) 1`] = `
+exports[`integration:tokenize > user constructs > at least one construct succeeds (2) > should produce events 1`] = `
 [
   [
     "enter",
@@ -450,8 +730,8 @@ exports[`integration:tokenize > should work with constructs (3) 1`] = `
     {
       "attached": true,
       "end": {
-        "_bufferIndex": 6,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 1,
         "column": 7,
         "line": 1,
         "offset": 6,
@@ -472,8 +752,8 @@ exports[`integration:tokenize > should work with constructs (3) 1`] = `
     {
       "attached": true,
       "end": {
-        "_bufferIndex": 6,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 1,
         "column": 7,
         "line": 1,
         "offset": 6,
@@ -489,64 +769,20 @@ exports[`integration:tokenize > should work with constructs (3) 1`] = `
       "value": "",
     },
   ],
-  [
-    "enter",
-    {
-      "attached": false,
-      "end": {
-        "_bufferIndex": -1,
-        "_index": 2,
-        "column": 8,
-        "line": 1,
-        "offset": 7,
-      },
-      "start": {
-        "_bufferIndex": 0,
-        "_index": 1,
-        "column": 7,
-        "line": 1,
-        "offset": 6,
-      },
-      "type": "operand",
-      "value": "0",
-    },
-  ],
-  [
-    "exit",
-    {
-      "attached": false,
-      "end": {
-        "_bufferIndex": -1,
-        "_index": 2,
-        "column": 8,
-        "line": 1,
-        "offset": 7,
-      },
-      "start": {
-        "_bufferIndex": 0,
-        "_index": 1,
-        "column": 7,
-        "line": 1,
-        "offset": 6,
-      },
-      "type": "operand",
-      "value": "0",
-    },
-  ],
 ]
 `;
 
-exports[`integration:tokenize > should work with constructs (4) 1`] = `
+exports[`integration:tokenize > user constructs > at least one construct succeeds (3) > should produce events 1`] = `
 [
   [
     "enter",
     {
       "end": {
-        "_bufferIndex": -1,
+        "_bufferIndex": 0,
         "_index": 1,
-        "column": 10,
+        "column": 8,
         "line": 1,
-        "offset": 9,
+        "offset": 7,
       },
       "long": true,
       "start": {
@@ -557,18 +793,18 @@ exports[`integration:tokenize > should work with constructs (4) 1`] = `
         "offset": 0,
       },
       "type": "flag",
-      "value": "--project",
+      "value": "--debug",
     },
   ],
   [
     "exit",
     {
       "end": {
-        "_bufferIndex": -1,
+        "_bufferIndex": 0,
         "_index": 1,
-        "column": 10,
+        "column": 8,
         "line": 1,
-        "offset": 9,
+        "offset": 7,
       },
       "long": true,
       "start": {
@@ -579,51 +815,95 @@ exports[`integration:tokenize > should work with constructs (4) 1`] = `
         "offset": 0,
       },
       "type": "flag",
-      "value": "--project",
+      "value": "--debug",
     },
   ],
   [
     "enter",
     {
-      "attached": false,
       "end": {
-        "_bufferIndex": -1,
-        "_index": 2,
-        "column": 43,
+        "_bufferIndex": 7,
+        "_index": 1,
+        "column": 15,
         "line": 1,
-        "offset": 42,
+        "offset": 14,
       },
+      "long": true,
       "start": {
         "_bufferIndex": 0,
         "_index": 1,
-        "column": 10,
+        "column": 8,
         "line": 1,
-        "offset": 9,
+        "offset": 7,
       },
-      "type": "operand",
-      "value": "@flex-development/vfile-tokenizer",
+      "type": "flag",
+      "value": "--color",
     },
   ],
   [
     "exit",
     {
-      "attached": false,
       "end": {
-        "_bufferIndex": -1,
-        "_index": 2,
-        "column": 43,
+        "_bufferIndex": 7,
+        "_index": 1,
+        "column": 15,
         "line": 1,
-        "offset": 42,
+        "offset": 14,
       },
+      "long": true,
       "start": {
         "_bufferIndex": 0,
         "_index": 1,
-        "column": 10,
+        "column": 8,
         "line": 1,
-        "offset": 9,
+        "offset": 7,
+      },
+      "type": "flag",
+      "value": "--color",
+    },
+  ],
+  [
+    "enter",
+    {
+      "attached": true,
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 17,
+        "line": 1,
+        "offset": 16,
+      },
+      "start": {
+        "_bufferIndex": 8,
+        "_index": 1,
+        "column": 16,
+        "line": 1,
+        "offset": 15,
       },
       "type": "operand",
-      "value": "@flex-development/vfile-tokenizer",
+      "value": "3",
+    },
+  ],
+  [
+    "exit",
+    {
+      "attached": true,
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 17,
+        "line": 1,
+        "offset": 16,
+      },
+      "start": {
+        "_bufferIndex": 8,
+        "_index": 1,
+        "column": 16,
+        "line": 1,
+        "offset": 15,
+      },
+      "type": "operand",
+      "value": "3",
     },
   ],
   [
@@ -632,18 +912,18 @@ exports[`integration:tokenize > should work with constructs (4) 1`] = `
       "end": {
         "_bufferIndex": -1,
         "_index": 3,
-        "column": 43,
+        "column": 17,
         "line": 1,
-        "offset": 42,
+        "offset": 16,
       },
       "start": {
         "_bufferIndex": -1,
         "_index": 2,
-        "column": 43,
+        "column": 17,
         "line": 1,
-        "offset": 42,
+        "offset": 16,
       },
-      "type": "eof",
+      "type": "end",
     },
   ],
   [
@@ -652,38 +932,38 @@ exports[`integration:tokenize > should work with constructs (4) 1`] = `
       "end": {
         "_bufferIndex": -1,
         "_index": 3,
-        "column": 43,
+        "column": 17,
         "line": 1,
-        "offset": 42,
+        "offset": 16,
       },
       "start": {
         "_bufferIndex": -1,
         "_index": 2,
-        "column": 43,
+        "column": 17,
         "line": 1,
-        "offset": 42,
+        "offset": 16,
       },
-      "type": "eof",
+      "type": "end",
     },
   ],
 ]
 `;
 
-exports[`integration:tokenize > should work with constructs (5) 1`] = `
+exports[`integration:tokenize > user constructs > at least one construct succeeds (4) > should produce events 1`] = `
 [
   [
     "enter",
     {
       "emoji": "🏗️",
       "end": {
-        "_bufferIndex": 23,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 23,
         "column": 24,
         "line": 1,
         "offset": 23,
       },
       "start": {
-        "_bufferIndex": 0,
+        "_bufferIndex": -1,
         "_index": 0,
         "column": 1,
         "line": 1,
@@ -698,14 +978,14 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     {
       "emoji": "🏗️",
       "end": {
-        "_bufferIndex": 23,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 23,
         "column": 24,
         "line": 1,
         "offset": 23,
       },
       "start": {
-        "_bufferIndex": 0,
+        "_bufferIndex": -1,
         "_index": 0,
         "column": 1,
         "line": 1,
@@ -720,15 +1000,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     {
       "emoji": "📦",
       "end": {
-        "_bufferIndex": 33,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 33,
         "column": 34,
         "line": 1,
         "offset": 33,
       },
       "start": {
-        "_bufferIndex": 24,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 24,
         "column": 25,
         "line": 1,
         "offset": 24,
@@ -742,15 +1022,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     {
       "emoji": "📦",
       "end": {
-        "_bufferIndex": 33,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 33,
         "column": 34,
         "line": 1,
         "offset": 33,
       },
       "start": {
-        "_bufferIndex": 24,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 24,
         "column": 25,
         "line": 1,
         "offset": 24,
@@ -764,15 +1044,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     {
       "emoji": "👍",
       "end": {
-        "_bufferIndex": 53,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 53,
         "column": 8,
         "line": 3,
         "offset": 53,
       },
       "start": {
-        "_bufferIndex": 49,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 49,
         "column": 4,
         "line": 3,
         "offset": 49,
@@ -786,15 +1066,15 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
     {
       "emoji": "👍",
       "end": {
-        "_bufferIndex": 53,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 53,
         "column": 8,
         "line": 3,
         "offset": 53,
       },
       "start": {
-        "_bufferIndex": 49,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 49,
         "column": 4,
         "line": 3,
         "offset": 49,
@@ -806,20 +1086,20 @@ exports[`integration:tokenize > should work with constructs (5) 1`] = `
 ]
 `;
 
-exports[`integration:tokenize > should work with constructs (6) 1`] = `
+exports[`integration:tokenize > user constructs > at least one construct succeeds (5) > should produce events 1`] = `
 [
   [
     "enter",
     {
       "end": {
-        "_bufferIndex": 42,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 42,
         "column": 23,
         "line": 4,
         "offset": 42,
       },
       "start": {
-        "_bufferIndex": 0,
+        "_bufferIndex": -1,
         "_index": 0,
         "column": 1,
         "line": 1,
@@ -832,14 +1112,14 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 4,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 4,
         "column": 5,
         "line": 1,
         "offset": 4,
       },
       "start": {
-        "_bufferIndex": 0,
+        "_bufferIndex": -1,
         "_index": 0,
         "column": 1,
         "line": 1,
@@ -852,14 +1132,14 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 4,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 4,
         "column": 5,
         "line": 1,
         "offset": 4,
       },
       "start": {
-        "_bufferIndex": 0,
+        "_bufferIndex": -1,
         "_index": 0,
         "column": 1,
         "line": 1,
@@ -872,15 +1152,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 17,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 17,
         "column": 18,
         "line": 1,
         "offset": 17,
       },
       "start": {
-        "_bufferIndex": 4,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 4,
         "column": 5,
         "line": 1,
         "offset": 4,
@@ -892,15 +1172,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 17,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 17,
         "column": 18,
         "line": 1,
         "offset": 17,
       },
       "start": {
-        "_bufferIndex": 4,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 4,
         "column": 5,
         "line": 1,
         "offset": 4,
@@ -912,15 +1192,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 18,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 18,
         "column": 1,
         "line": 2,
         "offset": 18,
       },
       "start": {
-        "_bufferIndex": 17,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 17,
         "column": 18,
         "line": 1,
         "offset": 17,
@@ -932,15 +1212,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 18,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 18,
         "column": 1,
         "line": 2,
         "offset": 18,
       },
       "start": {
-        "_bufferIndex": 17,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 17,
         "column": 18,
         "line": 1,
         "offset": 17,
@@ -952,15 +1232,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 19,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 19,
         "column": 1,
         "line": 3,
         "offset": 19,
       },
       "start": {
-        "_bufferIndex": 18,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 18,
         "column": 1,
         "line": 2,
         "offset": 18,
@@ -972,15 +1252,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 19,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 19,
         "column": 1,
         "line": 3,
         "offset": 19,
       },
       "start": {
-        "_bufferIndex": 18,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 18,
         "column": 1,
         "line": 2,
         "offset": 18,
@@ -992,15 +1272,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 20,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 20,
         "column": 1,
         "line": 4,
         "offset": 20,
       },
       "start": {
-        "_bufferIndex": 19,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 19,
         "column": 1,
         "line": 3,
         "offset": 19,
@@ -1012,15 +1292,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 20,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 20,
         "column": 1,
         "line": 4,
         "offset": 20,
       },
       "start": {
-        "_bufferIndex": 19,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 19,
         "column": 1,
         "line": 3,
         "offset": 19,
@@ -1032,15 +1312,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 24,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 24,
         "column": 5,
         "line": 4,
         "offset": 24,
       },
       "start": {
-        "_bufferIndex": 20,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 20,
         "column": 1,
         "line": 4,
         "offset": 20,
@@ -1052,15 +1332,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 24,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 24,
         "column": 5,
         "line": 4,
         "offset": 24,
       },
       "start": {
-        "_bufferIndex": 20,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 20,
         "column": 1,
         "line": 4,
         "offset": 20,
@@ -1072,15 +1352,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 42,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 42,
         "column": 23,
         "line": 4,
         "offset": 42,
       },
       "start": {
-        "_bufferIndex": 24,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 24,
         "column": 5,
         "line": 4,
         "offset": 24,
@@ -1092,15 +1372,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 42,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 42,
         "column": 23,
         "line": 4,
         "offset": 42,
       },
       "start": {
-        "_bufferIndex": 24,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 24,
         "column": 5,
         "line": 4,
         "offset": 24,
@@ -1112,14 +1392,14 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 42,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 42,
         "column": 23,
         "line": 4,
         "offset": 42,
       },
       "start": {
-        "_bufferIndex": 0,
+        "_bufferIndex": -1,
         "_index": 0,
         "column": 1,
         "line": 1,
@@ -1132,15 +1412,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 86,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 86,
         "column": 14,
         "line": 8,
         "offset": 86,
       },
       "start": {
-        "_bufferIndex": 62,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 62,
         "column": 1,
         "line": 7,
         "offset": 62,
@@ -1152,15 +1432,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 66,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 66,
         "column": 5,
         "line": 7,
         "offset": 66,
       },
       "start": {
-        "_bufferIndex": 62,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 62,
         "column": 1,
         "line": 7,
         "offset": 62,
@@ -1172,15 +1452,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 66,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 66,
         "column": 5,
         "line": 7,
         "offset": 66,
       },
       "start": {
-        "_bufferIndex": 62,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 62,
         "column": 1,
         "line": 7,
         "offset": 62,
@@ -1192,15 +1472,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 72,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 72,
         "column": 11,
         "line": 7,
         "offset": 72,
       },
       "start": {
-        "_bufferIndex": 66,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 66,
         "column": 5,
         "line": 7,
         "offset": 66,
@@ -1212,15 +1492,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 72,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 72,
         "column": 11,
         "line": 7,
         "offset": 72,
       },
       "start": {
-        "_bufferIndex": 66,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 66,
         "column": 5,
         "line": 7,
         "offset": 66,
@@ -1232,15 +1512,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 73,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 73,
         "column": 1,
         "line": 8,
         "offset": 73,
       },
       "start": {
-        "_bufferIndex": 72,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 72,
         "column": 11,
         "line": 7,
         "offset": 72,
@@ -1252,15 +1532,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 73,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 73,
         "column": 1,
         "line": 8,
         "offset": 73,
       },
       "start": {
-        "_bufferIndex": 72,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 72,
         "column": 11,
         "line": 7,
         "offset": 72,
@@ -1272,15 +1552,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 77,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 77,
         "column": 5,
         "line": 8,
         "offset": 77,
       },
       "start": {
-        "_bufferIndex": 73,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 73,
         "column": 1,
         "line": 8,
         "offset": 73,
@@ -1292,15 +1572,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 77,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 77,
         "column": 5,
         "line": 8,
         "offset": 77,
       },
       "start": {
-        "_bufferIndex": 73,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 73,
         "column": 1,
         "line": 8,
         "offset": 73,
@@ -1312,15 +1592,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 86,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 86,
         "column": 14,
         "line": 8,
         "offset": 86,
       },
       "start": {
-        "_bufferIndex": 77,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 77,
         "column": 5,
         "line": 8,
         "offset": 77,
@@ -1332,15 +1612,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 86,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 86,
         "column": 14,
         "line": 8,
         "offset": 86,
       },
       "start": {
-        "_bufferIndex": 77,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 77,
         "column": 5,
         "line": 8,
         "offset": 77,
@@ -1352,15 +1632,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 86,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 86,
         "column": 14,
         "line": 8,
         "offset": 86,
       },
       "start": {
-        "_bufferIndex": 62,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 62,
         "column": 1,
         "line": 7,
         "offset": 62,
@@ -1372,15 +1652,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 148,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 148,
         "column": 17,
         "line": 14,
         "offset": 145,
       },
       "start": {
-        "_bufferIndex": 106,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 106,
         "column": 1,
         "line": 13,
         "offset": 105,
@@ -1392,15 +1672,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 110,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 110,
         "column": 5,
         "line": 13,
         "offset": 108,
       },
       "start": {
-        "_bufferIndex": 106,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 106,
         "column": 1,
         "line": 13,
         "offset": 105,
@@ -1412,15 +1692,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 110,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 110,
         "column": 5,
         "line": 13,
         "offset": 108,
       },
       "start": {
-        "_bufferIndex": 106,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 106,
         "column": 1,
         "line": 13,
         "offset": 105,
@@ -1432,15 +1712,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 131,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 131,
         "column": 26,
         "line": 13,
         "offset": 129,
       },
       "start": {
-        "_bufferIndex": 110,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 110,
         "column": 5,
         "line": 13,
         "offset": 108,
@@ -1452,15 +1732,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 131,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 131,
         "column": 26,
         "line": 13,
         "offset": 129,
       },
       "start": {
-        "_bufferIndex": 110,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 110,
         "column": 5,
         "line": 13,
         "offset": 108,
@@ -1472,15 +1752,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 132,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 132,
         "column": 1,
         "line": 14,
         "offset": 130,
       },
       "start": {
-        "_bufferIndex": 131,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 131,
         "column": 26,
         "line": 13,
         "offset": 129,
@@ -1492,15 +1772,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 132,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 132,
         "column": 1,
         "line": 14,
         "offset": 130,
       },
       "start": {
-        "_bufferIndex": 131,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 131,
         "column": 26,
         "line": 13,
         "offset": 129,
@@ -1512,15 +1792,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 136,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 136,
         "column": 5,
         "line": 14,
         "offset": 133,
       },
       "start": {
-        "_bufferIndex": 132,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 132,
         "column": 1,
         "line": 14,
         "offset": 130,
@@ -1532,15 +1812,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 136,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 136,
         "column": 5,
         "line": 14,
         "offset": 133,
       },
       "start": {
-        "_bufferIndex": 132,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 132,
         "column": 1,
         "line": 14,
         "offset": 130,
@@ -1552,15 +1832,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 148,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 148,
         "column": 17,
         "line": 14,
         "offset": 145,
       },
       "start": {
-        "_bufferIndex": 136,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 136,
         "column": 5,
         "line": 14,
         "offset": 133,
@@ -1572,15 +1852,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 148,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 148,
         "column": 17,
         "line": 14,
         "offset": 145,
       },
       "start": {
-        "_bufferIndex": 136,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 136,
         "column": 5,
         "line": 14,
         "offset": 133,
@@ -1592,15 +1872,15 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 148,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 148,
         "column": 17,
         "line": 14,
         "offset": 145,
       },
       "start": {
-        "_bufferIndex": 106,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 106,
         "column": 1,
         "line": 13,
         "offset": 105,
@@ -1611,21 +1891,21 @@ exports[`integration:tokenize > should work with constructs (6) 1`] = `
 ]
 `;
 
-exports[`integration:tokenize > should work with constructs (7) 1`] = `
+exports[`integration:tokenize > user constructs > at least one construct succeeds (6) > should produce events 1`] = `
 [
   [
     "enter",
     {
       "end": {
-        "_bufferIndex": 30,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 30,
         "column": 31,
         "line": 1,
         "offset": 30,
       },
       "start": {
-        "_bufferIndex": 27,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 27,
         "column": 28,
         "line": 1,
         "offset": 27,
@@ -1637,15 +1917,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 28,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 28,
         "column": 29,
         "line": 1,
         "offset": 28,
       },
       "start": {
-        "_bufferIndex": 27,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 27,
         "column": 28,
         "line": 1,
         "offset": 27,
@@ -1657,15 +1937,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 28,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 28,
         "column": 29,
         "line": 1,
         "offset": 28,
       },
       "start": {
-        "_bufferIndex": 27,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 27,
         "column": 28,
         "line": 1,
         "offset": 27,
@@ -1677,15 +1957,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 29,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 29,
         "column": 30,
         "line": 1,
         "offset": 29,
       },
       "start": {
-        "_bufferIndex": 28,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 28,
         "column": 29,
         "line": 1,
         "offset": 28,
@@ -1697,15 +1977,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 29,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 29,
         "column": 30,
         "line": 1,
         "offset": 29,
       },
       "start": {
-        "_bufferIndex": 28,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 28,
         "column": 29,
         "line": 1,
         "offset": 28,
@@ -1717,15 +1997,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 30,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 30,
         "column": 31,
         "line": 1,
         "offset": 30,
       },
       "start": {
-        "_bufferIndex": 29,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 29,
         "column": 30,
         "line": 1,
         "offset": 29,
@@ -1737,15 +2017,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 30,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 30,
         "column": 31,
         "line": 1,
         "offset": 30,
       },
       "start": {
-        "_bufferIndex": 29,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 29,
         "column": 30,
         "line": 1,
         "offset": 29,
@@ -1757,15 +2037,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 30,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 30,
         "column": 31,
         "line": 1,
         "offset": 30,
       },
       "start": {
-        "_bufferIndex": 27,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 27,
         "column": 28,
         "line": 1,
         "offset": 27,
@@ -1777,15 +2057,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 36,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 36,
         "column": 37,
         "line": 1,
         "offset": 36,
       },
       "start": {
-        "_bufferIndex": 32,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 32,
         "column": 33,
         "line": 1,
         "offset": 32,
@@ -1797,15 +2077,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 33,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 33,
         "column": 34,
         "line": 1,
         "offset": 33,
       },
       "start": {
-        "_bufferIndex": 32,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 32,
         "column": 33,
         "line": 1,
         "offset": 32,
@@ -1817,15 +2097,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 33,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 33,
         "column": 34,
         "line": 1,
         "offset": 33,
       },
       "start": {
-        "_bufferIndex": 32,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 32,
         "column": 33,
         "line": 1,
         "offset": 32,
@@ -1837,15 +2117,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 35,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 35,
         "column": 36,
         "line": 1,
         "offset": 35,
       },
       "start": {
-        "_bufferIndex": 33,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 33,
         "column": 34,
         "line": 1,
         "offset": 33,
@@ -1857,15 +2137,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 35,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 35,
         "column": 36,
         "line": 1,
         "offset": 35,
       },
       "start": {
-        "_bufferIndex": 33,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 33,
         "column": 34,
         "line": 1,
         "offset": 33,
@@ -1877,15 +2157,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 36,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 36,
         "column": 37,
         "line": 1,
         "offset": 36,
       },
       "start": {
-        "_bufferIndex": 35,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 35,
         "column": 36,
         "line": 1,
         "offset": 35,
@@ -1897,15 +2177,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 36,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 36,
         "column": 37,
         "line": 1,
         "offset": 36,
       },
       "start": {
-        "_bufferIndex": 35,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 35,
         "column": 36,
         "line": 1,
         "offset": 35,
@@ -1917,15 +2197,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 36,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 36,
         "column": 37,
         "line": 1,
         "offset": 36,
       },
       "start": {
-        "_bufferIndex": 32,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 32,
         "column": 33,
         "line": 1,
         "offset": 32,
@@ -1937,15 +2217,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 42,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 42,
         "column": 43,
         "line": 1,
         "offset": 42,
       },
       "start": {
-        "_bufferIndex": 38,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 38,
         "column": 39,
         "line": 1,
         "offset": 38,
@@ -1957,15 +2237,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 39,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 39,
         "column": 40,
         "line": 1,
         "offset": 39,
       },
       "start": {
-        "_bufferIndex": 38,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 38,
         "column": 39,
         "line": 1,
         "offset": 38,
@@ -1977,15 +2257,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 39,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 39,
         "column": 40,
         "line": 1,
         "offset": 39,
       },
       "start": {
-        "_bufferIndex": 38,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 38,
         "column": 39,
         "line": 1,
         "offset": 38,
@@ -1997,15 +2277,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 41,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 41,
         "column": 42,
         "line": 1,
         "offset": 41,
       },
       "start": {
-        "_bufferIndex": 39,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 39,
         "column": 40,
         "line": 1,
         "offset": 39,
@@ -2017,15 +2297,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 41,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 41,
         "column": 42,
         "line": 1,
         "offset": 41,
       },
       "start": {
-        "_bufferIndex": 39,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 39,
         "column": 40,
         "line": 1,
         "offset": 39,
@@ -2037,15 +2317,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 42,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 42,
         "column": 43,
         "line": 1,
         "offset": 42,
       },
       "start": {
-        "_bufferIndex": 41,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 41,
         "column": 42,
         "line": 1,
         "offset": 41,
@@ -2057,15 +2337,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 42,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 42,
         "column": 43,
         "line": 1,
         "offset": 42,
       },
       "start": {
-        "_bufferIndex": 41,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 41,
         "column": 42,
         "line": 1,
         "offset": 41,
@@ -2077,15 +2357,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 42,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 42,
         "column": 43,
         "line": 1,
         "offset": 42,
       },
       "start": {
-        "_bufferIndex": 38,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 38,
         "column": 39,
         "line": 1,
         "offset": 38,
@@ -2097,15 +2377,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 49,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 49,
         "column": 50,
         "line": 1,
         "offset": 49,
       },
       "start": {
-        "_bufferIndex": 44,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 44,
         "column": 45,
         "line": 1,
         "offset": 44,
@@ -2117,15 +2397,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 45,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 45,
         "column": 46,
         "line": 1,
         "offset": 45,
       },
       "start": {
-        "_bufferIndex": 44,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 44,
         "column": 45,
         "line": 1,
         "offset": 44,
@@ -2137,15 +2417,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 45,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 45,
         "column": 46,
         "line": 1,
         "offset": 45,
       },
       "start": {
-        "_bufferIndex": 44,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 44,
         "column": 45,
         "line": 1,
         "offset": 44,
@@ -2157,15 +2437,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 46,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 46,
         "column": 47,
         "line": 1,
         "offset": 46,
       },
       "start": {
-        "_bufferIndex": 45,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 45,
         "column": 46,
         "line": 1,
         "offset": 45,
@@ -2177,15 +2457,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 46,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 46,
         "column": 47,
         "line": 1,
         "offset": 46,
       },
       "start": {
-        "_bufferIndex": 45,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 45,
         "column": 46,
         "line": 1,
         "offset": 45,
@@ -2197,15 +2477,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 47,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 47,
         "column": 48,
         "line": 1,
         "offset": 47,
       },
       "start": {
-        "_bufferIndex": 46,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 46,
         "column": 47,
         "line": 1,
         "offset": 46,
@@ -2217,15 +2497,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 47,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 47,
         "column": 48,
         "line": 1,
         "offset": 47,
       },
       "start": {
-        "_bufferIndex": 46,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 46,
         "column": 47,
         "line": 1,
         "offset": 46,
@@ -2237,15 +2517,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 48,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 48,
         "column": 49,
         "line": 1,
         "offset": 48,
       },
       "start": {
-        "_bufferIndex": 47,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 47,
         "column": 48,
         "line": 1,
         "offset": 47,
@@ -2257,15 +2537,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 48,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 48,
         "column": 49,
         "line": 1,
         "offset": 48,
       },
       "start": {
-        "_bufferIndex": 47,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 47,
         "column": 48,
         "line": 1,
         "offset": 47,
@@ -2277,15 +2557,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 49,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 49,
         "column": 50,
         "line": 1,
         "offset": 49,
       },
       "start": {
-        "_bufferIndex": 48,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 48,
         "column": 49,
         "line": 1,
         "offset": 48,
@@ -2297,15 +2577,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 49,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 49,
         "column": 50,
         "line": 1,
         "offset": 49,
       },
       "start": {
-        "_bufferIndex": 48,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 48,
         "column": 49,
         "line": 1,
         "offset": 48,
@@ -2317,15 +2597,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 49,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 49,
         "column": 50,
         "line": 1,
         "offset": 49,
       },
       "start": {
-        "_bufferIndex": 44,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 44,
         "column": 45,
         "line": 1,
         "offset": 44,
@@ -2337,15 +2617,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 56,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 56,
         "column": 2,
         "line": 2,
         "offset": 56,
       },
       "start": {
-        "_bufferIndex": 51,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 51,
         "column": 52,
         "line": 1,
         "offset": 51,
@@ -2357,15 +2637,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 52,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 52,
         "column": 53,
         "line": 1,
         "offset": 52,
       },
       "start": {
-        "_bufferIndex": 51,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 51,
         "column": 52,
         "line": 1,
         "offset": 51,
@@ -2377,15 +2657,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 52,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 52,
         "column": 53,
         "line": 1,
         "offset": 52,
       },
       "start": {
-        "_bufferIndex": 51,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 51,
         "column": 52,
         "line": 1,
         "offset": 51,
@@ -2397,15 +2677,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 53,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 53,
         "column": 54,
         "line": 1,
         "offset": 53,
       },
       "start": {
-        "_bufferIndex": 52,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 52,
         "column": 53,
         "line": 1,
         "offset": 52,
@@ -2417,15 +2697,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 53,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 53,
         "column": 54,
         "line": 1,
         "offset": 53,
       },
       "start": {
-        "_bufferIndex": 52,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 52,
         "column": 53,
         "line": 1,
         "offset": 52,
@@ -2437,15 +2717,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 54,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 54,
         "column": 55,
         "line": 1,
         "offset": 54,
       },
       "start": {
-        "_bufferIndex": 53,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 53,
         "column": 54,
         "line": 1,
         "offset": 53,
@@ -2457,15 +2737,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 54,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 54,
         "column": 55,
         "line": 1,
         "offset": 54,
       },
       "start": {
-        "_bufferIndex": 53,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 53,
         "column": 54,
         "line": 1,
         "offset": 53,
@@ -2477,15 +2757,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 55,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 55,
         "column": 1,
         "line": 2,
         "offset": 55,
       },
       "start": {
-        "_bufferIndex": 54,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 54,
         "column": 55,
         "line": 1,
         "offset": 54,
@@ -2497,15 +2777,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 55,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 55,
         "column": 1,
         "line": 2,
         "offset": 55,
       },
       "start": {
-        "_bufferIndex": 54,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 54,
         "column": 55,
         "line": 1,
         "offset": 54,
@@ -2517,15 +2797,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 56,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 56,
         "column": 2,
         "line": 2,
         "offset": 56,
       },
       "start": {
-        "_bufferIndex": 55,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 55,
         "column": 1,
         "line": 2,
         "offset": 55,
@@ -2537,15 +2817,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 56,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 56,
         "column": 2,
         "line": 2,
         "offset": 56,
       },
       "start": {
-        "_bufferIndex": 55,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 55,
         "column": 1,
         "line": 2,
         "offset": 55,
@@ -2557,15 +2837,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 56,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 56,
         "column": 2,
         "line": 2,
         "offset": 56,
       },
       "start": {
-        "_bufferIndex": 51,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 51,
         "column": 52,
         "line": 1,
         "offset": 51,
@@ -2577,15 +2857,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 63,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 63,
         "column": 2,
         "line": 3,
         "offset": 63,
       },
       "start": {
-        "_bufferIndex": 58,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 58,
         "column": 4,
         "line": 2,
         "offset": 58,
@@ -2597,15 +2877,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 59,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 59,
         "column": 5,
         "line": 2,
         "offset": 59,
       },
       "start": {
-        "_bufferIndex": 58,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 58,
         "column": 4,
         "line": 2,
         "offset": 58,
@@ -2617,15 +2897,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 59,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 59,
         "column": 5,
         "line": 2,
         "offset": 59,
       },
       "start": {
-        "_bufferIndex": 58,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 58,
         "column": 4,
         "line": 2,
         "offset": 58,
@@ -2637,15 +2917,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 60,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 60,
         "column": 6,
         "line": 2,
         "offset": 60,
       },
       "start": {
-        "_bufferIndex": 59,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 59,
         "column": 5,
         "line": 2,
         "offset": 59,
@@ -2657,15 +2937,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 60,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 60,
         "column": 6,
         "line": 2,
         "offset": 60,
       },
       "start": {
-        "_bufferIndex": 59,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 59,
         "column": 5,
         "line": 2,
         "offset": 59,
@@ -2677,15 +2957,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 61,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 61,
         "column": 7,
         "line": 2,
         "offset": 61,
       },
       "start": {
-        "_bufferIndex": 60,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 60,
         "column": 6,
         "line": 2,
         "offset": 60,
@@ -2697,15 +2977,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 61,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 61,
         "column": 7,
         "line": 2,
         "offset": 61,
       },
       "start": {
-        "_bufferIndex": 60,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 60,
         "column": 6,
         "line": 2,
         "offset": 60,
@@ -2717,15 +2997,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 62,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 62,
         "column": 1,
         "line": 3,
         "offset": 62,
       },
       "start": {
-        "_bufferIndex": 61,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 61,
         "column": 7,
         "line": 2,
         "offset": 61,
@@ -2737,15 +3017,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 62,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 62,
         "column": 1,
         "line": 3,
         "offset": 62,
       },
       "start": {
-        "_bufferIndex": 61,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 61,
         "column": 7,
         "line": 2,
         "offset": 61,
@@ -2757,15 +3037,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 63,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 63,
         "column": 2,
         "line": 3,
         "offset": 63,
       },
       "start": {
-        "_bufferIndex": 62,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 62,
         "column": 1,
         "line": 3,
         "offset": 62,
@@ -2777,15 +3057,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 63,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 63,
         "column": 2,
         "line": 3,
         "offset": 63,
       },
       "start": {
-        "_bufferIndex": 62,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 62,
         "column": 1,
         "line": 3,
         "offset": 62,
@@ -2797,15 +3077,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 63,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 63,
         "column": 2,
         "line": 3,
         "offset": 63,
       },
       "start": {
-        "_bufferIndex": 58,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 58,
         "column": 4,
         "line": 2,
         "offset": 58,
@@ -2817,15 +3097,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 69,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 69,
         "column": 2,
         "line": 4,
         "offset": 69,
       },
       "start": {
-        "_bufferIndex": 65,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 65,
         "column": 4,
         "line": 3,
         "offset": 65,
@@ -2837,15 +3117,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 66,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 66,
         "column": 5,
         "line": 3,
         "offset": 66,
       },
       "start": {
-        "_bufferIndex": 65,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 65,
         "column": 4,
         "line": 3,
         "offset": 65,
@@ -2857,15 +3137,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 66,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 66,
         "column": 5,
         "line": 3,
         "offset": 66,
       },
       "start": {
-        "_bufferIndex": 65,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 65,
         "column": 4,
         "line": 3,
         "offset": 65,
@@ -2877,15 +3157,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 67,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 67,
         "column": 6,
         "line": 3,
         "offset": 67,
       },
       "start": {
-        "_bufferIndex": 66,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 66,
         "column": 5,
         "line": 3,
         "offset": 66,
@@ -2897,15 +3177,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 67,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 67,
         "column": 6,
         "line": 3,
         "offset": 67,
       },
       "start": {
-        "_bufferIndex": 66,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 66,
         "column": 5,
         "line": 3,
         "offset": 66,
@@ -2917,15 +3197,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 68,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 68,
         "column": 1,
         "line": 4,
         "offset": 68,
       },
       "start": {
-        "_bufferIndex": 67,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 67,
         "column": 6,
         "line": 3,
         "offset": 67,
@@ -2937,15 +3217,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 68,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 68,
         "column": 1,
         "line": 4,
         "offset": 68,
       },
       "start": {
-        "_bufferIndex": 67,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 67,
         "column": 6,
         "line": 3,
         "offset": 67,
@@ -2957,15 +3237,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 69,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 69,
         "column": 2,
         "line": 4,
         "offset": 69,
       },
       "start": {
-        "_bufferIndex": 68,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 68,
         "column": 1,
         "line": 4,
         "offset": 68,
@@ -2977,15 +3257,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 69,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 69,
         "column": 2,
         "line": 4,
         "offset": 69,
       },
       "start": {
-        "_bufferIndex": 68,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 68,
         "column": 1,
         "line": 4,
         "offset": 68,
@@ -2997,15 +3277,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 69,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 69,
         "column": 2,
         "line": 4,
         "offset": 69,
       },
       "start": {
-        "_bufferIndex": 65,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 65,
         "column": 4,
         "line": 3,
         "offset": 65,
@@ -3017,15 +3297,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 75,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 75,
         "column": 3,
         "line": 5,
         "offset": 75,
       },
       "start": {
-        "_bufferIndex": 71,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 71,
         "column": 4,
         "line": 4,
         "offset": 71,
@@ -3037,15 +3317,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 72,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 72,
         "column": 5,
         "line": 4,
         "offset": 72,
       },
       "start": {
-        "_bufferIndex": 71,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 71,
         "column": 4,
         "line": 4,
         "offset": 71,
@@ -3057,15 +3337,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 72,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 72,
         "column": 5,
         "line": 4,
         "offset": 72,
       },
       "start": {
-        "_bufferIndex": 71,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 71,
         "column": 4,
         "line": 4,
         "offset": 71,
@@ -3077,15 +3357,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 73,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 73,
         "column": 1,
         "line": 5,
         "offset": 73,
       },
       "start": {
-        "_bufferIndex": 72,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 72,
         "column": 5,
         "line": 4,
         "offset": 72,
@@ -3097,15 +3377,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 73,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 73,
         "column": 1,
         "line": 5,
         "offset": 73,
       },
       "start": {
-        "_bufferIndex": 72,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 72,
         "column": 5,
         "line": 4,
         "offset": 72,
@@ -3117,15 +3397,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 74,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 74,
         "column": 2,
         "line": 5,
         "offset": 74,
       },
       "start": {
-        "_bufferIndex": 73,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 73,
         "column": 1,
         "line": 5,
         "offset": 73,
@@ -3137,15 +3417,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 74,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 74,
         "column": 2,
         "line": 5,
         "offset": 74,
       },
       "start": {
-        "_bufferIndex": 73,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 73,
         "column": 1,
         "line": 5,
         "offset": 73,
@@ -3157,15 +3437,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 75,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 75,
         "column": 3,
         "line": 5,
         "offset": 75,
       },
       "start": {
-        "_bufferIndex": 74,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 74,
         "column": 2,
         "line": 5,
         "offset": 74,
@@ -3177,15 +3457,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 75,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 75,
         "column": 3,
         "line": 5,
         "offset": 75,
       },
       "start": {
-        "_bufferIndex": 74,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 74,
         "column": 2,
         "line": 5,
         "offset": 74,
@@ -3197,15 +3477,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 75,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 75,
         "column": 3,
         "line": 5,
         "offset": 75,
       },
       "start": {
-        "_bufferIndex": 71,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 71,
         "column": 4,
         "line": 4,
         "offset": 71,
@@ -3217,15 +3497,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 117,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 117,
         "column": 14,
         "line": 8,
         "offset": 116,
       },
       "start": {
-        "_bufferIndex": 83,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 83,
         "column": 6,
         "line": 7,
         "offset": 83,
@@ -3237,15 +3517,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 84,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 84,
         "column": 7,
         "line": 7,
         "offset": 84,
       },
       "start": {
-        "_bufferIndex": 83,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 83,
         "column": 6,
         "line": 7,
         "offset": 83,
@@ -3257,15 +3537,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 84,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 84,
         "column": 7,
         "line": 7,
         "offset": 84,
       },
       "start": {
-        "_bufferIndex": 83,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 83,
         "column": 6,
         "line": 7,
         "offset": 83,
@@ -3277,15 +3557,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 103,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 103,
         "column": 26,
         "line": 7,
         "offset": 103,
       },
       "start": {
-        "_bufferIndex": 84,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 84,
         "column": 7,
         "line": 7,
         "offset": 84,
@@ -3297,15 +3577,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 103,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 103,
         "column": 26,
         "line": 7,
         "offset": 103,
       },
       "start": {
-        "_bufferIndex": 84,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 84,
         "column": 7,
         "line": 7,
         "offset": 84,
@@ -3317,15 +3597,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 104,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 104,
         "column": 1,
         "line": 8,
         "offset": 104,
       },
       "start": {
-        "_bufferIndex": 103,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 103,
         "column": 26,
         "line": 7,
         "offset": 103,
@@ -3337,15 +3617,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 104,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 104,
         "column": 1,
         "line": 8,
         "offset": 104,
       },
       "start": {
-        "_bufferIndex": 103,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 103,
         "column": 26,
         "line": 7,
         "offset": 103,
@@ -3357,15 +3637,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 116,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 116,
         "column": 13,
         "line": 8,
         "offset": 115,
       },
       "start": {
-        "_bufferIndex": 104,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 104,
         "column": 1,
         "line": 8,
         "offset": 104,
@@ -3377,15 +3657,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 116,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 116,
         "column": 13,
         "line": 8,
         "offset": 115,
       },
       "start": {
-        "_bufferIndex": 104,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 104,
         "column": 1,
         "line": 8,
         "offset": 104,
@@ -3397,15 +3677,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "enter",
     {
       "end": {
-        "_bufferIndex": 117,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 117,
         "column": 14,
         "line": 8,
         "offset": 116,
       },
       "start": {
-        "_bufferIndex": 116,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 116,
         "column": 13,
         "line": 8,
         "offset": 115,
@@ -3417,15 +3697,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 117,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 117,
         "column": 14,
         "line": 8,
         "offset": 116,
       },
       "start": {
-        "_bufferIndex": 116,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 116,
         "column": 13,
         "line": 8,
         "offset": 115,
@@ -3437,15 +3717,15 @@ exports[`integration:tokenize > should work with constructs (7) 1`] = `
     "exit",
     {
       "end": {
-        "_bufferIndex": 117,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 117,
         "column": 14,
         "line": 8,
         "offset": 116,
       },
       "start": {
-        "_bufferIndex": 83,
-        "_index": 0,
+        "_bufferIndex": -1,
+        "_index": 83,
         "column": 6,
         "line": 7,
         "offset": 83,

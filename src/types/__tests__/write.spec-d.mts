@@ -7,7 +7,6 @@ import type TestSubject from '#types/write'
 import type {
   Chunk,
   Event,
-  FileLike,
   List,
   Value
 } from '@flex-development/vfile-tokenizer'
@@ -18,12 +17,10 @@ describe('unit-d:types/Write', () => {
   })
 
   describe('parameters', () => {
-    it('should be callable with [Chunk | FileLike | List<Chunk | FileLike | Value> | Value]', () => {
-      // Arrange
-      type Params = [Chunk | FileLike | List<Chunk | FileLike | Value> | Value]
-
-      // Expect
-      expectTypeOf<TestSubject>().parameters.toEqualTypeOf<Params>()
+    it('should be callable with [Chunk | List<Chunk | Value> | Value]', () => {
+      expectTypeOf<TestSubject>()
+        .parameters
+        .toEqualTypeOf<[Chunk | List<Chunk | Value> | Value]>()
     })
   })
 

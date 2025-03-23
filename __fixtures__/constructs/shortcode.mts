@@ -44,6 +44,7 @@ export default shortcode
  *  `true` if `code` can come before construct, `false` otherwise
  */
 function previousShortcode(this: TokenizeContext, code: Code): boolean {
+  assert(code === this.previous, 'expected previous code')
   return code !== codes.backslash && code !== codes.colon
 }
 
@@ -238,6 +239,7 @@ function tokenizeShortcode(
         effects.exit(tt.shortcode)
         return ok
       case asciiAlphanumeric(code):
+      case code === codes.break:
       case code === codes.minus:
       case code === codes.plus:
       case code === codes.underscore:

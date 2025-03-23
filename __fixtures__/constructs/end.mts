@@ -1,11 +1,10 @@
 /**
- * @file Constructs - eof
- * @module fixtures/constructs/eof
+ * @file Constructs - eos
+ * @module fixtures/constructs/eos
  */
 
 import codes from '#enums/codes'
 import tt from '#fixtures/tt'
-import eos from '#utils/eof'
 import type {
   Code,
   Construct,
@@ -13,23 +12,21 @@ import type {
   State,
   TokenizeContext
 } from '@flex-development/vfile-tokenizer'
-import { ok as assert } from 'devlop'
 
 /**
- * End-of-file construct.
+ * End-of-stream construct.
  *
- * @const {Construct} eof
+ * @const {Construct} end
  */
-const eof: Construct = {
-  name: tt.eof,
-  test: eos,
-  tokenize: tokenizeEOF
+const end: Construct = {
+  name: tt.end,
+  tokenize: tokenizeEnd
 }
 
-export default eof
+export default end
 
 /**
- * Tokenize the end of file.
+ * Tokenize the end of stream.
  *
  * @this {TokenizeContext}
  *
@@ -37,15 +34,18 @@ export default eof
  *  Context object to transition state machine
  * @param {State} ok
  *  Successful tokenization state
+ * @param {State} nok
+ *  Failed tokenization state
  * @return {State}
  *  Initial state
  */
-function tokenizeEOF(
+function tokenizeEnd(
   this: TokenizeContext,
   effects: Effects,
-  ok: State
+  ok: State,
+  nok: State
 ): State {
-  return eof
+  return end
 
   /**
    * @this {void}
@@ -55,11 +55,11 @@ function tokenizeEOF(
    * @return {State | undefined}
    *  Next state
    */
-  function eof(this: void, code: Code): State | undefined {
-    assert(code === codes.eof, 'expected eof code')
-    effects.enter(tt.eof)
+  function end(this: void, code: Code): State | undefined {
+    if (code !== codes.eos) return nok(code)
+    effects.enter(tt.end)
     effects.consume(code)
-    effects.exit(tt.eof)
+    effects.exit(tt.end)
     return ok
   }
 }

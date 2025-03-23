@@ -4,7 +4,7 @@
  */
 
 import type TestSubject from '#types/slice-stream'
-import type { Chunk, Position } from '@flex-development/vfile-tokenizer'
+import type { Chunk, Range } from '@flex-development/vfile-tokenizer'
 
 describe('unit-d:types/SliceStream', () => {
   it('should match [this: void]', () => {
@@ -12,8 +12,8 @@ describe('unit-d:types/SliceStream', () => {
   })
 
   describe('parameters', () => {
-    it('should be callable with [Position]', () => {
-      expectTypeOf<TestSubject>().parameters.toEqualTypeOf<[Position]>()
+    it('should be callable with [Range]', () => {
+      expectTypeOf<TestSubject>().parameters.toEqualTypeOf<[Range]>()
     })
   })
 

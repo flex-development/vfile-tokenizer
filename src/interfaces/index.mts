@@ -11,9 +11,13 @@ export type { default as Options } from '#interfaces/options'
 export type {
   default as PreprocessOptions
 } from '#interfaces/options-preprocess'
+export type { default as SerializeOptions } from '#interfaces/options-serialize'
+export type { default as TokenizeOptions } from '#interfaces/options-tokenize'
 export type { default as Place } from '#interfaces/place'
 export type { default as Position } from '#interfaces/position'
 export type { default as Preprocess } from '#interfaces/preprocess'
+export type { default as Range } from '#interfaces/range'
+export type { default as RangeInfo } from '#interfaces/range-info'
 export type { default as Token } from '#interfaces/token'
 export type { default as TokenFields } from '#interfaces/token-fields'
 export type { default as TokenInfo } from '#interfaces/token-info'

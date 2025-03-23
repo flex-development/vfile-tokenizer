@@ -5,8 +5,13 @@
 
 import chars from '#enums/chars'
 import codes from '#enums/codes'
+import nil from '#internal/nil'
 import size from '#internal/size'
-import type { Chunk, List } from '@flex-development/vfile-tokenizer'
+import type {
+  Chunk,
+  List,
+  SerializeOptions
+} from '@flex-development/vfile-tokenizer'
 import { ok } from 'devlop'
 
 /**
@@ -14,6 +19,7 @@ import { ok } from 'devlop'
  *
  * @see {@linkcode Chunk}
  * @see {@linkcode List}
+ * @see {@linkcode SerializeOptions}
  *
  * @category
  *  utils
@@ -22,16 +28,20 @@ import { ok } from 'devlop'
  *
  * @param {List<Chunk | string>} chunks
  *  The chunks to serialize
- * @param {boolean | null | undefined} [expandTabs]
- *  Whether to expand tabs
+ * @param {SerializeOptions | boolean | null | undefined} [options]
+ *  Options for serializing or whether to expand tabs
  * @return {string}
  *  String value of `chunks`
  */
 function serializeChunks(
   this: void,
   chunks: List<Chunk | string>,
-  expandTabs?: boolean | null | undefined
+  options?: SerializeOptions | boolean | null | undefined
 ): string {
+  if (typeof options === 'boolean' || !options) {
+    options = { expandTabs: options }
+  }
+
   /**
    * Serialized character codes.
    *
@@ -57,9 +67,9 @@ function serializeChunks(
     /**
      * Current chunk.
      *
-     * @const {Chunk} chunk
+     * @const {Chunk | string | undefined} chunk
      */
-    const chunk: Chunk | string = [...chunks][index] as Chunk | string
+    const chunk: Chunk | string | undefined = [...chunks][index]
 
     /**
      * Serialized chunk.
@@ -68,26 +78,35 @@ function serializeChunks(
      */
     let value: string
 
+    ok(typeof chunk !== 'undefined', 'expected `chunk`')
+
     if (Array.isArray(chunk)) {
-      value = serializeChunks(chunk, expandTabs)
+      value = serializeChunks(chunk, options)
     } else if (typeof chunk === 'string') {
       value = chunk
     } else {
-      switch (chunk) {
-        case codes.crlf:
+      switch (true) {
+        case chunk === codes.break && !nil(options.breaks):
+          value = options.breaks ? chars.space : chars.empty
+          if (typeof options.breaks === 'string') value = options.breaks
+          break
+        case chunk === codes.crlf:
           value = chars.crlf
           break
-        case codes.vcr:
+        case chunk === codes.empty:
+          value = chars.empty
+          break
+        case chunk === codes.vcr:
           value = chars.cr
           break
-        case codes.vht:
-          value = expandTabs ? chars.space : chars.ht
+        case chunk === codes.vht:
+          value = options.expandTabs ? chars.space : chars.ht
           break
-        case codes.vlf:
+        case chunk === codes.vlf:
           value = chars.lf
           break
-        case codes.vs:
-          if (!expandTabs && tab) continue
+        case chunk === codes.vs:
+          if (!options.expandTabs && tab) continue
           value = chars.space
           break
         default:
