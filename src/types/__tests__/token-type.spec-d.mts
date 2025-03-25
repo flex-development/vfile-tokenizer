@@ -1,10 +1,10 @@
 /**
  * @file Type Tests - TokenType
- * @module vfile-tokenizer/interfaces/tests/unit-d/TokenType
+ * @module fsm-tokenizer/interfaces/tests/unit-d/TokenType
  */
 
 import type TestSubject from '#types/token-type'
-import type { TokenTypeMap } from '@flex-development/vfile-tokenizer'
+import type { TokenTypeMap } from '@flex-development/fsm-tokenizer'
 
 describe('unit-d:interfaces/TokenType', () => {
   it('should equal TokenTypeMap[keyof TokenTypeMap]', () => {

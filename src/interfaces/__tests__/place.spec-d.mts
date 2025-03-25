@@ -1,11 +1,11 @@
 /**
  * @file Type Tests - Place
- * @module vfile-tokenizer/interfaces/tests/unit-d/Place
+ * @module fsm-tokenizer/interfaces/tests/unit-d/Place
  */
 
 import type TestSubject from '#interfaces/place'
+import type { RangeInfo } from '@flex-development/fsm-tokenizer'
 import type { Point } from '@flex-development/vfile-location'
-import type { RangeInfo } from '@flex-development/vfile-tokenizer'
 
 describe('unit-d:interfaces/Place', () => {
   it('should extend Point', () => {

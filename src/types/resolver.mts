@@ -1,13 +1,13 @@
 /**
  * @file Type Aliases - Resolver
- * @module vfile-tokenizer/types/Resolver
+ * @module fsm-tokenizer/types/Resolver
  */
 
 import type {
   Construct,
   Event,
   TokenizeContext
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 /**
  * Handle events coming from `tokenize`.

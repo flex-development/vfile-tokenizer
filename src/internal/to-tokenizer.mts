@@ -1,13 +1,13 @@
 /**
  * @file Internal - toTokenizer
- * @module vfile-tokenizer/internal/toTokenizer
+ * @module fsm-tokenizer/internal/toTokenizer
  */
 
 import createTokenizer from '#create-tokenizer'
 import type {
   TokenizeContext,
   TokenizeOptions
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 /**
  * Convert `value` to a tokenizer if it is not one already.

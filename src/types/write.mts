@@ -1,6 +1,6 @@
 /**
  * @file Type Aliases - Write
- * @module vfile-tokenizer/types/Write
+ * @module fsm-tokenizer/types/Write
  */
 
 import type {
@@ -8,7 +8,7 @@ import type {
   Event,
   List,
   Value
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 /**
  * Write a slice of chunks.

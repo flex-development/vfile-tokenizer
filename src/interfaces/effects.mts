@@ -1,6 +1,6 @@
 /**
  * @file Interfaces - Effects
- * @module vfile-tokenizer/interfaces/Effects
+ * @module fsm-tokenizer/interfaces/Effects
  */
 
 import type {
@@ -8,7 +8,7 @@ import type {
   Consume,
   Enter,
   Exit
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 /**
  * Context object to transition the state machine.

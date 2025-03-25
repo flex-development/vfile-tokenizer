@@ -1,9 +1,9 @@
 /**
  * @file Type Aliases - SerializeChunks
- * @module vfile-tokenizer/types/SerializeChunks
+ * @module fsm-tokenizer/types/SerializeChunks
  */
 
-import type { Chunk, SerializeOptions } from '@flex-development/vfile-tokenizer'
+import type { Chunk, SerializeOptions } from '@flex-development/fsm-tokenizer'
 
 /**
  * Get the string value of a slice of `chunks`.

@@ -1,10 +1,10 @@
 /**
  * @file Type Tests - Exit
- * @module vfile-tokenizer/types/tests/unit-d/Exit
+ * @module fsm-tokenizer/types/tests/unit-d/Exit
  */
 
 import type TestSubject from '#types/exit'
-import type { Token, TokenType } from '@flex-development/vfile-tokenizer'
+import type { Token, TokenType } from '@flex-development/fsm-tokenizer'
 
 describe('unit-d:types/Exit', () => {
   it('should match [this: void]', () => {

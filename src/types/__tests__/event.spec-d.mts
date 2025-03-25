@@ -1,6 +1,6 @@
 /**
  * @file Type Tests - Event
- * @module vfile-tokenizer/types/tests/unit-d/Event
+ * @module fsm-tokenizer/types/tests/unit-d/Event
  */
 
 import type tt from '#fixtures/tt'
@@ -9,7 +9,7 @@ import type {
   EventType,
   Token,
   TokenizeContext
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 describe('unit-d:types/Event', () => {
   type T = tt.end

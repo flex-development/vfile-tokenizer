@@ -1,6 +1,6 @@
 /**
  * @file Internal - noop
- * @module vfile-tokenizer/internal/noop
+ * @module fsm-tokenizer/internal/noop
  */
 
 /**

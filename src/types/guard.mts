@@ -1,9 +1,9 @@
 /**
  * @file Type Aliases - Guard
- * @module vfile-tokenizer/types/Guard
+ * @module fsm-tokenizer/types/Guard
  */
 
-import type { Code, TokenizeContext } from '@flex-development/vfile-tokenizer'
+import type { Code, TokenizeContext } from '@flex-development/fsm-tokenizer'
 
 /**
  * Check the given character `code`.

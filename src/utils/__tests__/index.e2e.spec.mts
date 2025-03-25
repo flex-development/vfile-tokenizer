@@ -1,6 +1,6 @@
 /**
  * @file E2E Tests - utils
- * @module vfile-tokenizer/utils/tests/e2e/api
+ * @module fsm-tokenizer/utils/tests/e2e/api
  */
 
 import * as testSubject from '#utils/index'

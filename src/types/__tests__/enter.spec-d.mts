@@ -1,6 +1,6 @@
 /**
  * @file Type Tests - Enter
- * @module vfile-tokenizer/types/tests/unit-d/Enter
+ * @module fsm-tokenizer/types/tests/unit-d/Enter
  */
 
 import type TestSubject from '#types/enter'
@@ -8,7 +8,7 @@ import type {
   Token,
   TokenFields,
   TokenType
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 describe('unit-d:types/Enter', () => {
   it('should match [this: void]', () => {

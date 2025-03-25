@@ -1,10 +1,10 @@
 /**
  * @file Utilities - isCode
- * @module vfile-tokenizer/utils/isCode
+ * @module fsm-tokenizer/utils/isCode
  */
 
 import codes from '#enums/codes'
-import type { Code } from '@flex-development/vfile-tokenizer'
+import type { Code } from '@flex-development/fsm-tokenizer'
 
 /**
  * Check if `value` looks like a character code.

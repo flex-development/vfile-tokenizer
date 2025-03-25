@@ -1,6 +1,6 @@
 /**
  * @file Interfaces - SerializeOptions
- * @module vfile-tokenizer/interfaces/SerializeOptions
+ * @module fsm-tokenizer/interfaces/SerializeOptions
  */
 
 /**

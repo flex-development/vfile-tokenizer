@@ -1,6 +1,6 @@
 /**
  * @file Type Aliases - Numeric
- * @module vfile-tokenizer/types/Numeric
+ * @module fsm-tokenizer/types/Numeric
  */
 
 /**

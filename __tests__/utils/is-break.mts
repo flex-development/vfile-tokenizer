@@ -4,7 +4,7 @@
  */
 
 import codes from '#enums/codes'
-import type { Code } from '@flex-development/vfile-tokenizer'
+import type { Code } from '@flex-development/fsm-tokenizer'
 
 /**
  * Check if `code` is a character code representing a stream break.

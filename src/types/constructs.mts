@@ -1,12 +1,12 @@
 /**
  * @file Type Aliases - Constructs
- * @module vfile-tokenizer/types/Constructs
+ * @module fsm-tokenizer/types/Constructs
  */
 
 import type {
   ConstructPack,
   ConstructRecord
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 /**
  * A single construct, list of constructs, or several constructs mapped from

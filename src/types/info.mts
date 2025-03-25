@@ -1,9 +1,9 @@
 /**
  * @file Type Aliases - Info
- * @module vfile-tokenizer/types/Info
+ * @module fsm-tokenizer/types/Info
  */
 
-import type { Restore } from '@flex-development/vfile-tokenizer'
+import type { Restore } from '@flex-development/fsm-tokenizer'
 
 /**
  * Internal state; info passed around.

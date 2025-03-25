@@ -1,6 +1,6 @@
 /**
  * @file Functional Tests - skip
- * @module vfile-tokenizer/internal/tests/functional/skip
+ * @module fsm-tokenizer/internal/tests/functional/skip
  */
 
 import testSubject from '#internal/skip'

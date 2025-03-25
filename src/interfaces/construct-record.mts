@@ -1,9 +1,9 @@
 /**
  * @file Type Aliases - ConstructRecord
- * @module vfile-tokenizer/interfaces/ConstructRecord
+ * @module fsm-tokenizer/interfaces/ConstructRecord
  */
 
-import type { ConstructPack, Numeric } from '@flex-development/vfile-tokenizer'
+import type { ConstructPack, Numeric } from '@flex-development/fsm-tokenizer'
 
 /**
  * Several constructs, mapped from their initial codes.

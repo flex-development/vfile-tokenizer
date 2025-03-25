@@ -1,9 +1,9 @@
 /**
  * @file Type Aliases - FinalizeContext
- * @module vfile-tokenizer/types/FinalizeContext
+ * @module fsm-tokenizer/types/FinalizeContext
  */
 
-import type { TokenizeContext } from '@flex-development/vfile-tokenizer'
+import type { TokenizeContext } from '@flex-development/fsm-tokenizer'
 
 /**
  * Finalize the tokenize context.

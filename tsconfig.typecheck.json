@@ -2,12 +2,12 @@
   "compilerOptions": {
     "allowJs": false,
     "checkJs": false,
-    "customConditions": ["types", "vfile-tokenizer"]
+    "customConditions": ["types", "fsm-tokenizer"]
   },
   "exclude": [],
   "extends": "./tsconfig.json",
   "files": [
-    "typings/@flex-development/vfile-tokenizer/index.d.mts",
+    "typings/@flex-development/fsm-tokenizer/index.d.mts",
     "typings/typescript/lib.es5.d.ts",
     "vitest-env.d.mts"
   ],

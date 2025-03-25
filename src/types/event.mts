@@ -1,6 +1,6 @@
 /**
  * @file Type Aliases - Event
- * @module vfile-tokenizer/types/Event
+ * @module fsm-tokenizer/types/Event
  */
 
 import type {
@@ -8,7 +8,7 @@ import type {
   Token,
   TokenizeContext,
   TokenType
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 /**
  * The start or end of a token amongst other events.

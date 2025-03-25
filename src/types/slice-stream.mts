@@ -1,9 +1,9 @@
 /**
  * @file Type Aliases - SliceStream
- * @module vfile-tokenizer/types/SliceStream
+ * @module fsm-tokenizer/types/SliceStream
  */
 
-import type { Chunk, Range } from '@flex-development/vfile-tokenizer'
+import type { Chunk, Range } from '@flex-development/fsm-tokenizer'
 
 /**
  * Get the chunks spanning `range`.

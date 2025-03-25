@@ -1,6 +1,6 @@
 /**
  * @file Type Tests - Write
- * @module vfile-tokenizer/types/tests/unit-d/Write
+ * @module fsm-tokenizer/types/tests/unit-d/Write
  */
 
 import type TestSubject from '#types/write'
@@ -9,7 +9,7 @@ import type {
   Event,
   List,
   Value
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 describe('unit-d:types/Write', () => {
   it('should match [this: void]', () => {

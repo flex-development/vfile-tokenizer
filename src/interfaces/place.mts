@@ -1,10 +1,10 @@
 /**
  * @file Interfaces - Place
- * @module vfile-tokenizer/interfaces/Place
+ * @module fsm-tokenizer/interfaces/Place
  */
 
+import type { RangeInfo } from '@flex-development/fsm-tokenizer'
 import type { Point } from '@flex-development/vfile-location'
-import type { RangeInfo } from '@flex-development/vfile-tokenizer'
 
 /**
  * One place in a file, with additional chunk metadata.

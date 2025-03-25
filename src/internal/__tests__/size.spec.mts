@@ -1,6 +1,6 @@
 /**
  * @file Unit Tests - size
- * @module vfile-tokenizer/internal/tests/unit/size
+ * @module fsm-tokenizer/internal/tests/unit/size
  */
 
 import chars from '#enums/chars'

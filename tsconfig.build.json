@@ -3,7 +3,7 @@
     "allowImportingTsExtensions": false,
     "allowJs": false,
     "checkJs": false,
-    "customConditions": ["vfile-tokenizer", "production", "import", "node"],
+    "customConditions": ["fsm-tokenizer", "production", "import", "node"],
     "declarationMap": false,
     "noEmitOnError": true,
     "outDir": "dist",
@@ -14,7 +14,7 @@
   "exclude": ["**/__tests__/**"],
   "extends": "./tsconfig.json",
   "files": [
-    "typings/@flex-development/vfile-tokenizer/index.d.mts",
+    "typings/@flex-development/fsm-tokenizer/index.d.mts",
     "typings/typescript/lib.es5.d.ts"
   ],
   "include": ["dist/**/*", "src/**/**.mts"]

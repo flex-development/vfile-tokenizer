@@ -1,15 +1,15 @@
 /**
  * @file Type Tests - Construct
- * @module vfile-tokenizer/interfaces/tests/unit-d/Construct
+ * @module fsm-tokenizer/interfaces/tests/unit-d/Construct
  */
 
 import type TestSubject from '#interfaces/construct'
-import type { Nilable } from '@flex-development/tutils'
 import type {
   Guard,
   Resolver,
   Tokenizer
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
+import type { Nilable } from '@flex-development/tutils'
 
 describe('unit-d:interfaces/Construct', () => {
   it('should match [name?: string | null | undefined]', () => {

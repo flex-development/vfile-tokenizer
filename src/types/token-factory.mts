@@ -1,13 +1,13 @@
 /**
  * @file Type Aliases - TokenFactory
- * @module vfile-tokenizer/types/TokenFactory
+ * @module fsm-tokenizer/types/TokenFactory
  */
 
 import type {
   Token,
   TokenInfo,
   TokenType
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 /**
  * Create a new token.

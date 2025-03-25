@@ -1,10 +1,10 @@
 /**
  * @file Functional Tests - onsuccessfulcheck
- * @module vfile-tokenizer/internal/tests/functional/onsuccessfulcheck
+ * @module fsm-tokenizer/internal/tests/functional/onsuccessfulcheck
  */
 
 import testSubject from '#internal/onsuccessfulcheck'
-import type { Info, Restore } from '@flex-development/vfile-tokenizer'
+import type { Info, Restore } from '@flex-development/fsm-tokenizer'
 import type { MockInstance } from 'vitest'
 
 describe('functional:internal/onsuccessfulcheck', () => {

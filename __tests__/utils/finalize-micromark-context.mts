@@ -3,7 +3,7 @@
  * @module tests/utils/finalizeMicromarkContext
  */
 
-import type { TokenizeContext } from '@flex-development/vfile-tokenizer'
+import type { TokenizeContext } from '@flex-development/fsm-tokenizer'
 
 /**
  * Finalize the micromark tokenize `context`.

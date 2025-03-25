@@ -1,6 +1,6 @@
 /**
  * @file E2E Tests - constructs
- * @module vfile-tokenizer/constructs/tests/e2e/api
+ * @module fsm-tokenizer/constructs/tests/e2e/api
  */
 
 import * as testSubject from '#constructs/index'

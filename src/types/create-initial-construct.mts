@@ -1,9 +1,9 @@
 /**
  * @file Type Aliases - CreateInitialConstruct
- * @module vfile-tokenizer/types/CreateInitialConstruct
+ * @module fsm-tokenizer/types/CreateInitialConstruct
  */
 
-import type { InitialConstruct } from '@flex-development/vfile-tokenizer'
+import type { InitialConstruct } from '@flex-development/fsm-tokenizer'
 
 /**
  * Create an initial construct.

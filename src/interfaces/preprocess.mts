@@ -1,6 +1,6 @@
 /**
  * @file Interfaces - Preprocess
- * @module vfile-tokenizer/interfaces/Preprocess
+ * @module fsm-tokenizer/interfaces/Preprocess
  */
 
 import type {
@@ -8,7 +8,7 @@ import type {
   Encoding,
   FileLike,
   Value
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 /**
  * Turn `value` into character code chunks.

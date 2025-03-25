@@ -1,12 +1,12 @@
 /**
  * @file Type Tests - ConstructRecord
- * @module vfile-tokenizer/interfaces/tests/unit-d/ConstructRecord
+ * @module fsm-tokenizer/interfaces/tests/unit-d/ConstructRecord
  */
 
 import codes from '#enums/codes'
 import type TestSubject from '#interfaces/construct-record'
+import type { ConstructPack } from '@flex-development/fsm-tokenizer'
 import type { Nilable } from '@flex-development/tutils'
-import type { ConstructPack } from '@flex-development/vfile-tokenizer'
 
 describe('unit-d:interfaces/ConstructRecord', () => {
   type Value = Nilable<ConstructPack>

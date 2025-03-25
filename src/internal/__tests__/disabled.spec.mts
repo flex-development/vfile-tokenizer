@@ -1,6 +1,6 @@
 /**
  * @file Unit Tests - disabled
- * @module vfile-tokenizer/internal/tests/unit/disabled
+ * @module fsm-tokenizer/internal/tests/unit/disabled
  */
 
 import testSubject from '#internal/disabled'

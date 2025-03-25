@@ -1,15 +1,15 @@
 /**
  * @file Internal - createDefineSkip
- * @module vfile-tokenizer/internal/createDefineSkip
+ * @module fsm-tokenizer/internal/createDefineSkip
  */
 
 import skip from '#internal/skip'
+import type { DefineSkip } from '@flex-development/fsm-tokenizer'
 import type {
   Column,
   Line,
   Point
 } from '@flex-development/vfile-location'
-import type { DefineSkip } from '@flex-development/vfile-tokenizer'
 import type { Debugger } from 'debug'
 
 /**

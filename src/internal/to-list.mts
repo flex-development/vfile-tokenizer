@@ -1,10 +1,10 @@
 /**
  * @file Internal - toList
- * @module vfile-tokenizer/internal/toList
+ * @module fsm-tokenizer/internal/toList
  */
 
 import isList from '#internal/is-list'
-import type { List } from '@flex-development/vfile-tokenizer'
+import type { List } from '@flex-development/fsm-tokenizer'
 
 export default toList
 

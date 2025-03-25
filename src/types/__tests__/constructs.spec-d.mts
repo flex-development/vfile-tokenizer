@@ -1,13 +1,13 @@
 /**
  * @file Type Tests - Constructs
- * @module vfile-tokenizer/types/tests/unit-d/Constructs
+ * @module fsm-tokenizer/types/tests/unit-d/Constructs
  */
 
 import type TestSubject from '#types/constructs'
 import type {
   ConstructPack,
   ConstructRecord
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 describe('unit-d:types/Constructs', () => {
   it('should extract ConstructPack', () => {

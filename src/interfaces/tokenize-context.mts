@@ -1,6 +1,6 @@
 /**
  * @file Interfaces - TokenizeContext
- * @module vfile-tokenizer/interfaces/TokenizeContext
+ * @module fsm-tokenizer/interfaces/TokenizeContext
  */
 
 import type {
@@ -16,7 +16,7 @@ import type {
   SliceStream,
   TokenFactory,
   Write
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 /**
  * Context object to assist with tokenization.

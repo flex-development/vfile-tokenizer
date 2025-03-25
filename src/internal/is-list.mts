@@ -1,9 +1,9 @@
 /**
  * @file Internal - isList
- * @module vfile-tokenizer/internal/isList
+ * @module fsm-tokenizer/internal/isList
  */
 
-import type { List } from '@flex-development/vfile-tokenizer'
+import type { List } from '@flex-development/fsm-tokenizer'
 
 /**
  * Check if `value` is a list.

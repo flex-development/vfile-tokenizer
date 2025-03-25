@@ -1,10 +1,10 @@
 /**
  * @file Type Tests - SliceSerialize
- * @module vfile-tokenizer/types/tests/unit-d/SliceSerialize
+ * @module fsm-tokenizer/types/tests/unit-d/SliceSerialize
  */
 
 import type TestSubject from '#types/slice-serialize'
-import type { Range, SerializeOptions } from '@flex-development/vfile-tokenizer'
+import type { Range, SerializeOptions } from '@flex-development/fsm-tokenizer'
 
 describe('unit-d:types/SliceSerialize', () => {
   it('should match [this: void]', () => {

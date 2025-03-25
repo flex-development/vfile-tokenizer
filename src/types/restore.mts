@@ -1,6 +1,6 @@
 /**
  * @file Type Aliases - Restore
- * @module vfile-tokenizer/types/Restore
+ * @module fsm-tokenizer/types/Restore
  */
 
 /**

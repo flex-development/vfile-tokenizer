@@ -1,6 +1,6 @@
 /**
  * @file Type Tests - RangeInfo
- * @module vfile-tokenizer/interfaces/tests/unit-d/RangeInfo
+ * @module fsm-tokenizer/interfaces/tests/unit-d/RangeInfo
  */
 
 import type TestSubject from '#interfaces/range-info'

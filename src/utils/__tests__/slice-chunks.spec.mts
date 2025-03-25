@@ -1,6 +1,6 @@
 /**
  * @file Unit Tests - sliceChunks
- * @module vfile-tokenizer/utils/tests/unit/sliceChunks
+ * @module fsm-tokenizer/utils/tests/unit/sliceChunks
  */
 
 import chars from '#enums/chars'

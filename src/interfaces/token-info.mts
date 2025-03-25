@@ -1,13 +1,13 @@
 /**
  * @file Interfaces - TokenInfo
- * @module vfile-tokenizer/interfaces/TokenInfo
+ * @module fsm-tokenizer/interfaces/TokenInfo
  */
 
 import type {
   Position,
   Token,
   TokenFields
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 /**
  * Token data.

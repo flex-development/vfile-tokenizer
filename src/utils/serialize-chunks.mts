@@ -1,6 +1,6 @@
 /**
  * @file Utilities - serializeChunks
- * @module vfile-tokenizer/utils/serializeChunks
+ * @module fsm-tokenizer/utils/serializeChunks
  */
 
 import chars from '#enums/chars'
@@ -11,7 +11,7 @@ import type {
   Chunk,
   List,
   SerializeOptions
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 import { ok } from 'devlop'
 
 /**

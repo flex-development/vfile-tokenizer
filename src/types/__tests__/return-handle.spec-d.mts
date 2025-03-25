@@ -1,10 +1,10 @@
 /**
  * @file Type Tests - ReturnHandle
- * @module vfile-tokenizer/types/tests/unit-d/ReturnHandle
+ * @module fsm-tokenizer/types/tests/unit-d/ReturnHandle
  */
 
 import type TestSubject from '#types/return-handle'
-import type { Construct, Info } from '@flex-development/vfile-tokenizer'
+import type { Construct, Info } from '@flex-development/fsm-tokenizer'
 
 describe('unit-d:types/ReturnHandle', () => {
   it('should match [this: void]', () => {

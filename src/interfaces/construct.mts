@@ -1,16 +1,16 @@
 /**
  * @file Interfaces - Construct
- * @module vfile-tokenizer/interfaces/Construct
+ * @module fsm-tokenizer/interfaces/Construct
  */
 
 import type {
   Guard,
   Resolver,
   Tokenizer
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 /**
- * Object describing how to tokenize a region of a source file.
+ * Object describing how to tokenize a region of a source value.
  */
 interface Construct {
   /**

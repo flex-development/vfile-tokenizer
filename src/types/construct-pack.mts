@@ -1,9 +1,9 @@
 /**
  * @file Type Aliases - ConstructPack
- * @module vfile-tokenizer/types/ConstructPack
+ * @module fsm-tokenizer/types/ConstructPack
  */
 
-import type { Construct } from '@flex-development/vfile-tokenizer'
+import type { Construct } from '@flex-development/fsm-tokenizer'
 
 /**
  * A single construct or a list of constructs.

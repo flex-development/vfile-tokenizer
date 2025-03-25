@@ -1,10 +1,10 @@
 /**
  * @file Type Tests - FinalizeContext
- * @module vfile-tokenizer/types/tests/unit-d/FinalizeContext
+ * @module fsm-tokenizer/types/tests/unit-d/FinalizeContext
  */
 
 import type TestSubject from '#types/finalize-context'
-import type { TokenizeContext } from '@flex-development/vfile-tokenizer'
+import type { TokenizeContext } from '@flex-development/fsm-tokenizer'
 
 describe('unit-d:types/FinalizeContext', () => {
   it('should match [this: void]', () => {

@@ -1,6 +1,6 @@
 /**
  * @file Unit Tests - serializeChunks
- * @module vfile-tokenizer/utils/tests/unit/serializeChunks
+ * @module fsm-tokenizer/utils/tests/unit/serializeChunks
  */
 
 import chars from '#enums/chars'

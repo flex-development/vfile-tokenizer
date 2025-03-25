@@ -1,6 +1,6 @@
 /**
  * @file tokenize
- * @module vfile-tokenizer/tokenize
+ * @module fsm-tokenizer/tokenize
  */
 
 import codes from '#enums/codes'
@@ -16,7 +16,7 @@ import type {
   TokenizeContext,
   TokenizeOptions,
   Value
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 import { ok } from 'devlop'
 
 /**

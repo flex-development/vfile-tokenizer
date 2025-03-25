@@ -5,11 +5,11 @@
 blank_issues_enabled: false
 contact_links:
   - name: Discuss an idea
-    url: https://github.com/flex-development/vfile-tokenizer/discussions/new?category=ideas
+    url: https://github.com/flex-development/fsm-tokenizer/discussions/new?category=ideas
     about: Discuss an idea before submitting a feature request
   - name: Q&A
-    url: https://github.com/flex-development/vfile-tokenizer/discussions/new?category=q-a
+    url: https://github.com/flex-development/fsm-tokenizer/discussions/new?category=q-a
     about: Ask and answer questions
   - name: Show and tell
-    url: https://github.com/flex-development/vfile-tokenizer/discussions/new?category=show-and-tell
+    url: https://github.com/flex-development/fsm-tokenizer/discussions/new?category=show-and-tell
     about: Show the community how you integrated this project into yours

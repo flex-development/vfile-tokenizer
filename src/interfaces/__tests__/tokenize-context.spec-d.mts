@@ -1,10 +1,9 @@
 /**
  * @file Type Tests - TokenizeContext
- * @module vfile-tokenizer/interfaces/tests/unit-d/TokenizeContext
+ * @module fsm-tokenizer/interfaces/tests/unit-d/TokenizeContext
  */
 
 import type TestSubject from '#interfaces/tokenize-context'
-import type { Nilable } from '@flex-development/tutils'
 import type {
   Code,
   Construct,
@@ -17,7 +16,8 @@ import type {
   SliceStream,
   TokenFactory,
   Write
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
+import type { Nilable } from '@flex-development/tutils'
 
 describe('unit-d:interfaces/TokenizeContext', () => {
   it('should match [breaks?: boolean | null | undefined]', () => {

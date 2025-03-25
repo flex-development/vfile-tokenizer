@@ -1,26 +1,28 @@
 {
-  "name": "@flex-development/vfile-tokenizer",
-  "description": "vfile utility to tokenize a file",
+  "name": "@flex-development/fsm-tokenizer",
+  "description": "finite state machine tokenizer",
   "version": "0.0.0",
   "keywords": [
+    "finite",
+    "fsm",
     "lexer",
     "parse",
+    "state",
     "tokenize",
-    "vfile",
-    "vfile-util"
+    "tokenizer"
   ],
   "license": "BSD-3-Clause",
-  "homepage": "https://github.com/flex-development/vfile-tokenizer",
-  "repository": "https://github.com/flex-development/vfile-tokenizer.git",
-  "bugs": "https://github.com/flex-development/vfile-tokenizer/issues",
+  "homepage": "https://github.com/flex-development/fsm-tokenizer",
+  "repository": "https://github.com/flex-development/fsm-tokenizer.git",
+  "bugs": "https://github.com/flex-development/fsm-tokenizer/issues",
   "author": {
     "name": "Lexus Drumgold",
     "url": "https://github.com/unicornware"
   },
   "publishConfig": {
     "access": "public",
-    "diff-dst-prefix": "vfile-tokenizer",
-    "diff-src-prefix": "vfile-tokenizer",
+    "diff-dst-prefix": "fsm-tokenizer",
+    "diff-src-prefix": "fsm-tokenizer",
     "directory": "./",
     "executableFiles": [],
     "node-options": null,
@@ -39,48 +41,48 @@
   ],
   "exports": {
     ".": {
-      "vfile-tokenizer": "./src/index.mts",
+      "fsm-tokenizer": "./src/index.mts",
       "default": "./dist/index.mjs"
     },
     "./package.json": "./package.json"
   },
   "imports": {
     "#constructs/*": {
-      "vfile-tokenizer": "./src/constructs/*.mts",
+      "fsm-tokenizer": "./src/constructs/*.mts",
       "default": "./dist/constructs/*.mjs"
     },
     "#create-tokenizer": {
-      "vfile-tokenizer": "./src/create-tokenizer.mts",
+      "fsm-tokenizer": "./src/create-tokenizer.mts",
       "default": "./dist/create-tokenizer.mjs"
     },
     "#enums/*": {
-      "vfile-tokenizer": "./src/enums/*.mts",
+      "fsm-tokenizer": "./src/enums/*.mts",
       "default": "./dist/enums/*.mjs"
     },
     "#fixtures/*": "./__fixtures__/*.mts",
     "#interfaces/*": {
-      "vfile-tokenizer": "./src/interfaces/*.mts",
+      "fsm-tokenizer": "./src/interfaces/*.mts",
       "default": "./dist/interfaces/*.d.mts"
     },
     "#internal/*": {
-      "vfile-tokenizer": "./src/internal/*.mts",
+      "fsm-tokenizer": "./src/internal/*.mts",
       "default": "./dist/internal/*.mjs"
     },
     "#preprocess": {
-      "vfile-tokenizer": "./src/preprocess.mts",
+      "fsm-tokenizer": "./src/preprocess.mts",
       "default": "./dist/preprocess.mjs"
     },
     "#tests/*": "./__tests__/*.mts",
     "#tokenize": {
-      "vfile-tokenizer": "./src/tokenize.mts",
+      "fsm-tokenizer": "./src/tokenize.mts",
       "default": "./dist/tokenize.mjs"
     },
     "#types/*": {
-      "vfile-tokenizer": "./src/types/*.mts",
+      "fsm-tokenizer": "./src/types/*.mts",
       "default": "./dist/types/*.d.mts"
     },
     "#utils/*": {
-      "vfile-tokenizer": "./src/utils/*.mts",
+      "fsm-tokenizer": "./src/utils/*.mts",
       "default": "./dist/utils/*.mjs"
     }
   },
@@ -114,14 +116,14 @@
     "prepublishOnly": "toggle-scripts -prepack",
     "release": "bash ./scripts/release.sh",
     "remark": "remark .",
-    "test": "yarn clean:build; cross-env NODE_OPTIONS=\"--conditions vfile-tokenizer --experimental-strip-types --experimental-transform-types\" vitest run",
-    "test:bench": "yarn clean:build; cross-env NODE_OPTIONS=\"--conditions vfile-tokenizer --experimental-strip-types --experimental-transform-types\" vitest bench --run",
+    "test": "yarn clean:build; cross-env NODE_OPTIONS=\"--conditions fsm-tokenizer --experimental-strip-types --experimental-transform-types\" vitest run",
+    "test:bench": "yarn clean:build; cross-env NODE_OPTIONS=\"--conditions fsm-tokenizer --experimental-strip-types --experimental-transform-types\" vitest bench --run",
     "test:cov": "yarn test --coverage",
     "test:cov:reports": "yarn test:cov --merge-reports --mode=reports",
     "test:cov:ui": "yarn test:ui --coverage",
     "test:cov:upload": "./codecov -t $CODECOV_TOKEN -f ./coverage/lcov.info",
     "test:reports": "yarn test --merge-reports --mode=reports",
-    "test:ui": "cross-env VITEST_UI=1 NODE_OPTIONS=\"--conditions vfile-tokenizer --experimental-strip-types --experimental-transform-types\" vitest --ui",
+    "test:ui": "cross-env VITEST_UI=1 NODE_OPTIONS=\"--conditions fsm-tokenizer --experimental-strip-types --experimental-transform-types\" vitest --ui",
     "typecheck": "yarn test --typecheck --mode=typecheck",
     "typecheck:ui": "yarn test:ui --typecheck --mode=typecheck"
   },

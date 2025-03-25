@@ -1,10 +1,10 @@
 /**
  * @file Utilities - splice
- * @module vfile-tokenizer/utils/splice
+ * @module fsm-tokenizer/utils/splice
  */
 
 import constants from '#enums/constants'
-import type { List, Numeric } from '@flex-development/vfile-tokenizer'
+import type { List, Numeric } from '@flex-development/fsm-tokenizer'
 
 /**
  * Remove items from `list` and, if necessary, insert new `items` in their

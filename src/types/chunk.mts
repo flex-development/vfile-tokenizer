@@ -1,9 +1,9 @@
 /**
  * @file Type Aliases - Chunk
- * @module vfile-tokenizer/types/Chunk
+ * @module fsm-tokenizer/types/Chunk
  */
 
-import type { Code } from '@flex-development/vfile-tokenizer'
+import type { Code } from '@flex-development/fsm-tokenizer'
 
 /**
  * A character code or slice of a buffer in the form of an array.

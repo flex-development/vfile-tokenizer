@@ -1,6 +1,6 @@
 /**
  * @file Type Tests - SerializeOptions
- * @module vfile-tokenizer/interfaces/tests/unit-d/SerializeOptions
+ * @module fsm-tokenizer/interfaces/tests/unit-d/SerializeOptions
  */
 
 import type TestSubject from '#interfaces/options-serialize'

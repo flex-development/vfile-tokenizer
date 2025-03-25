@@ -1,6 +1,6 @@
 /**
  * @file Entry Point - Utilities
- * @module vfile-tokenizer/utils
+ * @module fsm-tokenizer/utils
  */
 
 export { default as eof, default as eos } from '#utils/eof'

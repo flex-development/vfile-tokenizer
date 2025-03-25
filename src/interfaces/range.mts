@@ -1,9 +1,9 @@
 /**
  * @file Type Aliases - Range
- * @module vfile-tokenizer/types/Range
+ * @module fsm-tokenizer/types/Range
  */
 
-import type { RangeInfo } from '@flex-development/vfile-tokenizer'
+import type { RangeInfo } from '@flex-development/fsm-tokenizer'
 
 /**
  * A range of chunks in a stream.

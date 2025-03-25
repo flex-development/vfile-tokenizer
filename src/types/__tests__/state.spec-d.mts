@@ -1,11 +1,11 @@
 /**
  * @file Type Tests - State
- * @module vfile-tokenizer/types/tests/unit-d/State
+ * @module fsm-tokenizer/types/tests/unit-d/State
  */
 
 import type TestSubject from '#types/state'
+import type { Code } from '@flex-development/fsm-tokenizer'
 import type { Optional } from '@flex-development/tutils'
-import type { Code } from '@flex-development/vfile-tokenizer'
 
 describe('unit-d:types/State', () => {
   it('should match [this: void]', () => {

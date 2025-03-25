@@ -1,9 +1,9 @@
 /**
  * @file Enums - codes
- * @module vfile-tokenizer/enums/codes
+ * @module fsm-tokenizer/enums/codes
  */
 
-import type { Code } from '@flex-development/vfile-tokenizer'
+import type { Code } from '@flex-development/fsm-tokenizer'
 
 /**
  * Character codes.

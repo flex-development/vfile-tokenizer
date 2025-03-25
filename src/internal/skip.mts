@@ -1,6 +1,6 @@
 /**
  * @file Internal - skip
- * @module vfile-tokenizer/internal/skip
+ * @module fsm-tokenizer/internal/skip
  */
 
 import type { Column, Line, Point } from '@flex-development/vfile-location'

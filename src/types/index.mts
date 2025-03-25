@@ -1,6 +1,6 @@
 /**
  * @file Entry Point - Type Aliases
- * @module vfile-tokenizer/types
+ * @module fsm-tokenizer/types
  */
 
 export type {

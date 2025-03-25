@@ -1,9 +1,9 @@
 /**
  * @file Type Aliases - State
- * @module vfile-tokenizer/types/State
+ * @module fsm-tokenizer/types/State
  */
 
-import type { Code } from '@flex-development/vfile-tokenizer'
+import type { Code } from '@flex-development/fsm-tokenizer'
 
 /**
  * The main unit in the state machine: a function that gets a character code and

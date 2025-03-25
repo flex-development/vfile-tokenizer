@@ -1,13 +1,13 @@
 /**
  * @file Functional Tests - sliceSerialize
- * @module vfile-tokenizer/utils/tests/functional/sliceSerialize
+ * @module fsm-tokenizer/utils/tests/functional/sliceSerialize
  */
 
 import codes from '#enums/codes'
 import serializeChunks from '#utils/serialize-chunks'
 import sliceChunks from '#utils/slice-chunks'
 import testSubject from '#utils/slice-serialize'
-import type { Chunk, List, Range } from '@flex-development/vfile-tokenizer'
+import type { Chunk, List, Range } from '@flex-development/fsm-tokenizer'
 import type { MockContext } from 'vitest'
 
 vi.mock('#utils/serialize-chunks')

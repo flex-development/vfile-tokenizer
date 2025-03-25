@@ -1,6 +1,6 @@
 /**
  * @file Type Tests - Encoding
- * @module vfile-tokenizer/types/tests/unit-d/Encoding
+ * @module fsm-tokenizer/types/tests/unit-d/Encoding
  */
 
 import type TestSubject from '#types/encoding'

@@ -1,6 +1,6 @@
 /**
  * @file Type Tests - TokenTypeMap
- * @module vfile-tokenizer/interfaces/tests/unit-d/TokenTypeMap
+ * @module fsm-tokenizer/interfaces/tests/unit-d/TokenTypeMap
  */
 
 import type TestSubject from '#interfaces/token-type-map'

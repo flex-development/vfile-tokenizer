@@ -1,11 +1,9 @@
 /**
  * @file Type Tests - Options
- * @module vfile-tokenizer/interfaces/tests/unit-d/Options
+ * @module fsm-tokenizer/interfaces/tests/unit-d/Options
  */
 
 import type TestSubject from '#interfaces/options'
-import type { Nilable } from '@flex-development/tutils'
-import type { Point } from '@flex-development/vfile-location'
 import type {
   CodeCheck,
   CreateInitialConstruct,
@@ -16,7 +14,9 @@ import type {
   Preprocess,
   PreprocessOptions,
   TokenFactory
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
+import type { Nilable } from '@flex-development/tutils'
+import type { Point } from '@flex-development/vfile-location'
 
 describe('unit-d:interfaces/Options', () => {
   it('should extend PreprocessOptions', () => {

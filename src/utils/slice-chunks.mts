@@ -1,11 +1,11 @@
 /**
  * @file Utilities - sliceChunks
- * @module vfile-tokenizer/utils/sliceChunks
+ * @module fsm-tokenizer/utils/sliceChunks
  */
 
 import size from '#internal/size'
 import sliceable from '#internal/sliceable'
-import type { Chunk, List, Range } from '@flex-development/vfile-tokenizer'
+import type { Chunk, List, Range } from '@flex-development/fsm-tokenizer'
 import { ok } from 'devlop'
 
 export default sliceChunks

@@ -1,6 +1,6 @@
 /**
  * @file Utilities - eof
- * @module vfile-tokenizer/utils/eof
+ * @module fsm-tokenizer/utils/eof
  */
 
 import codes from '#enums/codes'

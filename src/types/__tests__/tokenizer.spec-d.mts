@@ -1,6 +1,6 @@
 /**
  * @file Type Tests - Tokenizer
- * @module vfile-tokenizer/types/tests/unit-d/Tokenizer
+ * @module fsm-tokenizer/types/tests/unit-d/Tokenizer
  */
 
 import type TestSubject from '#types/tokenizer'
@@ -8,7 +8,7 @@ import type {
   Effects,
   State,
   TokenizeContext
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 describe('unit-d:types/Tokenizer', () => {
   it('should match [this: TokenizeContext]', () => {

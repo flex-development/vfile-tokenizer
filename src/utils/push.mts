@@ -1,6 +1,6 @@
 /**
  * @file Utilities - push
- * @module vfile-tokenizer/utils/push
+ * @module fsm-tokenizer/utils/push
  */
 
 import splice from '#utils/splice'

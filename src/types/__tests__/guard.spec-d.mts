@@ -1,10 +1,10 @@
 /**
  * @file Type Tests - Guard
- * @module vfile-tokenizer/types/tests/unit-d/Guard
+ * @module fsm-tokenizer/types/tests/unit-d/Guard
  */
 
 import type TestSubject from '#types/guard'
-import type { Code, TokenizeContext } from '@flex-development/vfile-tokenizer'
+import type { Code, TokenizeContext } from '@flex-development/fsm-tokenizer'
 
 describe('unit-d:types/Guard', () => {
   it('should match [this: TokenizeContext]', () => {

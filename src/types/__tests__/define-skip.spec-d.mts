@@ -1,10 +1,10 @@
 /**
  * @file Type Tests - DefineSkip
- * @module vfile-tokenizer/types/tests/unit-d/DefineSkip
+ * @module fsm-tokenizer/types/tests/unit-d/DefineSkip
  */
 
 import type TestSubject from '#types/define-skip'
-import type { Point } from '@flex-development/vfile-tokenizer'
+import type { Point } from '@flex-development/fsm-tokenizer'
 
 describe('unit-d:types/DefineSkip', () => {
   it('should match [this: void]', () => {

@@ -1,6 +1,6 @@
 /**
  * @file Interfaces - PreprocessOptions
- * @module vfile-tokenizer/interfaces/PreprocessOptions
+ * @module fsm-tokenizer/interfaces/PreprocessOptions
  */
 
 /**

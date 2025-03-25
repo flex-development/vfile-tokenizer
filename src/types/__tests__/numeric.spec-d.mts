@@ -1,6 +1,6 @@
 /**
  * @file Type Tests - Numeric
- * @module vfile-tokenizer/types/tests/unit-d/Numeric
+ * @module fsm-tokenizer/types/tests/unit-d/Numeric
  */
 
 import type TestSubject from '#types/numeric'

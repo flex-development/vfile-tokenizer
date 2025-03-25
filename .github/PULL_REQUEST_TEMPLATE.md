@@ -37,4 +37,4 @@ Include additional details here. Be sure to note if any tolerable vulnerabilitie
 - [ ] new, **tolerable** vulnerabilities and/or warnings documented, if any
 - [ ] [pr naming conventions][pr-naming]
 
-[pr-naming]: https://github.com/flex-development/vfile-tokenizer/blob/main/CONTRIBUTING.md#pull-request-titles
+[pr-naming]: https://github.com/flex-development/fsm-tokenizer/blob/main/CONTRIBUTING.md#pull-request-titles

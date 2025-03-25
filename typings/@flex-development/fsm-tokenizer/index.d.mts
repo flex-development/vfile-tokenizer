@@ -1,6 +1,6 @@
-import type { Effects } from '@flex-development/vfile-tokenizer'
+import type { Effects } from '@flex-development/fsm-tokenizer'
 
-declare module '@flex-development/vfile-tokenizer' {
+declare module '@flex-development/fsm-tokenizer' {
   interface TokenInfo {
     emoji?: string | null | undefined
   }

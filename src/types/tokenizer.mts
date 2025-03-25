@@ -1,13 +1,13 @@
 /**
  * @file Type Aliases - Tokenizer
- * @module vfile-tokenizer/types/Tokenizer
+ * @module fsm-tokenizer/types/Tokenizer
  */
 
 import type {
   Effects,
   State,
   TokenizeContext
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 /**
  * Set up a state machine to handle character codes streaming in.

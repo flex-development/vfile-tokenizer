@@ -1,9 +1,9 @@
 /**
  * @file Type Aliases - CodeCheck
- * @module vfile-tokenizer/types/CodeCheck
+ * @module fsm-tokenizer/types/CodeCheck
  */
 
-import type { Code } from '@flex-development/vfile-tokenizer'
+import type { Code } from '@flex-development/fsm-tokenizer'
 
 /**
  * Check whether a character `code` passes a test.

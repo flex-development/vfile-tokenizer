@@ -4,7 +4,7 @@
  */
 
 import codes from '#enums/codes'
-import type { ConstructRecord } from '@flex-development/vfile-tokenizer'
+import type { ConstructRecord } from '@flex-development/fsm-tokenizer'
 import { codeFenced, codeIndented, codeText } from 'micromark-core-commonmark'
 
 /**

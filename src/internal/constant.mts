@@ -1,6 +1,6 @@
 /**
  * @file Internal - constant
- * @module vfile-tokenizer/internal/constant
+ * @module fsm-tokenizer/internal/constant
  */
 
 /**

@@ -1,10 +1,10 @@
 /**
  * @file Type Tests - Attempt
- * @module vfile-tokenizer/types/tests/unit-d/Attempt
+ * @module fsm-tokenizer/types/tests/unit-d/Attempt
  */
 
 import type TestSubject from '#types/attempt'
-import type { Constructs, State } from '@flex-development/vfile-tokenizer'
+import type { Constructs, State } from '@flex-development/fsm-tokenizer'
 
 describe('unit-d:types/Attempt', () => {
   it('should match [this: void]', () => {

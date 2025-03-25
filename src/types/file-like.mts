@@ -1,9 +1,9 @@
 /**
  * @file Type Aliases - FileLike
- * @module vfile-tokenizer/types/FileLike
+ * @module fsm-tokenizer/types/FileLike
  */
 
-import type { Value } from '@flex-development/vfile-tokenizer'
+import type { Value } from '@flex-development/fsm-tokenizer'
 
 /**
  * A file-like structure.

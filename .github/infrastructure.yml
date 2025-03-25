@@ -159,11 +159,11 @@ repository:
   automated_security_fixes: true
   default_branch: main
   delete_branch_on_merge: true
-  description: vfile utility to tokenize a file
+  description: finite state machine tokenizer
   has_issues: true
   has_projects: true
   has_wiki: false
-  homepage: https://github.com/flex-development/vfile-tokenizer
+  homepage: https://github.com/flex-development/fsm-tokenizer
   is_template: false
   private: false
   security_and_analysis:
@@ -174,11 +174,13 @@ repository:
   squash_merge_commit_message: BLANK
   squash_merge_commit_title: PR_TITLE
   topics:
+    - finite-state-machine
+    - fsm
     - lexer
     - parse
+    - state
     - tokenize
-    - vfile
-    - vfile-util
+    - tokenizer
   visibility: public
   vulnerability_alerts: true
   web_commit_signoff_required: true

@@ -1,9 +1,9 @@
 /**
  * @file Type Aliases - TokenType
- * @module vfile-tokenizer/types/TokenType
+ * @module fsm-tokenizer/types/TokenType
  */
 
-import type { TokenTypeMap } from '@flex-development/vfile-tokenizer'
+import type { TokenTypeMap } from '@flex-development/fsm-tokenizer'
 
 /**
  * Union of registered token types.

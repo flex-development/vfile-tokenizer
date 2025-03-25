@@ -1,6 +1,6 @@
 /**
  * @file Type Tests - TokenInfo
- * @module vfile-tokenizer/interfaces/tests/unit-d/TokenInfo
+ * @module fsm-tokenizer/interfaces/tests/unit-d/TokenInfo
  */
 
 import type TestSubject from '#interfaces/token-info'
@@ -8,7 +8,7 @@ import type {
   Position,
   Token,
   TokenFields
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 describe('unit-d:interfaces/TokenInfo', () => {
   it('should extend Position', () => {

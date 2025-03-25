@@ -3,7 +3,7 @@
     "allowImportingTsExtensions": true,
     "allowJs": true,
     "alwaysStrict": true,
-    "customConditions": ["vfile-tokenizer", "development", "node"],
+    "customConditions": ["fsm-tokenizer", "development", "node"],
     "declaration": true,
     "declarationMap": true,
     "lib": ["es2024"],

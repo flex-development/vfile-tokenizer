@@ -1,6 +1,6 @@
 /**
  * @file Integration Tests - tokenize
- * @module vfile-tokenizer/tests/integration/tokenize
+ * @module fsm-tokenizer/tests/integration/tokenize
  */
 
 import initialize from '#constructs/initialize'
@@ -22,8 +22,6 @@ import createPreprocess from '#preprocess'
 import finalizeMicromarkContext from '#tests/utils/finalize-micromark-context'
 import snapshot from '#tests/utils/snapshot-events'
 import testSubject from '#tokenize'
-import pathe from '@flex-development/pathe'
-import { isNIL, type Fn } from '@flex-development/tutils'
 import type {
   Code,
   Consume,
@@ -36,7 +34,9 @@ import type {
   TokenizeContext,
   TokenizeOptions,
   Value
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
+import pathe from '@flex-development/pathe'
+import { isNIL, type Fn } from '@flex-development/tutils'
 import { readSync as read } from 'to-vfile'
 import type { MockInstance } from 'vitest'
 

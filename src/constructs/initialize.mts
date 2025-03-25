@@ -1,6 +1,6 @@
 /**
  * @file Constructs - initialize
- * @module vfile-tokenizer/constructs/initialize
+ * @module fsm-tokenizer/constructs/initialize
  */
 
 import type {
@@ -10,7 +10,7 @@ import type {
   InitialConstruct,
   State,
   TokenizeContext
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 /**
  * Create an initial construct.
@@ -24,7 +24,7 @@ import type {
  *  Initial construct
  */
 function initialize(constructs: Constructs): InitialConstruct {
-  return { name: 'vfile-tokenizer:initialize', tokenize: initialize }
+  return { name: 'fsm-tokenizer:initialize', tokenize: initialize }
 
   /**
    * Set up a state machine to handle character codes streaming in.

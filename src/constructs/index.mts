@@ -1,6 +1,6 @@
 /**
  * @file Entry Point - Constructs
- * @module vfile-tokenizer/constructs
+ * @module fsm-tokenizer/constructs
  */
 
 export { default as initialize } from '#constructs/initialize'

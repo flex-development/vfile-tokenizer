@@ -1,6 +1,6 @@
 /**
  * @file Interfaces - RangeInfo
- * @module vfile-tokenizer/interfaces/RangeInfo
+ * @module fsm-tokenizer/interfaces/RangeInfo
  */
 
 /**

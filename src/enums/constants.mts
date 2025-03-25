@@ -1,6 +1,6 @@
 /**
  * @file Enums - constants
- * @module vfile-tokenizer/enums/constants
+ * @module fsm-tokenizer/enums/constants
  */
 
 /**

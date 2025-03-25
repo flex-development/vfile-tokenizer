@@ -1,6 +1,6 @@
 /**
  * @file Package Entry Point
- * @module vfile-tokenizer
+ * @module fsm-tokenizer
  */
 
 export * from '#constructs/index'

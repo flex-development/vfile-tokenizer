@@ -1,6 +1,6 @@
 /**
  * @file Type Aliases - Encoding
- * @module vfile-tokenizer/types/Encoding
+ * @module fsm-tokenizer/types/Encoding
  */
 
 /**

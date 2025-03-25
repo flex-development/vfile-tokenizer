@@ -1,6 +1,6 @@
 /**
  * @file Type Tests - Restore
- * @module vfile-tokenizer/types/tests/unit-d/Restore
+ * @module fsm-tokenizer/types/tests/unit-d/Restore
  */
 
 import type TestSubject from '#types/restore'

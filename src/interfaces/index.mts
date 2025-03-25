@@ -1,6 +1,6 @@
 /**
  * @file Entry Point - Interfaces
- * @module vfile-tokenizer/interfaces
+ * @module fsm-tokenizer/interfaces
  */
 
 export type { default as Construct } from '#interfaces/construct'

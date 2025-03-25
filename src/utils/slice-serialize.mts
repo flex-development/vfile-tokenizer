@@ -1,6 +1,6 @@
 /**
  * @file Utilities - sliceSerialize
- * @module vfile-tokenizer/utils/sliceSerialize
+ * @module fsm-tokenizer/utils/sliceSerialize
  */
 
 import serializeChunks from '#utils/serialize-chunks'
@@ -10,7 +10,7 @@ import type {
   List,
   Range,
   SerializeOptions
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 /**
  * Get the text spanning `range`.

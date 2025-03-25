@@ -1,13 +1,13 @@
 /**
  * @file Type Aliases - Enter
- * @module vfile-tokenizer/types/Enter
+ * @module fsm-tokenizer/types/Enter
  */
 
 import type {
   Token,
   TokenFields,
   TokenType
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 /**
  * Start a new token.

@@ -1,10 +1,10 @@
 /**
  * @file Type Tests - SliceStream
- * @module vfile-tokenizer/types/tests/unit-d/SliceStream
+ * @module fsm-tokenizer/types/tests/unit-d/SliceStream
  */
 
 import type TestSubject from '#types/slice-stream'
-import type { Chunk, Range } from '@flex-development/vfile-tokenizer'
+import type { Chunk, Range } from '@flex-development/fsm-tokenizer'
 
 describe('unit-d:types/SliceStream', () => {
   it('should match [this: void]', () => {

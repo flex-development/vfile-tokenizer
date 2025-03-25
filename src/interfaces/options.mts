@@ -1,10 +1,8 @@
 /**
  * @file Interfaces - Options
- * @module vfile-tokenizer/interfaces/Options
+ * @module fsm-tokenizer/interfaces/Options
  */
 
-import type { u } from '@flex-development/unist-util-builder'
-import type { Point } from '@flex-development/vfile-location'
 import type {
   CodeCheck,
   CreateInitialConstruct,
@@ -15,7 +13,9 @@ import type {
   Preprocess,
   PreprocessOptions,
   TokenFactory
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
+import type { u } from '@flex-development/unist-util-builder'
+import type { Point } from '@flex-development/vfile-location'
 
 /**
  * Configuration options.
@@ -28,7 +28,7 @@ interface Options extends PreprocessOptions {
   /**
    * Debug logger name.
    *
-   * @default 'vfile-tokenizer'
+   * @default 'fsm-tokenizer'
    */
   debug?: string | null | undefined
 

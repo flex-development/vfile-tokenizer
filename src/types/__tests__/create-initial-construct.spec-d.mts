@@ -1,11 +1,11 @@
 /**
  * @file Type Tests - CreateInitialConstruct
- * @module vfile-tokenizer/types/tests/unit-d/CreateInitialConstruct
+ * @module fsm-tokenizer/types/tests/unit-d/CreateInitialConstruct
  */
 
 import type TestSubject from '#types/create-initial-construct'
+import type { InitialConstruct } from '@flex-development/fsm-tokenizer'
 import type { EmptyArray } from '@flex-development/tutils'
-import type { InitialConstruct } from '@flex-development/vfile-tokenizer'
 
 describe('unit-d:types/CreateInitialConstruct', () => {
   it('should match [this: void]', () => {

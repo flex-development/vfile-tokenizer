@@ -13,7 +13,7 @@ import type {
   Event,
   State,
   TokenizeContext
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 import { ok as assert } from 'devlop'
 import * as micromark from 'micromark-core-commonmark'
 
@@ -34,7 +34,7 @@ const lineEnding: Construct = {
 
 export default lineEnding
 
-declare module '@flex-development/vfile-tokenizer' {
+declare module '@flex-development/fsm-tokenizer' {
   interface TokenInfo {
     value?: string | null | undefined
   }

@@ -1,6 +1,6 @@
 /**
  * @file Type Aliases - List
- * @module vfile-tokenizer/types/List
+ * @module fsm-tokenizer/types/List
  */
 
 /**

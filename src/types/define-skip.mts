@@ -1,9 +1,9 @@
 /**
  * @file Type Aliases - DefineSkip
- * @module vfile-tokenizer/types/DefineSkip
+ * @module fsm-tokenizer/types/DefineSkip
  */
 
-import type { Point } from '@flex-development/vfile-tokenizer'
+import type { Point } from '@flex-development/fsm-tokenizer'
 
 /**
  * Define a skip.

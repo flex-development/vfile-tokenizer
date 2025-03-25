@@ -1,6 +1,6 @@
 /**
  * @file Type Aliases - Event
- * @module vfile-tokenizer/types/Event
+ * @module fsm-tokenizer/types/Event
  */
 
 /**

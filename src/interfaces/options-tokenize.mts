@@ -1,9 +1,9 @@
 /**
  * @file Interfaces - TokenizeOptions
- * @module vfile-tokenizer/interfaces/TokenizeOptions
+ * @module fsm-tokenizer/interfaces/TokenizeOptions
  */
 
-import type { Options } from '@flex-development/vfile-tokenizer'
+import type { Options } from '@flex-development/fsm-tokenizer'
 
 /**
  * Options for tokenizing.

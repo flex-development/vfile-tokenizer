@@ -1,6 +1,6 @@
 /**
  * @file Type Tests - Value
- * @module vfile-tokenizer/types/tests/unit-d/Value
+ * @module fsm-tokenizer/types/tests/unit-d/Value
  */
 
 import type TestSubject from '#types/value'

@@ -1,9 +1,9 @@
 /**
  * @file Type Aliases - Consume
- * @module vfile-tokenizer/types/Consume
+ * @module fsm-tokenizer/types/Consume
  */
 
-import type { Code } from '@flex-development/vfile-tokenizer'
+import type { Code } from '@flex-development/fsm-tokenizer'
 
 /**
  * Deal with a character `code` and move onto the next.

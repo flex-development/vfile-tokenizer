@@ -1,9 +1,9 @@
 /**
  * @file Type Aliases - Exit
- * @module vfile-tokenizer/types/Exit
+ * @module fsm-tokenizer/types/Exit
  */
 
-import type { Token, TokenType } from '@flex-development/vfile-tokenizer'
+import type { Token, TokenType } from '@flex-development/fsm-tokenizer'
 
 /**
  * Close an open token.

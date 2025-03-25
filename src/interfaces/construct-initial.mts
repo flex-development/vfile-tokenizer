@@ -1,9 +1,9 @@
 /**
  * @file Interfaces - Construct
- * @module vfile-tokenizer/interfaces/Construct
+ * @module fsm-tokenizer/interfaces/Construct
  */
 
-import type { Construct, Initializer } from '@flex-development/vfile-tokenizer'
+import type { Construct, Initializer } from '@flex-development/fsm-tokenizer'
 
 /**
  * An initial construct.

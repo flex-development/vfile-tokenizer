@@ -1,10 +1,10 @@
 /**
  * @file Type Tests - Range
- * @module vfile-tokenizer/interfaces/tests/unit-d/Range
+ * @module fsm-tokenizer/interfaces/tests/unit-d/Range
  */
 
 import type TestSubject from '#interfaces/range'
-import type { RangeInfo } from '@flex-development/vfile-tokenizer'
+import type { RangeInfo } from '@flex-development/fsm-tokenizer'
 
 describe('unit-d:interfaces/Range', () => {
   it('should match [end: RangeInfo]', () => {

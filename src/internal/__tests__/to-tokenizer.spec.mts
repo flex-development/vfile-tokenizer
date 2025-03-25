@@ -1,6 +1,6 @@
 /**
  * @file Unit Tests - toTokenizer
- * @module vfile-tokenizer/internal/tests/unit/toTokenizer
+ * @module fsm-tokenizer/internal/tests/unit/toTokenizer
  */
 
 import initialize from '#constructs/initialize'
@@ -8,7 +8,7 @@ import testSubject from '#internal/to-tokenizer'
 import type {
   TokenizeContext,
   TokenizeOptions
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 import type { Mock } from 'vitest'
 
 describe('unit:internal/toTokenizer', () => {

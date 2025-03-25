@@ -1,10 +1,10 @@
 /**
  * @file Type Tests - Chunk
- * @module vfile-tokenizer/types/tests/unit-d/Chunk
+ * @module fsm-tokenizer/types/tests/unit-d/Chunk
  */
 
 import type TestSubject from '#types/chunk'
-import type { Code } from '@flex-development/vfile-tokenizer'
+import type { Code } from '@flex-development/fsm-tokenizer'
 
 describe('unit-d:types/Chunk', () => {
   it('should extract Code', () => {

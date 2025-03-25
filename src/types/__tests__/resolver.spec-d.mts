@@ -1,10 +1,10 @@
 /**
  * @file Type Tests - Resolver
- * @module vfile-tokenizer/types/tests/unit-d/Resolver
+ * @module fsm-tokenizer/types/tests/unit-d/Resolver
  */
 
 import type TestSubject from '#types/resolver'
-import type { Event, TokenizeContext } from '@flex-development/vfile-tokenizer'
+import type { Event, TokenizeContext } from '@flex-development/fsm-tokenizer'
 
 describe('unit-d:types/Resolver', () => {
   it('should match [this: void]', () => {

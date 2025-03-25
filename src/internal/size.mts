@@ -1,9 +1,9 @@
 /**
  * @file Internal - size
- * @module vfile-tokenizer/internal/size
+ * @module fsm-tokenizer/internal/size
  */
 
-import type { List } from '@flex-development/vfile-tokenizer'
+import type { List } from '@flex-development/fsm-tokenizer'
 
 /**
  * Get the size of a `list`.

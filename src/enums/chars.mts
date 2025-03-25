@@ -1,6 +1,6 @@
 /**
  * @file chars
- * @module vfile-tokenizer/chars
+ * @module fsm-tokenizer/chars
  */
 
 /**

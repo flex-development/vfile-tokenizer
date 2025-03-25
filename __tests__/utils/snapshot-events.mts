@@ -3,7 +3,7 @@
  * @module tests/utils/snapshotEvents
  */
 
-import type { Event, EventType, Token } from '@flex-development/vfile-tokenizer'
+import type { Event, EventType, Token } from '@flex-development/fsm-tokenizer'
 
 /**
  * Get a snapshot-compliant list of events.

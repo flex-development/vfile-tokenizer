@@ -1,6 +1,6 @@
 /**
  * @file Unit Tests - constant
- * @module vfile-tokenizer/internal/tests/unit/constant
+ * @module fsm-tokenizer/internal/tests/unit/constant
  */
 
 import testSubject from '#internal/constant'

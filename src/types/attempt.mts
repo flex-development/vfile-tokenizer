@@ -1,9 +1,9 @@
 /**
  * @file Type Aliases - Attempt
- * @module vfile-tokenizer/types/Attempt
+ * @module fsm-tokenizer/types/Attempt
  */
 
-import type { Constructs, State } from '@flex-development/vfile-tokenizer'
+import type { Constructs, State } from '@flex-development/fsm-tokenizer'
 
 /**
  * Attempt deals with several constructs, and tries to tokenize according to

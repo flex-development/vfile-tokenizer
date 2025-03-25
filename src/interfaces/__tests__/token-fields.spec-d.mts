@@ -1,6 +1,6 @@
 /**
  * @file Type Tests - TokenFields
- * @module vfile-tokenizer/interfaces/tests/unit-d/TokenFields
+ * @module fsm-tokenizer/interfaces/tests/unit-d/TokenFields
  */
 
 import type TestSubject from '#interfaces/token-fields'

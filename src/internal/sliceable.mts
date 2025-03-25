@@ -1,6 +1,6 @@
 /**
  * @file Internal - sliceable
- * @module vfile-tokenizer/internal/sliceable
+ * @module fsm-tokenizer/internal/sliceable
  */
 
 /**

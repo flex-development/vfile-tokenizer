@@ -1,13 +1,13 @@
 /**
  * @file Interfaces - Token
- * @module vfile-tokenizer/interfaces/Token
+ * @module fsm-tokenizer/interfaces/Token
  */
 
 import type {
   Code,
   TokenInfo,
   TokenType
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 /**
  * A span of one (`1`) or more character codes.
@@ -22,7 +22,7 @@ import type {
  * custom token fields.
  *
  * @example
- *  declare module '@flex-development/vfile-tokenizer' {
+ *  declare module '@flex-development/fsm-tokenizer' {
  *    interface Token {
  *      value?: string | null | undefined
  *    }

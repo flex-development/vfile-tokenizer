@@ -1,6 +1,6 @@
 /**
  * @file preprocess
- * @module vfile-tokenizer/preprocess
+ * @module fsm-tokenizer/preprocess
  */
 
 import codes from '#enums/codes'
@@ -13,7 +13,7 @@ import type {
   Preprocess,
   PreprocessOptions,
   Value
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 /**
  * Create a preprocessor to turn a value into character code chunks.

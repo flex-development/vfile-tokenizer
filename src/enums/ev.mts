@@ -1,9 +1,9 @@
 /**
  * @file Enums - ev
- * @module vfile-tokenizer/enums/ev
+ * @module fsm-tokenizer/enums/ev
  */
 
-import type { EventType } from '@flex-development/vfile-tokenizer'
+import type { EventType } from '@flex-development/fsm-tokenizer'
 
 /**
  * Event types.

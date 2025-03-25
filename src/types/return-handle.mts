@@ -1,9 +1,9 @@
 /**
  * @file Type Aliases - ReturnHandle
- * @module vfile-tokenizer/types/ReturnHandle
+ * @module fsm-tokenizer/types/ReturnHandle
  */
 
-import type { Construct, Info } from '@flex-development/vfile-tokenizer'
+import type { Construct, Info } from '@flex-development/fsm-tokenizer'
 
 /**
  * Successful construct callback.

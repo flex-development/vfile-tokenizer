@@ -1,6 +1,6 @@
 /**
  * @file Type Aliases - Initializer
- * @module vfile-tokenizer/types/Initializer
+ * @module fsm-tokenizer/types/Initializer
  */
 
 import type {
@@ -8,7 +8,7 @@ import type {
   State,
   TokenizeContext,
   Tokenizer
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 /**
  * Set up an initial state machine.

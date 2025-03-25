@@ -1,9 +1,9 @@
 /**
  * @file Internal - disabled
- * @module vfile-tokenizer/internal/disabled
+ * @module fsm-tokenizer/internal/disabled
  */
 
-import type { List } from '@flex-development/vfile-tokenizer'
+import type { List } from '@flex-development/fsm-tokenizer'
 
 /**
  * Check if a construct is disabled.

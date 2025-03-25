@@ -1,6 +1,6 @@
 /**
  * @file Unit Tests - eol
- * @module vfile-tokenizer/utils/tests/unit/eol
+ * @module fsm-tokenizer/utils/tests/unit/eol
  */
 
 import codes from '#enums/codes'

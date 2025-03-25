@@ -1,6 +1,6 @@
 /**
  * @file Unit Tests - preprocess
- * @module vfile-tokenizer/tests/unit/preprocess
+ * @module fsm-tokenizer/tests/unit/preprocess
  */
 
 import chars from '#enums/chars'
@@ -10,7 +10,7 @@ import type {
   FileLike,
   Preprocess,
   Value
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 describe('unit:preprocess', () => {
   let subject: Preprocess

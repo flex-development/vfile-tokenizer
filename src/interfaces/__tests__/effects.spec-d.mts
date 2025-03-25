@@ -1,6 +1,6 @@
 /**
  * @file Type Tests - Effects
- * @module vfile-tokenizer/interfaces/tests/unit-d/Effects
+ * @module fsm-tokenizer/interfaces/tests/unit-d/Effects
  */
 
 import type TestSubject from '#interfaces/effects'
@@ -9,7 +9,7 @@ import type {
   Consume,
   Enter,
   Exit
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 describe('unit-d:interfaces/Effects', () => {
   it('should match [attempt: Attempt]', () => {

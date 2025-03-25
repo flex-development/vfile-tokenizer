@@ -1,6 +1,6 @@
 /**
  * @file createTokenizer
- * @module vfile-tokenizer/createTokenizer
+ * @module fsm-tokenizer/createTokenizer
  */
 
 import codes from '#enums/codes'
@@ -23,8 +23,6 @@ import serializeChunks from '#utils/serialize-chunks'
 import sliceChunks from '#utils/slice-chunks'
 import splice from '#utils/splice'
 import tab from '#utils/tab'
-import { u } from '@flex-development/unist-util-builder'
-import { Location } from '@flex-development/vfile-location'
 import type {
   Attempt,
   Chunk,
@@ -53,7 +51,9 @@ import type {
   TokenizeContext,
   TokenType,
   Value
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
+import { u } from '@flex-development/unist-util-builder'
+import { Location } from '@flex-development/vfile-location'
 import createDebug, { type Debugger } from 'debug'
 import { ok as assert } from 'devlop'
 
@@ -76,7 +76,7 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
    *
    * @const {Debugger} debug
    */
-  const debug: Debugger = createDebug(options.debug ?? 'vfile-tokenizer')
+  const debug: Debugger = createDebug(options.debug ?? 'fsm-tokenizer')
 
   /**
    * Initial construct.

@@ -1,6 +1,6 @@
 /**
  * @file Functional Tests - resolveAll
- * @module vfile-tokenizer/utils/tests/functional/resolveAll
+ * @module fsm-tokenizer/utils/tests/functional/resolveAll
  */
 
 import ev from '#enums/ev'
@@ -13,7 +13,7 @@ import type {
   Resolver,
   Token,
   TokenizeContext
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 import type { MockInstance } from 'vitest'
 
 describe('functional:utils/resolveAll', () => {

@@ -1,9 +1,9 @@
 /**
  * @file Internal - onsuccessfulcheck
- * @module vfile-tokenizer/internal/onsuccessfulcheck
+ * @module fsm-tokenizer/internal/onsuccessfulcheck
  */
 
-import type { Info } from '@flex-development/vfile-tokenizer'
+import type { Info } from '@flex-development/fsm-tokenizer'
 
 /**
  * Discard results.

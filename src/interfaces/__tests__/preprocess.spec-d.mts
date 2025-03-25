@@ -1,6 +1,6 @@
 /**
  * @file Type Tests - Preprocess
- * @module vfile-tokenizer/interfaces/tests/unit-d/Preprocess
+ * @module fsm-tokenizer/interfaces/tests/unit-d/Preprocess
  */
 
 import type TestSubject from '#interfaces/preprocess'
@@ -9,7 +9,7 @@ import type {
   Encoding,
   FileLike,
   Value
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 describe('unit-d:interfaces/Preprocess', () => {
   it('should match [this: void]', () => {

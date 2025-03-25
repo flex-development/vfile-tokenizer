@@ -1,6 +1,6 @@
 /**
  * @file Utilities - resolveAll
- * @module vfile-tokenizer/utils/resolveAll
+ * @module fsm-tokenizer/utils/resolveAll
  */
 
 import type {
@@ -8,7 +8,7 @@ import type {
   Event,
   Resolver,
   TokenizeContext
-} from '@flex-development/vfile-tokenizer'
+} from '@flex-development/fsm-tokenizer'
 
 /**
  * Call all `resolveAll`s.

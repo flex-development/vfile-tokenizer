@@ -1,6 +1,6 @@
 /**
  * @file Interfaces - TokenTypeMap
- * @module vfile-tokenizer/interfaces/TokenTypeMap
+ * @module fsm-tokenizer/interfaces/TokenTypeMap
  */
 
 /**
@@ -9,7 +9,7 @@
  * This interface can be augmented to register custom token types.
  *
  * @example
- *  declare module '@flex-development/vfile-tokenizer' {
+ *  declare module '@flex-development/fsm-tokenizer' {
  *    interface TokenTypeMap {
  *      whitespace: tt.whitespace
  *    }

@@ -2,10 +2,10 @@
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
   "allowCompoundWords": true,
   "caseSensitive": false,
-  "dictionaries": ["@flex-development/vfile-tokenizer"],
+  "dictionaries": ["@flex-development/fsm-tokenizer"],
   "dictionaryDefinitions": [
     {
-      "name": "@flex-development/vfile-tokenizer",
+      "name": "@flex-development/fsm-tokenizer",
       "path": "./.dictionary.txt"
     }
   ],

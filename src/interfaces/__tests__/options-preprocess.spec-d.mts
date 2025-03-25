@@ -1,6 +1,6 @@
 /**
  * @file Type Tests - PreprocessOptions
- * @module vfile-tokenizer/interfaces/tests/unit-d/PreprocessOptions
+ * @module fsm-tokenizer/interfaces/tests/unit-d/PreprocessOptions
  */
 
 import type TestSubject from '#interfaces/options-preprocess'

@@ -1,6 +1,6 @@
 /**
  * @file Entry Point - Enums
- * @module vfile-tokenizer/enums
+ * @module fsm-tokenizer/enums
  */
 
 export { default as chars } from '#enums/chars'

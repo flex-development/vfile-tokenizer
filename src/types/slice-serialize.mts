@@ -1,9 +1,9 @@
 /**
  * @file Type Aliases - SliceSerialize
- * @module vfile-tokenizer/types/SliceSerialize
+ * @module fsm-tokenizer/types/SliceSerialize
  */
 
-import type { Range, SerializeOptions } from '@flex-development/vfile-tokenizer'
+import type { Range, SerializeOptions } from '@flex-development/fsm-tokenizer'
 
 /**
  * Get the text spanning `range`.

@@ -1,6 +1,6 @@
 /**
  * @file Internal - nil
- * @module vfile-tokenizer/internal/nil
+ * @module fsm-tokenizer/internal/nil
  */
 
 /**

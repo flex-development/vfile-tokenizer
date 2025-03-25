@@ -1,9 +1,9 @@
 /**
  * @file Type Aliases - Position
- * @module vfile-tokenizer/types/Position
+ * @module fsm-tokenizer/types/Position
  */
 
-import type { Place } from '@flex-development/vfile-tokenizer'
+import type { Place } from '@flex-development/fsm-tokenizer'
 
 /**
  * Range between two points in a source file.

@@ -1,9 +1,9 @@
 /**
  * @file Type Aliases - Now
- * @module vfile-tokenizer/types/Now
+ * @module fsm-tokenizer/types/Now
  */
 
-import type { Place } from '@flex-development/vfile-tokenizer'
+import type { Place } from '@flex-development/fsm-tokenizer'
 
 /**
  * Get the current point in the file.

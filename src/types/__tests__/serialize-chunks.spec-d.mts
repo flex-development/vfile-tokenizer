@@ -1,10 +1,10 @@
 /**
  * @file Type Tests - SerializeChunks
- * @module vfile-tokenizer/types/tests/unit-d/SerializeChunks
+ * @module fsm-tokenizer/types/tests/unit-d/SerializeChunks
  */
 
 import type TestSubject from '#types/serialize-chunks'
-import type { Chunk, SerializeOptions } from '@flex-development/vfile-tokenizer'
+import type { Chunk, SerializeOptions } from '@flex-development/fsm-tokenizer'
 
 describe('unit-d:types/SerializeChunks', () => {
   it('should match [this: void]', () => {
