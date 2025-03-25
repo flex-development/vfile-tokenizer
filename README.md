@@ -24,7 +24,9 @@ finite state machine tokenizer
 
 ## What is this?
 
-**TODO**: what is this?
+This package is a tokenization utility. The underlying tokenizer is implemented as a state machine that produces tokens
+with positional information, as well as any other fields attached when the token was opened. Tokens are turned into
+events, with the tokenizer calling any defined resolvers in the process.
 
 ## When should I use this?
 
