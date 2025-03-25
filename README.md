@@ -30,7 +30,9 @@ events, with the tokenizer calling any defined resolvers in the process.
 
 ## When should I use this?
 
-**TODO**: when should I use this?
+This package can be used to tokenize a [file][vfile], `Uint8Array`, string, or a list containing these values,
+like command-line arguments. Developers familiar with [micromark][] will find that tokenizers and constructs (objects
+used to define how to parse text) in this package work similarly.
 
 ## Install
 
@@ -88,6 +90,10 @@ community you agree to abide by its terms.
 
 [esmsh]: https://esm.sh
 
+[micromark]: https://github.com/micromark/micromark
+
 [typescript]: https://www.typescriptlang.org
+
+[vfile]: https://github.com/vfile/vfile
 
 [yarn]: https://yarnpkg.com
