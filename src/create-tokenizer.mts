@@ -495,7 +495,11 @@ function createTokenizer(this: void, options: Options): TokenizeContext {
     } else if (tab(code)) {
       place.column += options.tabSize ?? constants.tabSize
       if (code < 0) place.offset++
-    } else if (code !== codes.eof && code !== codes.vs) {
+    } else if (
+      code !== codes.empty &&
+      code !== codes.eof &&
+      code !== codes.vs
+    ) {
       if (code !== codes.break || options.moveOnBreak) {
         place.column++
         place.offset++
