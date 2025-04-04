@@ -1550,7 +1550,7 @@ __metadata:
     editorconfig: "npm:2.0.1"
     eslint: "npm:9.23.0"
     eslint-import-resolver-typescript: "npm:4.3.1"
-    eslint-mdx: "npm:3.3.1"
+    eslint-mdx: "npm:3.3.2"
     eslint-plugin-chai-expect: "npm:3.1.0"
     eslint-plugin-import: "npm:2.31.0"
     eslint-plugin-jest-formatting: "npm:3.1.0"
@@ -4980,9 +4980,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-mdx@npm:3.3.1, eslint-mdx@npm:^3.3.1":
-  version: 3.3.1
-  resolution: "eslint-mdx@npm:3.3.1"
+"eslint-mdx@npm:3.3.2, eslint-mdx@npm:^3.3.1":
+  version: 3.3.2
+  resolution: "eslint-mdx@npm:3.3.2"
   dependencies:
     acorn: "npm:^8.14.1"
     acorn-jsx: "npm:^5.3.2"
@@ -4991,7 +4991,7 @@ __metadata:
     remark-mdx: "npm:^3.1.0"
     remark-parse: "npm:^11.0.0"
     remark-stringify: "npm:^11.0.0"
-    synckit: "npm:^0.10.3"
+    synckit: "npm:^0.11.2"
     tslib: "npm:^2.8.1"
     unified: "npm:^11.0.5"
     unified-engine: "npm:^11.2.2"
@@ -5004,7 +5004,7 @@ __metadata:
   peerDependenciesMeta:
     remark-lint-file-extension:
       optional: true
-  checksum: 10/ea0f2b1fac267162da0992ff29c82960b1850f3d2107e1365397ff0d33778f42286974101eccb2665d025713f6a1d61503dc3835c4ecaa7def9bc002bfc07011
+  checksum: 10/e10fd9afe96c9494a120ee1650c9e8ecb4bea6e04425f218215ce133b8504574073df6b98a90f0cb0a56d2efc2282ba6f35989f996dd4a0626295e95db105c28
   languageName: node
   linkType: hard
 
@@ -10704,6 +10704,16 @@ __metadata:
     "@pkgr/core": "npm:^0.2.0"
     tslib: "npm:^2.8.1"
   checksum: 10/bab2193585139f972b3725a9db8fedb6a93fe50bb5db06c0e8d3c93dbf83157e1eeba9fbd9c4922a1a41e9912b754ffe3906a3a7fa639ed502105de67d888207
+  languageName: node
+  linkType: hard
+
+"synckit@npm:^0.11.2":
+  version: 0.11.2
+  resolution: "synckit@npm:0.11.2"
+  dependencies:
+    "@pkgr/core": "npm:^0.2.0"
+    tslib: "npm:^2.8.1"
+  checksum: 10/8dbf20a9f1cb9f168062b505302f87b434b6f808d61af94183583b1201f33ba0026469fb81dd20074c980bc56237c6bd4ccb640433b5734eef14f5a90c1bbf18
   languageName: node
   linkType: hard
 
