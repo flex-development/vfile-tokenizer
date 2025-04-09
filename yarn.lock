@@ -1584,7 +1584,7 @@ __metadata:
     remark-lint-definition-case: "npm:4.0.1"
     remark-lint-definition-spacing: "npm:4.0.1"
     remark-lint-emphasis-marker: "npm:4.0.1"
-    remark-lint-fenced-code-flag: "npm:4.1.1"
+    remark-lint-fenced-code-flag: "npm:4.2.0"
     remark-lint-fenced-code-marker: "npm:4.0.1"
     remark-lint-file-extension: "npm:3.0.1"
     remark-lint-final-definition: "npm:4.0.2"
@@ -1626,7 +1626,7 @@ __metadata:
     remark-lint-no-shortcut-reference-link: "npm:4.0.1"
     remark-lint-no-table-indentation: "npm:5.0.1"
     remark-lint-no-tabs: "npm:4.0.1"
-    remark-lint-no-undefined-references: "npm:5.0.1"
+    remark-lint-no-undefined-references: "npm:5.0.2"
     remark-lint-no-unneeded-full-reference-image: "npm:4.0.1"
     remark-lint-no-unneeded-full-reference-link: "npm:4.0.1"
     remark-lint-no-unused-definitions: "npm:4.0.1"
@@ -9075,9 +9075,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"remark-lint-fenced-code-flag@npm:4.1.1":
-  version: 4.1.1
-  resolution: "remark-lint-fenced-code-flag@npm:4.1.1"
+"remark-lint-fenced-code-flag@npm:4.2.0":
+  version: 4.2.0
+  resolution: "remark-lint-fenced-code-flag@npm:4.2.0"
   dependencies:
     "@types/mdast": "npm:^4.0.0"
     mdast-util-phrasing: "npm:^4.0.0"
@@ -9085,7 +9085,7 @@ __metadata:
     unified-lint-rule: "npm:^3.0.0"
     unist-util-position: "npm:^5.0.0"
     unist-util-visit-parents: "npm:^6.0.0"
-  checksum: 10/7deba2597a51b0e6874659ca53b06cc64e2dea75aec8f11a043ac40b4fbeef551688bd893eac369a848e70a878da27be7375dd399449c921ff34b685966b1e1e
+  checksum: 10/a30dec01a12887af9b6f8878f0c39f06c8edba99028e23ac85138faaa085a4bfda906963cfbf5e9c975d39f8894bdf2327c72112bf4e577ddddbc3a451b4ea17
   languageName: node
   linkType: hard
 
@@ -9631,9 +9631,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"remark-lint-no-undefined-references@npm:5.0.1":
-  version: 5.0.1
-  resolution: "remark-lint-no-undefined-references@npm:5.0.1"
+"remark-lint-no-undefined-references@npm:5.0.2":
+  version: 5.0.2
+  resolution: "remark-lint-no-undefined-references@npm:5.0.2"
   dependencies:
     "@types/mdast": "npm:^4.0.0"
     collapse-white-space: "npm:^2.0.0"
@@ -9643,7 +9643,7 @@ __metadata:
     unist-util-position: "npm:^5.0.0"
     unist-util-visit-parents: "npm:^6.0.0"
     vfile-location: "npm:^5.0.0"
-  checksum: 10/a7d759fbcf68146381077d3efc85bce6a60954c2cb125133c2f3b9fc5cf21854318485fc7bbb311c8249712137dd9339d3f68e64e2561f0d7f3ab88abdfb5702
+  checksum: 10/e5e1bec8a0774ee9d9fe89f294689eb5f8e1769dbc2e63a5b3ae09fbf6d3969e6e1aceb3e73fa5fd623c3872a03b1d829ac3f129bc5fed49a0bda1b95491a670
   languageName: node
   linkType: hard
 
