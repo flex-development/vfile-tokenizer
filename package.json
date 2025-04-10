@@ -245,7 +245,7 @@
     "remark-lint-no-undefined-references": "5.0.2",
     "remark-lint-no-unneeded-full-reference-image": "4.0.1",
     "remark-lint-no-unneeded-full-reference-link": "4.0.1",
-    "remark-lint-no-unused-definitions": "4.0.1",
+    "remark-lint-no-unused-definitions": "4.0.2",
     "remark-lint-no-url-trailing-slash": "3.0.1",
     "remark-lint-ordered-list-marker-style": "4.0.1",
     "remark-lint-ordered-list-marker-value": "4.0.1",
