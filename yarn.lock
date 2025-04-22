@@ -1641,7 +1641,7 @@ __metadata:
     remark-lint-table-pipes: "npm:5.0.1"
     remark-lint-unordered-list-marker-style: "npm:4.0.1"
     remark-validate-links: "npm:13.1.0"
-    sh-syntax: "npm:0.5.6"
+    sh-syntax: "npm:0.5.7"
     to-vfile: "npm:8.0.0"
     trash-cli: "npm:6.0.0"
     ts-dedent: "npm:2.2.0"
@@ -10254,12 +10254,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sh-syntax@npm:0.5.6":
-  version: 0.5.6
-  resolution: "sh-syntax@npm:0.5.6"
+"sh-syntax@npm:0.5.7":
+  version: 0.5.7
+  resolution: "sh-syntax@npm:0.5.7"
   dependencies:
     tslib: "npm:^2.8.1"
-  checksum: 10/c9eedeb5ddab589825f26c043c053a58c67a081ac15866ddfe71a9cb49a1ef7b20bf189abd5925bab5b5ba490b96ddd6af7bed3369c85c3afab56a8ea81fcd99
+  checksum: 10/063a1844e77adeab3df16f913ae90db282d1e4fddfb44c0d34c2421f97ec666253d00522072493d4dad9d024bd3d09fa1255e1e9da6554338fa396b8594f92ee
   languageName: node
   linkType: hard
 
