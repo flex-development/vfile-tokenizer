@@ -1556,7 +1556,7 @@ __metadata:
     eslint-plugin-jest-formatting: "npm:3.1.0"
     eslint-plugin-jsdoc: "npm:50.6.9"
     eslint-plugin-jsonc: "npm:2.20.0"
-    eslint-plugin-mdx: "npm:3.4.0"
+    eslint-plugin-mdx: "npm:3.4.1"
     eslint-plugin-n: "npm:17.16.2"
     eslint-plugin-promise: "npm:7.2.1"
     eslint-plugin-unicorn: "npm:58.0.0"
@@ -4987,7 +4987,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-mdx@npm:3.4.1, eslint-mdx@npm:^3.4.0":
+"eslint-mdx@npm:3.4.1, eslint-mdx@npm:^3.4.1":
   version: 3.4.1
   resolution: "eslint-mdx@npm:3.4.1"
   dependencies:
@@ -5126,24 +5126,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-mdx@npm:3.4.0":
-  version: 3.4.0
-  resolution: "eslint-plugin-mdx@npm:3.4.0"
+"eslint-plugin-mdx@npm:3.4.1":
+  version: 3.4.1
+  resolution: "eslint-plugin-mdx@npm:3.4.1"
   dependencies:
-    eslint-mdx: "npm:^3.4.0"
+    eslint-mdx: "npm:^3.4.1"
     mdast-util-from-markdown: "npm:^2.0.2"
     mdast-util-mdx: "npm:^3.0.0"
     micromark-extension-mdxjs: "npm:^3.0.0"
     remark-mdx: "npm:^3.1.0"
     remark-parse: "npm:^11.0.0"
     remark-stringify: "npm:^11.0.0"
-    synckit: "npm:^0.11.2"
+    synckit: "npm:^0.11.4"
     tslib: "npm:^2.8.1"
     unified: "npm:^11.0.5"
     vfile: "npm:^6.0.3"
   peerDependencies:
     eslint: ">=8.0.0"
-  checksum: 10/49e4816eed45a268fd01fd133472520ddca2deaf2dda8976624c30149f1e00b85b4a2c91ca538db0dba6f8d1ab3f6f766cb84e33651c2a80237cfef68abc15b4
+  checksum: 10/edddff307f39718d7b0c44e10701942bef701c970b833c8c434682276c3df6f93e128abf1c3eb7e05672f9ae0f5306ff863bed6c4e8e2cee829b2dd8c36e2f3a
   languageName: node
   linkType: hard
 
@@ -10715,7 +10715,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"synckit@npm:^0.11.2, synckit@npm:^0.11.4":
+"synckit@npm:^0.11.4":
   version: 0.11.4
   resolution: "synckit@npm:0.11.4"
   dependencies:
