@@ -136,7 +136,7 @@
     "devlop": "1.1.0"
   },
   "devDependencies": {
-    "@arethetypeswrong/cli": "0.18.0",
+    "@arethetypeswrong/cli": "0.18.1",
     "@commitlint/cli": "19.8.1",
     "@commitlint/types": "19.8.1",
     "@eslint/js": "9.26.0",
