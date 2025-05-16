@@ -1559,7 +1559,7 @@ __metadata:
     eslint-plugin-jest-formatting: "npm:3.1.0"
     eslint-plugin-jsdoc: "npm:50.6.17"
     eslint-plugin-jsonc: "npm:2.20.0"
-    eslint-plugin-mdx: "npm:3.4.1"
+    eslint-plugin-mdx: "npm:3.4.2"
     eslint-plugin-n: "npm:17.16.2"
     eslint-plugin-promise: "npm:7.2.1"
     eslint-plugin-unicorn: "npm:59.0.1"
@@ -5105,7 +5105,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-mdx@npm:3.4.1, eslint-mdx@npm:^3.4.1":
+"eslint-mdx@npm:3.4.1":
   version: 3.4.1
   resolution: "eslint-mdx@npm:3.4.1"
   dependencies:
@@ -5130,6 +5130,34 @@ __metadata:
     remark-lint-file-extension:
       optional: true
   checksum: 10/aaef3f977efc9f8b0f24d59ed6b1911fcb954f5f2a0d26767de348245895555338167515bfb11da8aaf163fb4ae50aedfec0c79fe2ab65ebd6ddd6147d5a3d6c
+  languageName: node
+  linkType: hard
+
+"eslint-mdx@npm:^3.4.2":
+  version: 3.4.2
+  resolution: "eslint-mdx@npm:3.4.2"
+  dependencies:
+    acorn: "npm:^8.14.1"
+    acorn-jsx: "npm:^5.3.2"
+    espree: "npm:^9.6.1 || ^10.3.0"
+    estree-util-visit: "npm:^2.0.0"
+    remark-mdx: "npm:^3.1.0"
+    remark-parse: "npm:^11.0.0"
+    remark-stringify: "npm:^11.0.0"
+    synckit: "npm:^0.11.4"
+    tslib: "npm:^2.8.1"
+    unified: "npm:^11.0.5"
+    unified-engine: "npm:^11.2.2"
+    unist-util-visit: "npm:^5.0.0"
+    uvu: "npm:^0.5.6"
+    vfile: "npm:^6.0.3"
+  peerDependencies:
+    eslint: ">=8.0.0"
+    remark-lint-file-extension: "*"
+  peerDependenciesMeta:
+    remark-lint-file-extension:
+      optional: true
+  checksum: 10/20e3b84268fa1c2902e14b08ac6a0df4cc4c290f0c997281087cf277d926873443460426a7958d1efae97069ab83872a05f98fd4993bf6f5309032f883d5ed35
   languageName: node
   linkType: hard
 
@@ -5243,11 +5271,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-mdx@npm:3.4.1":
-  version: 3.4.1
-  resolution: "eslint-plugin-mdx@npm:3.4.1"
+"eslint-plugin-mdx@npm:3.4.2":
+  version: 3.4.2
+  resolution: "eslint-plugin-mdx@npm:3.4.2"
   dependencies:
-    eslint-mdx: "npm:^3.4.1"
+    eslint-mdx: "npm:^3.4.2"
     mdast-util-from-markdown: "npm:^2.0.2"
     mdast-util-mdx: "npm:^3.0.0"
     micromark-extension-mdxjs: "npm:^3.0.0"
@@ -5260,7 +5288,7 @@ __metadata:
     vfile: "npm:^6.0.3"
   peerDependencies:
     eslint: ">=8.0.0"
-  checksum: 10/edddff307f39718d7b0c44e10701942bef701c970b833c8c434682276c3df6f93e128abf1c3eb7e05672f9ae0f5306ff863bed6c4e8e2cee829b2dd8c36e2f3a
+  checksum: 10/d0a22ff9d2f272e3de8890952dfe48526279103c954344ed56a711d4b4e20f7a62da5b5a05e0abfb44d33f4deebd1808557775bf2fd4742345a506f63964d8ec
   languageName: node
   linkType: hard
 
