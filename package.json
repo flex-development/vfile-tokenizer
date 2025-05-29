@@ -140,7 +140,7 @@
     "@commitlint/cli": "19.8.1",
     "@commitlint/types": "19.8.1",
     "@eslint/js": "9.27.0",
-    "@flex-development/colors": "1.0.1",
+    "@flex-development/colors": "1.0.2",
     "@flex-development/commitlint-config": "1.0.1",
     "@flex-development/grease": "3.0.0-alpha.9",
     "@flex-development/pathe": "4.0.1",
