@@ -1543,7 +1543,7 @@ __metadata:
     "@flex-development/colors": "npm:1.0.2"
     "@flex-development/commitlint-config": "npm:1.0.1"
     "@flex-development/grease": "npm:3.0.0-alpha.9"
-    "@flex-development/pathe": "npm:4.0.1"
+    "@flex-development/pathe": "npm:4.0.2"
     "@flex-development/tutils": "npm:6.0.0-alpha.25"
     "@flex-development/unist-util-builder": "npm:2.0.0"
     "@flex-development/unist-util-inspect": "npm:1.0.1"
@@ -1833,15 +1833,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@flex-development/pathe@npm:4.0.1":
-  version: 4.0.1
-  resolution: "@flex-development/pathe@npm:4.0.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Fpathe%2F4.0.1%2F4d48670922460d504e2c70cf42da77895ee25c46"
+"@flex-development/pathe@npm:4.0.2":
+  version: 4.0.2
+  resolution: "@flex-development/pathe@npm:4.0.2::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Fpathe%2F4.0.2%2Fb527dc789ae450a7480f6de2ce04c70a36d4c887"
   dependencies:
     "@flex-development/errnode": "npm:3.1.1"
     "@types/micromatch": "npm:4.0.9"
     micromatch: "npm:4.0.8"
     punycode.js: "npm:2.3.1"
-  checksum: 10/808e0f66154e70a7eff601268aeac8e7c503a5f3d30477bd06fcbfdb0f39d8f76de352dd031b0aae3af0011751c954be27ea2b38bb81b998168778183d974ef7
+  checksum: 10/1a26f63150fbc5d7fb98f300324703ea2df44d11b02c3b05ea5104eca6515b6633a74b54105a4813ce641d4f71e04b4657f41f3059457e0b40822f5f958350b5
   languageName: node
   linkType: hard
 
