@@ -1568,7 +1568,7 @@ __metadata:
     debug: "npm:4.4.1"
     devlop: "npm:1.1.0"
     dprint: "npm:0.50.0"
-    editorconfig: "npm:2.0.1"
+    editorconfig: "npm:3.0.0"
     eslint: "npm:9.28.0"
     eslint-import-resolver-typescript: "npm:4.4.3"
     eslint-mdx: "npm:3.4.2"
@@ -3922,13 +3922,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^13.1.0":
-  version: 13.1.0
-  resolution: "commander@npm:13.1.0"
-  checksum: 10/d3b4b79e6be8471ddadacbb8cd441fe82154d7da7393b50e76165a9e29ccdb74fa911a186437b9a211d0fc071db6051915c94fb8ef16d77511d898e9dbabc6af
-  languageName: node
-  linkType: hard
-
 "commander@npm:^14.0.0":
   version: 14.0.0
   resolution: "commander@npm:14.0.0"
@@ -4493,17 +4486,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"editorconfig@npm:2.0.1":
-  version: 2.0.1
-  resolution: "editorconfig@npm:2.0.1"
+"editorconfig@npm:3.0.0":
+  version: 3.0.0
+  resolution: "editorconfig@npm:3.0.0"
   dependencies:
     "@one-ini/wasm": "npm:0.2.0"
-    commander: "npm:^13.1.0"
+    commander: "npm:^14.0.0"
     minimatch: "npm:10.0.1"
-    semver: "npm:^7.7.1"
+    semver: "npm:^7.7.2"
   bin:
     editorconfig: bin/editorconfig
-  checksum: 10/5ee2770d0d3be7a09288a7123e5604d22280394ab5ac64ffb7b9bdf90ad8e7c29d40fb9a9cdd7136a7d606ef48274ce260d20f7246ba5da6352883ea95be1b03
+  checksum: 10/3e62bd1cb9636800e0a079c37a548f26986ca2db99b2386a4b754f37b03073277f0927247d2a15629711a9b2ec316a28ba990ab78cba0c097aac5234164d1509
   languageName: node
   linkType: hard
 

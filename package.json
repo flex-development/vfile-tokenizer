@@ -163,7 +163,7 @@
     "cross-env": "7.0.3",
     "cspell": "9.0.2",
     "dprint": "0.50.0",
-    "editorconfig": "2.0.1",
+    "editorconfig": "3.0.0",
     "eslint": "9.28.0",
     "eslint-import-resolver-typescript": "4.4.3",
     "eslint-mdx": "3.4.2",
