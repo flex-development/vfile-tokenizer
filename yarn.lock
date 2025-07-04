@@ -1571,7 +1571,7 @@ __metadata:
     editorconfig: "npm:3.0.0"
     eslint: "npm:9.29.0"
     eslint-import-resolver-typescript: "npm:4.4.3"
-    eslint-mdx: "npm:3.4.2"
+    eslint-mdx: "npm:3.6.0"
     eslint-plugin-chai-expect: "npm:3.1.0"
     eslint-plugin-import: "npm:2.31.0"
     eslint-plugin-jest-formatting: "npm:3.1.0"
@@ -3201,7 +3201,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"acorn@npm:^8.0.0, acorn@npm:^8.14.1, acorn@npm:^8.15.0, acorn@npm:^8.5.0, acorn@npm:^8.9.0":
+"acorn@npm:^8.0.0, acorn@npm:^8.15.0, acorn@npm:^8.5.0, acorn@npm:^8.9.0":
   version: 8.15.0
   resolution: "acorn@npm:8.15.0"
   bin:
@@ -5040,19 +5040,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-mdx@npm:3.4.2, eslint-mdx@npm:^3.4.2":
-  version: 3.4.2
-  resolution: "eslint-mdx@npm:3.4.2"
+"eslint-mdx@npm:3.6.0, eslint-mdx@npm:^3.4.2":
+  version: 3.6.0
+  resolution: "eslint-mdx@npm:3.6.0"
   dependencies:
-    acorn: "npm:^8.14.1"
+    acorn: "npm:^8.15.0"
     acorn-jsx: "npm:^5.3.2"
-    espree: "npm:^9.6.1 || ^10.3.0"
+    espree: "npm:^9.6.1 || ^10.4.0"
     estree-util-visit: "npm:^2.0.0"
     remark-mdx: "npm:^3.1.0"
     remark-parse: "npm:^11.0.0"
     remark-stringify: "npm:^11.0.0"
-    synckit: "npm:^0.11.4"
-    tslib: "npm:^2.8.1"
+    synckit: "npm:^0.11.8"
     unified: "npm:^11.0.5"
     unified-engine: "npm:^11.2.2"
     unist-util-visit: "npm:^5.0.0"
@@ -5064,7 +5063,7 @@ __metadata:
   peerDependenciesMeta:
     remark-lint-file-extension:
       optional: true
-  checksum: 10/20e3b84268fa1c2902e14b08ac6a0df4cc4c290f0c997281087cf277d926873443460426a7958d1efae97069ab83872a05f98fd4993bf6f5309032f883d5ed35
+  checksum: 10/1ed5018843f0479f3b21e92b8507e0412713fd30f8a050eb77ffd8c26d6682f7fcaee608c801ffd571fbf5c90869eb5cfca70c2031f633d8d1ee6825f9634f62
   languageName: node
   linkType: hard
 
@@ -5344,7 +5343,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"espree@npm:^10.0.1, espree@npm:^10.3.0, espree@npm:^10.4.0, espree@npm:^9.6.1 || ^10.3.0":
+"espree@npm:^10.0.1, espree@npm:^10.3.0, espree@npm:^10.4.0, espree@npm:^9.6.1 || ^10.3.0, espree@npm:^9.6.1 || ^10.4.0":
   version: 10.4.0
   resolution: "espree@npm:10.4.0"
   dependencies:
@@ -10700,12 +10699,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"synckit@npm:^0.11.4, synckit@npm:^0.6.2 || ^0.7.3 || ^0.11.5":
-  version: 0.11.6
-  resolution: "synckit@npm:0.11.6"
+"synckit@npm:^0.11.4, synckit@npm:^0.11.8, synckit@npm:^0.6.2 || ^0.7.3 || ^0.11.5":
+  version: 0.11.8
+  resolution: "synckit@npm:0.11.8"
   dependencies:
     "@pkgr/core": "npm:^0.2.4"
-  checksum: 10/e3fc13b064cb401ad4214e846f3e70037a44a221fcd303ad638c02d14e3f497ddd501b5b9f5e324e03fa2a3ca101df43f0850faa1696abaf0230a16ce9693408
+  checksum: 10/9bb2cf11edaf31ba781f1c719dd58087323201bda6392254538aef4dea216aa02a32e25f06643bcfa1c1a2c95e0d84186d82cfb66f9a0ab3a2be4816c696a8a3
   languageName: node
   linkType: hard
 
