@@ -1542,7 +1542,7 @@ __metadata:
     "@vates/toggle-scripts": "npm:1.0.0"
     "@vitest/coverage-v8": "npm:3.0.9"
     "@vitest/ui": "npm:3.0.9"
-    chai: "npm:5.2.0"
+    chai: "npm:5.2.1"
     convert-hrtime: "npm:5.0.0"
     cross-env: "npm:7.0.3"
     cspell: "npm:9.2.0"
@@ -3635,7 +3635,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chai@npm:5.2.0, chai@npm:^5.2.0":
+"chai@npm:5.2.1":
+  version: 5.2.1
+  resolution: "chai@npm:5.2.1"
+  dependencies:
+    assertion-error: "npm:^2.0.1"
+    check-error: "npm:^2.1.1"
+    deep-eql: "npm:^5.0.1"
+    loupe: "npm:^3.1.0"
+    pathval: "npm:^2.0.0"
+  checksum: 10/2d9b14c9bbb9b791641ecee0d74a53f34d2c86f05c10b5567041ed376177f87af9dc7f5398207fd2711affbfeb9f0f1f60e11bcaf021f78ef37b7c65a6d94e7d
+  languageName: node
+  linkType: hard
+
+"chai@npm:^5.2.0":
   version: 5.2.0
   resolution: "chai@npm:5.2.0"
   dependencies:
