@@ -5039,7 +5039,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-mdx@npm:3.6.2":
+"eslint-mdx@npm:3.6.2, eslint-mdx@npm:^3.4.2":
   version: 3.6.2
   resolution: "eslint-mdx@npm:3.6.2"
   dependencies:
@@ -5063,33 +5063,6 @@ __metadata:
     remark-lint-file-extension:
       optional: true
   checksum: 10/955f52a0aaac527204803f63cadba659b75dbc6c7d9c7407922c7f6c70c191db7442703afc53238c9dc9f1d06adfadac2d6353cf0a99872b564fccb690c251c8
-  languageName: node
-  linkType: hard
-
-"eslint-mdx@npm:^3.4.2":
-  version: 3.6.0
-  resolution: "eslint-mdx@npm:3.6.0"
-  dependencies:
-    acorn: "npm:^8.15.0"
-    acorn-jsx: "npm:^5.3.2"
-    espree: "npm:^9.6.1 || ^10.4.0"
-    estree-util-visit: "npm:^2.0.0"
-    remark-mdx: "npm:^3.1.0"
-    remark-parse: "npm:^11.0.0"
-    remark-stringify: "npm:^11.0.0"
-    synckit: "npm:^0.11.8"
-    unified: "npm:^11.0.5"
-    unified-engine: "npm:^11.2.2"
-    unist-util-visit: "npm:^5.0.0"
-    uvu: "npm:^0.5.6"
-    vfile: "npm:^6.0.3"
-  peerDependencies:
-    eslint: ">=8.0.0"
-    remark-lint-file-extension: "*"
-  peerDependenciesMeta:
-    remark-lint-file-extension:
-      optional: true
-  checksum: 10/1ed5018843f0479f3b21e92b8507e0412713fd30f8a050eb77ffd8c26d6682f7fcaee608c801ffd571fbf5c90869eb5cfca70c2031f633d8d1ee6825f9634f62
   languageName: node
   linkType: hard
 
