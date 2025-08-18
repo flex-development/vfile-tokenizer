@@ -168,7 +168,7 @@
     "eslint-import-resolver-typescript": "4.4.3",
     "eslint-mdx": "3.6.2",
     "eslint-plugin-chai-expect": "3.1.0",
-    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-import": "2.32.0",
     "eslint-plugin-jest-formatting": "3.1.0",
     "eslint-plugin-jsdoc": "54.1.0",
     "eslint-plugin-jsonc": "2.20.1",
